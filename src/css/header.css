@@ -631,18 +631,18 @@ html.is-clipped--nav .mobile-section-dropdown {
   opacity: 1;
 }
 
-.navbar::before {
-  content: " ";
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: linear-gradient(270deg, transparent 0, #58d7db 50%, transparent);
-  opacity: 0.5;
-}
-
 @media screen and (max-width: 1023.5px) {
+  .navbar::before {
+    content: " ";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(270deg, transparent 0, #58d7db 50%, transparent);
+    opacity: 0.5;
+  }
+
   .navbar::after {
     content: " ";
     width: 100%;

@@ -31,7 +31,11 @@ body.home .mobile-nav-toggle {
   pointer-events: none;
 }
 
-body.home .header,
+body.home .header {
+  position: relative;
+  z-index: 2;
+}
+
 body.home .home-main {
   position: relative;
   z-index: 1;
@@ -39,6 +43,34 @@ body.home .home-main {
 
 body.home .navbar-search-wrapper {
   display: none;
+}
+
+body.home .navbar::before {
+  content: " ";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(270deg, transparent 0, #58d7db 50%, transparent);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+body.home .navbar::after {
+  content: " ";
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 30px;
+  background: linear-gradient(180deg, #58d7db, transparent);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .home-main {
@@ -50,10 +82,16 @@ body.home .navbar-search-wrapper {
 }
 
 /* Title wrapper */
-.openblock.tt1-wrapper,
+.openblock.tt1-wrapper {
+  width: 100%;
+  padding: 0 20px 0;
+  text-align: center;
+  margin-top: -21px;
+}
+
 .openblock.tt1-wrapper > .content {
   width: 100%;
-  padding: 15px 20px 0;
+  padding: 0 20px 0;
   text-align: center;
 }
 
