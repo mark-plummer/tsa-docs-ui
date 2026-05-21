@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head defaultPageTitle='Untitled'}}
+  </head>
+  <body class="home">
+    <div id="particles-js"></div>
+{{> header}}
+<main class="home-main">
+  {{{page.contents}}}
+</main>
+{{> footer-scripts}}
+    <script src="{{{uiRootPath}}}/js/vendor/particles.js"></script>
+    <script>
+      particlesJS('particles-js', {"particles":{"number":{"value":123,"density":{"enable":true,"value_area":1763.753266952075}},"color":{"value":"#08062b"},"shape":{"type":"circle","stroke":{"width":3,"color":"#4646a7"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.6471010661384636,"random":true,"anim":{"enable":true,"speed":0.8120772123013451,"opacity_min":1,"sync":false}},"size":{"value":1,"random":true,"anim":{"enable":true,"speed":23.976023976023978,"size_min":7.992007992007992,"sync":false}},"line_linked":{"enable":true,"distance":320.6824121731046,"color":"#ffffff","opacity":0.07891476416322726,"width":1.5},"move":{"enable":true,"speed":1.2,"direction":"none","random":false,"straight":false,"out_mode":"bounce","bounce":false,"attract":{"enable":true,"rotateX":6155.351604731727,"rotateY":6944.499246364}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":401.97822008916586,"line_linked":{"opacity":0.04935752949112391}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":389.79706190464566,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+<script>
+  (function () {
+    var siteUrl = '{{{site.url}}}';
+    var cardLinks = {
+      'card-cloud': siteUrl + '/cloud/latest',
+      'card-software': siteUrl + '/software/latest',
+      'card-mobile': siteUrl + '/mobile/latest',
+      'card-developer': 'https://developers.thoughtspot.com/docs',
+      'card-seekwell': siteUrl + '/seekwell',
+      'card-agentspot': siteUrl + '/agentspot',
+    };
+    Object.keys(cardLinks).forEach(function (cls) {
+      document.querySelectorAll('.' + cls).forEach(function (el) {
+        var a = document.createElement('a');
+        a.href = cardLinks[cls];
+        a.className = el.className;
+        while (el.firstChild) a.appendChild(el.firstChild);
+        el.parentNode.replaceChild(a, el);
+      });
+    });
+
+    // Generic custom cards — URL and label come from a link: macro inside the block
+    document.querySelectorAll('.card-custom').forEach(function (el) {
+      var innerLink = el.querySelector('a');
+      if (!innerLink) return;
+      var href = innerLink.href;
+      var a = document.createElement('a');
+      a.href = href;
+      a.className = el.className;
+      while (el.firstChild) a.appendChild(el.firstChild);
+      el.parentNode.replaceChild(a, el);
+      // Replace nested <a> with plain text to avoid invalid nested links
+      var nested = a.querySelector('a');
+      if (nested) {
+        nested.parentNode.replaceChild(document.createTextNode(nested.textContent), nested);
+      }
+    });
+  })();
+</script>
+  </body>
+</html>

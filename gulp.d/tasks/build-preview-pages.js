@@ -2,6 +2,39 @@
 
 const Asciidoctor = require('@asciidoctor/core')()
 const fs = require('fs-extra')
+
+Asciidoctor.Extensions.register(function () {
+  this.preprocessor(function () {
+    this.process(function (doc, reader) {
+      const lines = reader.readLines()
+      const result = []
+      for (let i = 0; i < lines.length; i++) {
+        const match = lines[i].match(/^SPOTTER:\s+(.*)$/)
+        if (match) {
+          result.push('[SPOTTER]')
+          result.push('====')
+          result.push(match[1])
+          result.push('====')
+        } else {
+          result.push(lines[i])
+        }
+      }
+      reader.pushInclude(result, '<stdin>', '<stdin>', 1, {})
+    })
+  })
+  this.block('SPOTTER', function () {
+    this.onContext(['example'])
+    this.process(function (parent, reader, attrs) {
+      const lines = reader.readLines()
+      const innerHtml = Asciidoctor.load(lines.join('\n'), { safe: 'safe' }).convert()
+      const html = '<div class="admonitionblock spotter"><table><tr>' +
+        '<td class="icon"><i class="icon-spotter" title="Spotter"></i></td>' +
+        '<td class="content">' + innerHtml + '</td>' +
+        '</tr></table></div>'
+      return this.createPassBlock(parent, html, {}, {})
+    })
+  })
+})
 const handlebars = require('handlebars')
 const merge = require('merge-stream')
 const ospath = require('path')
@@ -12,7 +45,13 @@ const map = (transform = () => {}, flush = undefined) => new Transform({ objectM
 const vfs = require('vinyl-fs')
 const yaml = require('js-yaml')
 
-const ASCIIDOC_ATTRIBUTES = { experimental: '', icons: 'font', sectanchors: '', 'source-highlighter': 'highlight.js' }
+const ASCIIDOC_ATTRIBUTES = {
+  experimental: '',
+  icons: 'font',
+  sectanchors: '',
+  'source-highlighter': 'highlight.js',
+  imagesdir: '_images',
+}
 
 module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
   Promise.all([
@@ -49,7 +88,8 @@ module.exports = (src, previewSrc, previewDest, sink = () => map()) => (done) =>
             if (file.stem === '404') {
               uiModel.page = { layout: '404', title: 'Page Not Found' }
             } else {
-              const doc = Asciidoctor.load(file.contents, { safe: 'safe', attributes: ASCIIDOC_ATTRIBUTES })
+              const asciidocAttrs = { ...ASCIIDOC_ATTRIBUTES, uiRootPath: uiModel.uiRootPath }
+              const doc = Asciidoctor.load(file.contents, { safe: 'safe', attributes: asciidocAttrs })
               uiModel.page.attributes = Object.entries(doc.getAttributes())
                 .filter(([name, val]) => name.startsWith('page-'))
                 .reduce((accum, [name, val]) => {

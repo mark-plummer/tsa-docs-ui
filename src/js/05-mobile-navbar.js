@@ -1,20 +1,24 @@
 ;(function () {
   'use strict'
 
-  var navbarBurger = document.querySelector('.navbar-burger')
-  if (!navbarBurger) return
-  navbarBurger.addEventListener('click', toggleNavbarMenu.bind(navbarBurger))
+  var sectionDropdown = document.querySelector('.mobile-section-dropdown')
+  var sectionToggle = document.querySelector('.mobile-section-toggle')
+  if (!sectionToggle || !sectionDropdown) return
 
-  function toggleNavbarMenu (e) {
-    e.stopPropagation() // trap event
-    document.documentElement.classList.toggle('is-clipped--navbar')
-    navbarBurger.setAttribute('aria-expanded', this.classList.toggle('is-active'))
-    var menu = document.getElementById(this.getAttribute('aria-controls') || this.dataset.target)
-    if (menu.classList.toggle('is-active')) {
-      menu.style.maxHeight = ''
-      var expectedMaxHeight = window.innerHeight - Math.round(menu.getBoundingClientRect().top)
-      var actualMaxHeight = parseInt(window.getComputedStyle(menu).maxHeight, 10)
-      if (actualMaxHeight !== expectedMaxHeight) menu.style.maxHeight = expectedMaxHeight + 'px'
+  sectionToggle.addEventListener('click', function (e) {
+    e.stopPropagation()
+    var expanded = sectionDropdown.classList.toggle('is-active')
+    sectionToggle.setAttribute('aria-expanded', String(expanded))
+  })
+
+  document.addEventListener('click', function () {
+    if (sectionDropdown.classList.contains('is-active')) {
+      sectionDropdown.classList.remove('is-active')
+      sectionToggle.setAttribute('aria-expanded', 'false')
     }
-  }
+  })
+
+  sectionDropdown.addEventListener('click', function (e) {
+    e.stopPropagation()
+  })
 })()

@@ -50,7 +50,12 @@
     var embeddedToc = document.createElement('aside')
     embeddedToc.className = 'toc embedded'
     embeddedToc.appendChild(menu.cloneNode(true))
-    startOfContent.parentNode.insertBefore(embeddedToc, startOfContent)
+    var leadParagraph = article.querySelector('#preamble .paragraph.lead')
+    if (leadParagraph) {
+      leadParagraph.parentNode.insertBefore(embeddedToc, leadParagraph.nextSibling)
+    } else {
+      startOfContent.parentNode.insertBefore(embeddedToc, startOfContent)
+    }
   }
 
   window.addEventListener('load', function () {

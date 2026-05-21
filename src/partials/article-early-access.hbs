@@ -1,0 +1,7 @@
+<article class="doc">
+{{#with page.title}}
+<h1 class="page">{{{this}}}<br><button class="badge badge-early-access" data-tippy-content="Early Access features are complete and available for you to try before they reach GA, when they are enabled by default. They are supported by ThoughtSpot, but you must refer to the documentation for the specific feature on how to enable them.">Early Access</button></h1>
+{{/with}}
+{{{page.contents}}}
+{{> pagination}}
+</article>

@@ -2,6 +2,12 @@ body.-toc aside.toc.sidebar {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  body.-toc .doc {
+    max-width: none;
+  }
+}
+
 @media screen and (max-width: 1023.5px) {
   aside.toc.sidebar {
     display: none;
@@ -20,6 +26,12 @@ body.-toc aside.toc.sidebar {
 
   main > .content {
     display: flex;
+    width: 100%;
+    max-width: calc(var(--doc-max-width--desktop) + var(--toc-width--widescreen) + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   aside.toc.embedded {
@@ -29,6 +41,8 @@ body.-toc aside.toc.sidebar {
   aside.toc.sidebar {
     flex: 0 0 var(--toc-width);
     order: 1;
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
   }
 }
 

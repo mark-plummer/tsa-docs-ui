@@ -5,11 +5,13 @@
 
   var navContainer = document.querySelector('.nav-container')
   var navToggle = document.querySelector('.nav-toggle')
-  if (!navContainer && (!navToggle || (navToggle.hidden = true))) return
+  var mobileNavToggle = document.querySelector('.mobile-nav-toggle')
+  if (!navContainer) return
   var nav = navContainer.querySelector('.nav')
   var navMenuToggle = navContainer.querySelector('.nav-menu-toggle')
 
-  navToggle.addEventListener('click', showNav)
+  if (navToggle) navToggle.addEventListener('click', showNav)
+  if (mobileNavToggle) mobileNavToggle.addEventListener('click', showNav)
   navContainer.addEventListener('click', trapEvent)
 
   var menuPanel = navContainer.querySelector('[data-panel=menu]')
@@ -131,11 +133,18 @@
   }
 
   function showNav (e) {
-    if (navToggle.classList.contains('is-active')) return hideNav(e)
+    var isActive = (navToggle && navToggle.classList.contains('is-active')) ||
+      (mobileNavToggle && mobileNavToggle.classList.contains('is-active'))
+    if (isActive) return hideNav(e)
     trapEvent(e)
     var html = document.documentElement
     html.classList.add('is-clipped--nav')
-    navToggle.classList.add('is-active')
+    if (navToggle) navToggle.classList.add('is-active')
+    if (mobileNavToggle) {
+      mobileNavToggle.classList.add('is-active')
+      mobileNavToggle.setAttribute('aria-expanded', 'true')
+      mobileNavToggle.setAttribute('aria-label', 'Close navigation')
+    }
     navContainer.classList.add('is-active')
     var bounds = nav.getBoundingClientRect()
     var expectedHeight = window.innerHeight - Math.round(bounds.top)
@@ -143,14 +152,35 @@
     html.addEventListener('click', hideNav)
   }
 
-  function hideNav (e) {
-    trapEvent(e)
+  function closeNav () {
     var html = document.documentElement
     html.classList.remove('is-clipped--nav')
-    navToggle.classList.remove('is-active')
+    if (navToggle) navToggle.classList.remove('is-active')
+    if (mobileNavToggle) {
+      mobileNavToggle.classList.remove('is-active')
+      mobileNavToggle.setAttribute('aria-expanded', 'false')
+      mobileNavToggle.setAttribute('aria-label', 'Open navigation')
+    }
     navContainer.classList.remove('is-active')
     html.removeEventListener('click', hideNav)
   }
+
+  function hideNav (e) {
+    trapEvent(e)
+    closeNav()
+  }
+
+  find(menuPanel, '.nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 1024) closeNav()
+    })
+  })
+
+  find(navContainer, '.version-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth < 1024) closeNav()
+    })
+  })
 
   function trapEvent (e) {
     e.stopPropagation()

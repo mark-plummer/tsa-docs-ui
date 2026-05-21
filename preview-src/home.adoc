@@ -1,0 +1,72 @@
+= Welcome to ThoughtSpot Documentation
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-layout: home
+:page-pagination:
+:description: A "preview" site for the UI.
+
+[.tt1-wrapper]
+--
+[.tt1-title]
+Welcome to +
+ThoughtSpot Documentation
+--
+
+[.tt1-sub-title]
+Choose your documentation:
+
+[.cards]
+--
+[.card.card-cloud]
+====
+image::cloud.svg[Cloud,45,45]
+
+Cloud
+====
+
+[.card.card-software]
+====
+image::software.svg[Software,45,45]
+
+Software
+====
+
+[.card.card-mobile]
+====
+image::mobile.svg[Mobile,45,45]
+
+Mobile
+====
+
+[.card.card-developer]
+====
+image::developer.svg[Embedded,45,45]
+
+Embedded
+====
+--
+
+[.cards]
+--
+[.card.card-custom]
+====
+image::myimage.svg[Alt text,45,45]
+
+link:https://example.com[My Card Title]
+
+[.card-body]
+A short description giving more detail about this card.
+====
+
+[.card.card-custom]
+====
+image::another.svg[Alt text,45,45]
+
+link:https://another.com[Another Card]
+
+[.card-body]
+A short description giving more detail about this card.
+====
+--

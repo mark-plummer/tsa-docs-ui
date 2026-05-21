@@ -1,45 +1,119 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{{or site.url siteRootPath}}}">{{site.title}}</a>
-      {{#if env.SITE_SEARCH_PROVIDER}}
-      <div class="navbar-item search hide-for-print">
-        <div id="search-field" class="field">
-          <input id="search-input" type="text" placeholder="Search the docs"{{#if page.home}} autofocus{{/if}}>
+      <a class="navbar-item" href="{{{or site.url siteRootPath}}}"><img src="{{{uiRootPath}}}/img/ts-docs-blue-v2.svg" alt="{{site.title}}" class="navbar-logo"></a>
+      <div class="mobile-controls">
+        <button class="mobile-nav-toggle" aria-label="Open navigation" aria-expanded="false"></button>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
+        <div class="mobile-section-dropdown">
+          <button class="mobile-section-toggle" aria-expanded="false">{{#if (eq page.layout 'home')}}Home{{else}}{{page.component.title}}{{/if}}</button>
+          <div class="mobile-section-menu">
+            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+            {{#if (eq @root.page.layout 'home')}}
+            <a class="mobile-section-link" href="{{{site.url}}}/software/latest">Software</a>
+            {{else}}
+            {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+            <a class="mobile-section-link is-current" href="{{{./url}}}">{{./title}}</a>
+            {{/if}}{{/each}}
+            {{/if}}
+            <a class="mobile-section-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+            <a class="mobile-section-link" href="https://developers.thoughtspot.com/docs">Developer</a>
+          </div>
         </div>
       </div>
-      {{/if}}
-      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    </div>
+    <div class="navbar-search-wrapper hide-for-print">
+      <div id="search-field" class="navbar-search">
+        <svg class="navbar-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input id="search-input" type="text" placeholder="Search...">
+        <kbd class="navbar-search-shortcut">⌘K</kbd>
+        <div id="algolia-search" class="algolia_search_wrapper"></div>
+      </div>
+      <a class="ask-ai-btn" href="#">
+        <svg class="ask-ai-icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 0L9.6 5.6L15.2 7.2L9.6 8.8L8 16L6.4 8.8L0.8 7.2L6.4 5.6Z"/>
+          <path d="M13.5 0L14.4 2.6L17 3.5L14.4 4.4L13.5 7L12.6 4.4L10 3.5L12.6 2.6Z"/>
+        </svg>
+        Ask AI
+      </a>
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
-          </div>
-        </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
-          </div>
-        </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
+<div class="navbar-item">
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+  </nav>
+  <nav class="subnav" aria-label="Section navigation">
+    {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3'))}}
+    {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+    {{/if}}{{/each}}
+    <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
+    <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+    {{else if (or (eq @root.page.layout 'default-mobile') (eq @root.page.layout 'home-branch-mobile'))}}
+    <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+    <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
+    {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+    {{/if}}{{/each}}
+    {{else if (or (eq @root.page.layout 'default-seekwell') (eq @root.page.layout 'home-branch-seekwell'))}}
+    <a class="subnav-link" href="{{{site.url}}}/cloud">Cloud</a>
+    <a class="subnav-link" href="{{{site.url}}}/software">Software</a>
+    <a class="subnav-link" href="{{{site.url}}}/mobile">Mobile</a>
+    {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+    {{/if}}{{/each}}
+    {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+    <a class="subnav-link" href="{{{site.url}}}/cloud">Cloud</a>
+    <a class="subnav-link" href="{{{site.url}}}/software">Software</a>
+    <a class="subnav-link" href="{{{site.url}}}/mobile">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/seekwell">SeekWell</a>
+    {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+    {{/if}}{{/each}}
+    {{else}}
+    <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+    {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+    <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+    {{/if}}{{/each}}
+    <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+    {{/if}}
+    {{#unless (or (eq @root.page.layout 'default-seekwell') (eq @root.page.layout 'home-branch-seekwell') (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+    <a class="subnav-link" href="{{{site.url}}}/seekwell">SeekWell</a>
+    {{/unless}}
   </nav>
 </header>

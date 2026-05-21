@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head defaultPageTitle='Untitled'}}
+    <link rel="stylesheet" href="{{{uiRootPath}}}/css/vendor/tippy.css">
+  </head>
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+{{> header}}
+{{> body}}
+{{> footer-scripts}}
+    <script src="{{{uiRootPath}}}/js/vendor/popper.js"></script>
+    <script src="{{{uiRootPath}}}/js/vendor/tippy.js"></script>
+    <script>
+      tippy('.badge-early-access', {
+        allowHTML: true,
+        interactive: true,
+        placement: 'bottom',
+        duration: 700,
+      });
+    </script>
+  </body>
+</html>

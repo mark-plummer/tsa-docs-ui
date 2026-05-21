@@ -8,7 +8,7 @@
   height: var(--toolbar-height);
   justify-content: flex-start;
   position: sticky;
-  top: var(--navbar-height);
+  top: var(--body-top);
   z-index: var(--z-index-toolbar);
 }
 
@@ -26,6 +26,7 @@
   height: var(--toolbar-height);
   width: var(--toolbar-height);
   margin-right: -0.25rem;
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {

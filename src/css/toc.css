@@ -5,7 +5,7 @@
 .toc.sidebar .toc-menu {
   margin-right: 0.75rem;
   position: sticky;
-  top: var(--toc-top);
+  top: calc(var(--toc-top) + 2.5rem);
 }
 
 .toc .toc-menu h3 {
@@ -20,12 +20,12 @@
 .toc.sidebar .toc-menu h3 {
   display: flex;
   flex-direction: column;
-  height: 2.5rem;
+  height: 2rem;
   justify-content: flex-end;
 }
 
 .toc .toc-menu ul {
-  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-size: 13px;
   line-height: var(--toc-line-height);
   list-style: none;
   margin: 0;
@@ -61,6 +61,7 @@
 
 .toc .toc-menu li {
   margin: 0;
+  font-size: 13px;
 }
 
 .toc .toc-menu li[data-level="2"] a {
@@ -90,7 +91,7 @@
 
 .toc .toc-menu a.is-active {
   border-left-color: var(--link-font-color);
-  color: var(--doc-font-color);
+  color: var(--link-font-color);
 }
 
 .sidebar.toc .toc-menu a:focus {

@@ -8,10 +8,16 @@
 
   toggle.addEventListener('click', function (e) {
     selector.classList.toggle('is-active')
-    e.stopPropagation() // trap event
+    e.stopPropagation()
   })
 
-  document.documentElement.addEventListener('click', function () {
-    selector.classList.remove('is-active')
+  document.addEventListener('click', function (e) {
+    if (!selector.contains(e.target)) selector.classList.remove('is-active')
+  }, true)
+
+  selector.querySelectorAll('.version-menu a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      selector.classList.remove('is-active')
+    })
   })
 })()

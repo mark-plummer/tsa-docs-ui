@@ -2,10 +2,77 @@
 <html lang="en">
   <head>
 {{> head defaultPageTitle='Page Not Found'}}
+    <style>
+      body.status-404 {
+        margin: 0;
+        overflow: hidden;
+        background-color: #08062b;
+      }
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      .status-404-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        color: #fff;
+        padding-top: 8rem;
+      }
+      .status-404-content .doc {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .status-404-number {
+        font-family: "Geist Mono", monospace;
+        font-size: 160px;
+        font-weight: 300;
+        line-height: 1;
+        margin: 0 auto 0.5rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
+      .status-404-content .page {
+        font-family: "Geist Mono", monospace;
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+        color: #B8B8B8;
+      }
+      .status-404-content .paragraph p {
+        font-size: 24px;
+        color: #B8B8B8;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+      .status-404-content .back-home-link {
+        color: #B8B8B8;
+        text-decoration: none;
+      }
+      .status-404-content .back-home-link:hover {
+        color: #fff;
+      }
+    </style>
   </head>
   <body class="status-404">
-{{> header}}
-{{> body}}
-{{> footer}}
+    <div id="particles-js"></div>
+    <div class="status-404-content">
+      <div>
+        <p class="status-404-number">404</p>
+{{> article-404}}
+      </div>
+    </div>
+{{> footer-scripts}}
+    <script src="{{{uiRootPath}}}/js/vendor/particles.js"></script>
+    <script>
+      particlesJS('particles-js', {"particles":{"number":{"value":123,"density":{"enable":true,"value_area":1763.753266952075}},"color":{"value":"#08062b"},"shape":{"type":"circle","stroke":{"width":3,"color":"#4646a7"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.6471010661384636,"random":true,"anim":{"enable":true,"speed":0.8120772123013451,"opacity_min":1,"sync":false}},"size":{"value":1,"random":true,"anim":{"enable":true,"speed":23.976023976023978,"size_min":7.992007992007992,"sync":false}},"line_linked":{"enable":true,"distance":320.6824121731046,"color":"#ffffff","opacity":0.07891476416322726,"width":1.5},"move":{"enable":true,"speed":1.2,"direction":"none","random":false,"straight":false,"out_mode":"bounce","bounce":false,"attract":{"enable":true,"rotateX":6155.351604731727,"rotateY":6944.499246364}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":401.97822008916586,"line_linked":{"opacity":0.04935752949112391}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":389.79706190464566,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
   </body>
 </html>

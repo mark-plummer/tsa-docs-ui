@@ -23,31 +23,31 @@
   --body-font-size--desktop: 1.125em; /* 18px */
   --body-font-size--print: 0.9375em; /* 15px */
   --body-line-height: 1.15;
-  --body-font-color: var(--color-jet-70);
-  --body-font-family: "Roboto", sans-serif;
+  --body-font-color: var(--color-jet-20);
+  --body-font-family: "Geist", sans-serif;
   --body-font-weight-bold: 600;
-  --monospace-font-family: "Roboto Mono", monospace;
+  --monospace-font-family: "Geist Mono", monospace;
   --monospace-font-weight-bold: 600;
   /* base */
-  --body-background: var(--color-white);
+  --body-background: #f5f5f5;
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-track-color: var(--color-smoke-30);
   --scrollbar-thumb-color: var(--color-gray-10);
   --scrollbar_hover-thumb-color: var(--color-gray-30);
   /* navbar */
-  --navbar-background: var(--color-jet-80);
-  --navbar-font-color: var(--color-white);
-  --navbar_hover-background: var(--color-black);
-  --navbar-button-background: var(--color-white);
-  --navbar-button-border-color: var(--panel-border-color);
-  --navbar-button-font-color: var(--body-font-color);
-  --navbar-menu-border-color: var(--panel-border-color);
-  --navbar-menu-background: var(--color-white);
-  --navbar-menu-font-color: var(--body-font-color);
-  --navbar-menu_hover-background: var(--color-smoke-50);
+  --navbar-background: #0a082d;
+  --navbar-font-color: #d4d4d4;
+  --navbar_hover-background: #13113a;
+  --navbar-button-background: #1e1c4a;
+  --navbar-button-border-color: #2a2860;
+  --navbar-button-font-color: #d4d4d4;
+  --navbar-menu-border-color: #2a2860;
+  --navbar-menu-background: #13113a;
+  --navbar-menu-font-color: #d4d4d4;
+  --navbar-menu_hover-background: #1e1c4a;
   /* nav */
-  --nav-background: var(--panel-background);
+  --nav-background: var(--body-background);
   --nav-border-color: var(--color-gray-10);
   --nav-line-height: 1.35;
   --nav-heading-font-color: var(--color-jet-30);
@@ -73,17 +73,17 @@
   --warning-color: #e18114;
   --warning-on-color: var(--color-white);
   /* doc */
-  --doc-font-color: var(--color-jet-50);
+  --doc-font-color: var(--color-jet-20);
   --doc-font-size: inherit;
   --doc-font-size--desktop: calc(17 / var(--rem-base) * 1rem);
   --doc-line-height: 1.6;
   --doc-margin: 0 auto;
-  --doc-margin--desktop: 0 2rem;
+  --doc-margin--desktop: 0;
   --heading-font-color: var(--color-jet-80);
-  --heading-font-weight: normal;
+  --heading-font-weight: 600;
   --alt-heading-font-weight: var(--body-font-weight-bold);
   --section-divider-color: var(--panel-border-color);
-  --link-font-color: #1565c0;
+  --link-font-color: #3d2894;
   --link_hover-font-color: #104d92;
   --link_unresolved-font-color: var(--important-color);
   --abstract-background: var(--color-smoke-70);
@@ -100,8 +100,9 @@
   --example-border-color: var(--color-gray-70);
   --kbd-background: var(--panel-background);
   --kbd-border-color: var(--color-gray-10);
-  --pre-background: var(--panel-background);
-  --pre-border-color: var(--panel-border-color);
+  --pre-background: #fff;
+  --pre-border-color: rgba(0, 0, 0, 0.1);
+  --pre-font-color: #030712;
   --pre-annotation-font-color: var(--color-gray-50);
   --quote-background: var(--panel-background);
   --quote-border-color: var(--color-gray-70);
@@ -123,17 +124,18 @@
   --footer-link-font-color: var(--color-jet-80);
   /* dimensions and positioning */
   --navbar-height: calc(63 / var(--rem-base) * 1rem);
+  --subnav-height: 0;
   --toolbar-height: calc(45 / var(--rem-base) * 1rem);
   --drawer-height: var(--toolbar-height);
-  --body-top: var(--navbar-height);
+  --body-top: calc(var(--navbar-height) + var(--subnav-height));
   --body-min-height: calc(100vh - var(--body-top));
-  --nav-height: calc(var(--body-min-height) - var(--toolbar-height));
+  --nav-height: var(--body-min-height);
   --nav-height--desktop: var(--body-min-height);
   --nav-panel-menu-height: calc(100% - var(--drawer-height));
   --nav-panel-explore-height: calc(50% + var(--drawer-height));
   --nav-width: calc(270 / var(--rem-base) * 1rem);
-  --toc-top: calc(var(--body-top) + var(--toolbar-height));
-  --toc-height: calc(100vh - var(--toc-top) - 2.5rem);
+  --toc-top: var(--body-top);
+  --toc-height: calc(100vh - var(--toc-top) - 5rem);
   --toc-width: calc(162 / var(--rem-base) * 1rem);
   --toc-width--widescreen: calc(216 / var(--rem-base) * 1rem);
   --doc-max-width: calc(720 / var(--rem-base) * 1rem);
@@ -143,4 +145,159 @@
   --z-index-toolbar: 2;
   --z-index-page-version-menu: 3;
   --z-index-navbar: 4;
+  /* nav item hover */
+  --nav-item-hover-background: rgba(0, 0, 0, 0.08);
+  /* search input */
+  --search-input-color: var(--color-jet-50);
+  --search-input-background: var(--color-white);
+  --search-input-border-color: #dbdbdb;
+  --search-input-disabled-background: #dbdbdb;
+  --search-input-disabled-placeholder-color: #4c4c4c;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --subnav-height: calc(48 / var(--rem-base) * 1rem);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --body-background: #0a082d;
+    --panel-background: #13113a;
+    --panel-border-color: #2a2860;
+    --scrollbar-track-color: #13113a;
+    --scrollbar-thumb-color: #3a3870;
+    --scrollbar_hover-thumb-color: #4a4880;
+    --body-font-color: #d4d4d4;
+    --navbar-background: #0a082d;
+    --navbar-font-color: #d4d4d4;
+    --navbar_hover-background: #13113a;
+    --navbar-button-background: #1e1c4a;
+    --navbar-button-border-color: #2a2860;
+    --navbar-button-font-color: #d4d4d4;
+    --navbar-menu-background: #13113a;
+    --navbar-menu-font-color: #d4d4d4;
+    --navbar-menu_hover-background: #1e1c4a;
+    --nav-background: #0a082d;
+    --nav-border-color: #2a2860;
+    --nav-heading-font-color: #e0e0e0;
+    --nav-muted-color: #888;
+    --nav-panel-divider-color: #2a2860;
+    --nav-secondary-background: #0a082d;
+    --toolbar-background: #252525;
+    --toolbar-border-color: #3d3d3d;
+    --toolbar-font-color: #888;
+    --toolbar-muted-color: #666;
+    --page-version-menu-background: var(--body-background);
+    --page-version-missing-font-color: #666;
+    --doc-font-color: #a8a8a8;
+    --heading-font-color: #d8d8d8;
+    --section-divider-color: #3d3d3d;
+    --link-font-color: #4da3ff;
+    --link_hover-font-color: #74b8ff;
+    --abstract-background: #252525;
+    --abstract-font-color: #b0b0b0;
+    --abstract-border-color: #3d3d3d;
+    --admonition-background: #252525;
+    --code-background: #2a2a2a;
+    --code-font-color: #d4d4d4;
+    --example-background: #1e1e1e;
+    --example-border-color: #555;
+    --kbd-background: #2a2a2a;
+    --kbd-border-color: #555;
+    --pre-background: #111;
+    --pre-border-color: rgba(255, 255, 255, 0.1);
+    --pre-font-color: #e2e2e2;
+    --pre-annotation-font-color: #888;
+    --quote-background: #252525;
+    --quote-border-color: #555;
+    --quote-font-color: #888;
+    --quote-attribution-font-color: #666;
+    --sidebar-background: #2d2d2d;
+    --table-border-color: #3d3d3d;
+    --table-stripe-background: #252525;
+    --table-footer-background: linear-gradient(to bottom, #2d2d2d 0%, #1e1e1e 100%);
+    --toc-font-color: #888;
+    --toc-heading-font-color: #c8c8c8;
+    --toc-border-color: #3d3d3d;
+    --footer-background: #141414;
+    --footer-font-color: #888;
+    --footer-link-font-color: #aaa;
+    --nav-item-hover-background: rgba(255, 255, 255, 0.1);
+    --search-input-color: #d4d4d4;
+    --search-input-background: #2a2a2a;
+    --search-input-border-color: #555;
+    --search-input-disabled-background: #333;
+    --search-input-disabled-placeholder-color: #666;
+  }
+}
+
+:root[data-theme="dark"] {
+  --body-background: #1e1e1e;
+  --panel-background: #252525;
+  --panel-border-color: #3d3d3d;
+  --scrollbar-track-color: #252525;
+  --scrollbar-thumb-color: #555;
+  --scrollbar_hover-thumb-color: #666;
+  --body-font-color: #d4d4d4;
+  --navbar-background: #1e1e1e;
+  --navbar-font-color: #d4d4d4;
+  --navbar_hover-background: #2a2a2a;
+  --navbar-button-background: #333;
+  --navbar-button-border-color: #555;
+  --navbar-button-font-color: #d4d4d4;
+  --navbar-menu-background: #252525;
+  --navbar-menu-font-color: #d4d4d4;
+  --navbar-menu_hover-background: #333;
+  --nav-background: #252525;
+  --nav-border-color: #3d3d3d;
+  --nav-heading-font-color: #e0e0e0;
+  --nav-muted-color: #888;
+  --nav-panel-divider-color: #3d3d3d;
+  --nav-secondary-background: #1e1e1e;
+  --toolbar-background: #252525;
+  --toolbar-border-color: #3d3d3d;
+  --toolbar-font-color: #888;
+  --toolbar-muted-color: #666;
+  --page-version-menu-background: var(--body-background);
+  --page-version-missing-font-color: #666;
+  --doc-font-color: #c8c8c8;
+  --heading-font-color: #f0f0f0;
+  --section-divider-color: #3d3d3d;
+  --link-font-color: #4da3ff;
+  --link_hover-font-color: #74b8ff;
+  --abstract-background: #252525;
+  --abstract-font-color: #b0b0b0;
+  --abstract-border-color: #3d3d3d;
+  --admonition-background: #252525;
+  --code-background: #2a2a2a;
+  --code-font-color: #d4d4d4;
+  --example-background: #1e1e1e;
+  --example-border-color: #555;
+  --kbd-background: #2a2a2a;
+  --kbd-border-color: #555;
+  --pre-background: #2a2a2a;
+  --pre-border-color: #3d3d3d;
+  --pre-annotation-font-color: #888;
+  --quote-background: #252525;
+  --quote-border-color: #555;
+  --quote-font-color: #888;
+  --quote-attribution-font-color: #666;
+  --sidebar-background: #2d2d2d;
+  --table-border-color: #3d3d3d;
+  --table-stripe-background: #252525;
+  --table-footer-background: linear-gradient(to bottom, #2d2d2d 0%, #1e1e1e 100%);
+  --toc-font-color: #888;
+  --toc-heading-font-color: #c8c8c8;
+  --toc-border-color: #3d3d3d;
+  --footer-background: #141414;
+  --footer-font-color: #888;
+  --footer-link-font-color: #aaa;
+  --nav-item-hover-background: rgba(255, 255, 255, 0.1);
+  --search-input-color: #d4d4d4;
+  --search-input-background: #2a2a2a;
+  --search-input-border-color: #555;
+  --search-input-disabled-background: #333;
+  --search-input-disabled-placeholder-color: #666;
 }

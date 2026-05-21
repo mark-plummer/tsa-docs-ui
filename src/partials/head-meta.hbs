@@ -1,1 +1,11 @@
     {{!-- Add additional meta tags here --}}
+    {{#if (or (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default') (eq @root.page.layout 'default-beta') (eq @root.page.layout 'home-branch') (eq @root.page.layout 'default-early-access'))}}
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    {{/if}}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--    <link rel="stylesheet" href="../../_/css/site-extra.css"> -->
+    {{#unless (eq page.attributes.noindex undefined)}}
+    {{/unless}}
+    <meta name="google-site-verification" content="5aT50TKC816hXbQoRYGObVPaJHugwz5_9nW-kb-WfT4" />

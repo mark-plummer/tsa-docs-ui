@@ -4,9 +4,79 @@ Author Name
 :idseparator: -
 :!example-caption:
 :!table-caption:
+:page-layout: default-cloud
 //:page-role: -toc
 :page-pagination:
 :description: A "preview" site for the UI.
+
+xref:home.adoc[]
+
+[.lead]
+
+This is it!
+
+[.card-link]
+--
+link:/path/to/page[Responses API]
+
+Build with the most powerful API for AI agents.
+
+*Click here*
+--
+
+[.card-link]
+--
+link:/path/to/page[Spotter API]
+
+Build with the most powerful AI agent.
+
+*Click here*
+--
+
+[.card-box]
+--
+*Title text*
+
+Description text here.
+--
+
+TIP: Use ==== for cards inside the grid, and -- for standalone cards
+
+[.card-grid]
+--
+[.card-box]
+====
+*Card 1*
+
+Description for card 1.Description for card 1.Description for card 1.Description for card 1.Description for card 1.Description for card 1.
+====
+
+[.card-box]
+====
+*Card 2*
+
+Description for card 2.
+====
+
+[.card-box]
+====
+*Card 3*
+
+Description for card 3.
+====
+
+[.card-box]
+====
+*Card 4*
+
+Description for card 4.
+====
+
+--
+
+
+
+
 
 [.float-group]
 --
@@ -78,6 +148,41 @@ Voila!
 ====
 Voila!
 ====
+
+kbd:[Ctrl+F]
+
+menu:File[Save]
+
+WARNING: Watch out! you may fall into a deep dark hole, if you're not more careful! Don't blame me if something bad happens when i told you not to do it in the first place!
+
+NOTE: don't forget! Otherwise, you'll be sorry!
+
+TIP: Here's an idea!
+
+CAUTION: Whatever you do, don't do this!
+
+IMPORTANT: Don't forget this step!
+
+SPOTTER: New Spotter feature!! SpotterModel 2.0!!!
+
+
+=== Steps
+
+. do this.
+. then, do this.
++
+Make sure to remember this.
+. then, do this.
++
+Also, don't forget this!
+or this.
++
+or this.
+. then, do this.
++
+And, NEVER forget this!
+. and finally, do this!
+
 
 === Some Code
 

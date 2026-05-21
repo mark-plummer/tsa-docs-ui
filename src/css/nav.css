@@ -9,20 +9,19 @@
   top: var(--navbar-height);
   left: 0;
   width: 100%;
-  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-size: calc(14 / var(--rem-base) * 1rem);
   z-index: var(--z-index-nav);
   visibility: hidden;
 }
 
 @media screen and (min-width: 769px) {
   .nav-container {
-    width: var(--nav-width);
+    width: calc(250 / var(--rem-base) * 1rem);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .nav-container {
-    font-size: calc(15.5 / var(--rem-base) * 1rem);
     flex: none;
     position: static;
     top: 0;
@@ -36,21 +35,15 @@
 
 .nav {
   background: var(--nav-background);
+  border-right: 1px solid var(--panel-border-color);
   position: relative;
-  top: var(--toolbar-height);
+  top: 0;
   height: var(--nav-height);
-}
-
-@media screen and (min-width: 769px) {
-  .nav {
-    box-shadow: 0.5px 0 3px var(--nav-border-color);
-  }
 }
 
 @media screen and (min-width: 1024px) {
   .nav {
-    top: var(--navbar-height);
-    box-shadow: none;
+    top: var(--body-top);
     position: sticky;
     height: var(--nav-height--desktop);
   }
@@ -58,6 +51,7 @@
 
 .nav a {
   color: inherit;
+  text-decoration: none;
 }
 
 .nav .panels {
@@ -67,9 +61,14 @@
 }
 
 .nav-panel-menu {
-  overflow-y: scroll;
+  overflow-y: auto;
   overscroll-behavior: none;
   height: var(--nav-panel-menu-height);
+  scrollbar-width: none;
+}
+
+.nav-panel-menu::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-panel-menu:only-child {
@@ -93,45 +92,64 @@
 
 .nav-menu {
   min-height: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.125rem 1.75rem 1.5rem;
   line-height: var(--nav-line-height);
   position: relative;
+  padding-left: 2.5rem;
 }
 
 .nav-menu-toggle {
-  background: transparent url(../img/octicons-16.svg#view-unfold) no-repeat center / 100% 100%;
-  border: none;
-  float: right;
-  height: 1em;
-  margin-right: -0.5rem;
-  opacity: 0.75;
-  outline: none;
-  padding: 0;
-  position: sticky;
-  top: calc((var(--nav-line-height) - 1 + 0.5) * 1rem);
-  visibility: hidden;
-  width: 1em;
+  display: none;
 }
 
-.nav-menu-toggle.is-active {
-  background-image: url(../img/octicons-16.svg#view-fold);
-}
-
-.nav-panel-menu.is-active:hover .nav-menu-toggle {
-  visibility: visible;
+.nav-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--panel-border-color);
 }
 
 .nav-menu h3.title {
   color: var(--nav-heading-font-color);
-  font-size: inherit;
+  font-size: 15px;
   font-weight: var(--body-font-weight-bold);
-  margin: 0;
-  padding: 0.25em 0 0.125em;
+  margin: 0.5rem 0 0.5rem;
+  padding: 0;
+  user-select: none;
+}
+
+.nav-menu h3.version {
+  color: #777;
+  font-size: 14px;
+  font-weight: var(--body-font-weight-bold);
+  margin: 0.5rem 0 0.5rem;
+  padding: 0;
+  user-select: none;
+}
+
+.nav-menu h3.title a {
+  color: inherit;
+}
+
+.nav-menu .nav-title-row .page-versions {
+  margin: 0.5rem 0.125rem 0 0.3em;
+  z-index: var(--z-index-page-version-menu);
+}
+
+.nav-menu .nav-title-row .version-menu-toggle {
+  padding-left: 0;
+  font-size: 15px;
+  font-weight: var(--body-font-weight-bold);
+  line-height: var(--nav-line-height);
+  cursor: pointer;
+  user-select: none;
 }
 
 .nav-list {
   list-style: none;
-  margin: 0 0 0 0.75rem;
+  margin: 0;
   padding: 0;
 }
 
@@ -139,16 +157,15 @@
   margin-top: 0.5rem;
 }
 
+/* nav item is a flex row; the nested nav-list wraps below */
 .nav-item {
-  margin-top: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.0625rem;
+  font-size: 13px;
 }
 
-/* adds some breathing room below a nested list */
-.nav-item-toggle ~ .nav-list {
-  padding-bottom: 0.125rem;
-}
-
-/* matches list without a title */
 .nav-item[data-depth="0"] > .nav-list:first-child {
   display: block;
   margin: 0;
@@ -158,26 +175,135 @@
   display: none;
 }
 
+/* nested list occupies full width and is indented; order > toggle's 99 keeps it on its own line */
+.nav-item > .nav-list {
+  flex-basis: 100%;
+  order: 100;
+  margin-left: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+/* section header labels (non-link, depth-0) */
+.nav-item[data-depth="0"] > .nav-text {
+  flex: 1;
+  font-weight: var(--body-font-weight-bold);
+  color: var(--nav-heading-font-color);
+  padding: 1.5rem 0 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* non-link text at deeper levels */
+.nav-item:not([data-depth="0"]) > .nav-text {
+  flex: 1;
+  display: block;
+  padding: 0.375rem 0.75rem 0.375rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+/* when a toggle is present, left-round only; ::after extends the highlight to cover the toggle */
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle) > .nav-text {
+  border-radius: 0.5rem 0 0 0.5rem;
+  position: relative;
+}
+
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle) > .nav-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 1.5rem;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 0 0.5rem 0.5rem 0;
+  pointer-events: none;
+}
+
+.nav-item:not([data-depth="0"]) > .nav-text:hover,
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle:hover) > .nav-text {
+  background-color: var(--nav-item-hover-background);
+}
+
+/* nav links */
+.nav-link {
+  flex: 1;
+  display: block;
+  padding: 0.375rem 0.75rem 0.375rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+/* when a toggle is present, left-round only; ::after extends the highlight to cover the toggle */
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle) > .nav-link {
+  border-radius: 0.5rem 0 0 0.5rem;
+  position: relative;
+}
+
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle) > .nav-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 1.5rem;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 0 0.5rem 0.5rem 0;
+  pointer-events: none;
+}
+
+/* depth-0 links styled as section headers */
+.nav-item[data-depth="0"] > .nav-link {
+  font-weight: var(--body-font-weight-bold);
+  color: var(--nav-heading-font-color);
+  padding: 1.5rem 0 0.5rem;
+  border-radius: 0;
+}
+
+.nav-link:hover {
+  background-color: var(--nav-item-hover-background);
+}
+
+/* hovering the toggle colors the link so its ::after extension also highlights */
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle:hover) > .nav-link,
+.nav-item:not([data-depth="0"]):has(> .nav-item-toggle:hover) > .nav-text {
+  background-color: var(--nav-item-hover-background);
+}
+
+.nav-item[data-depth="0"] > .nav-link:hover {
+  background-color: transparent;
+}
+
+/* current page uses background highlight instead of bold */
+.is-current-page > .nav-link {
+  background-color: var(--nav-item-hover-background);
+}
+
+.is-current-page > .nav-text {
+  font-weight: var(--body-font-weight-bold);
+}
+
+/* toggle button — right-side chevron, rotates 90° when expanded */
 .nav-item-toggle {
-  background: transparent url(../img/caret.svg) no-repeat center / 50%;
+  background: transparent url(../img/chevron-right.svg) no-repeat center / 55%;
   border: none;
   outline: none;
-  line-height: inherit;
+  cursor: pointer;
   padding: 0;
-  position: absolute;
-  height: calc(var(--nav-line-height) * 1em);
-  width: calc(var(--nav-line-height) * 1em);
-  margin-top: -0.05em;
-  margin-left: calc(var(--nav-line-height) * -1em);
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: none;
+  order: 99;
+  opacity: 0.5;
+  transition: transform 0.15s ease;
+  line-height: inherit;
+  margin-right: 0.125rem;
 }
 
 .nav-item.is-active > .nav-item-toggle {
   transform: rotate(90deg);
-}
-
-.is-current-page > .nav-link,
-.is-current-page > .nav-text {
-  font-weight: var(--body-font-weight-bold);
 }
 
 .nav-panel-explore {
@@ -286,4 +412,57 @@
   color: var(--nav-secondary-background);
   font-weight: var(--body-font-weight-bold);
   opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav-item-toggle,
+  :root:not([data-theme="light"]) .nav-panel-explore .context .version::after {
+    filter: brightness(0) invert(1);
+  }
+}
+
+[data-theme="dark"] .nav-item-toggle,
+[data-theme="dark"] .nav-panel-explore .context .version::after {
+  filter: brightness(0) invert(1);
+}
+
+/* Mobile nav search — shown above nav list when nav overlay is open */
+.mobile-nav-search {
+  align-items: center;
+  background: var(--nav-background);
+  border-bottom: 1px solid var(--panel-border-color);
+  display: none;
+  flex: none;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+@media screen and (max-width: 1023.5px) {
+  .nav-container.is-active .mobile-nav-search {
+    display: flex;
+  }
+}
+
+.mobile-nav-search-icon {
+  color: var(--color-gray-40);
+  flex: none;
+  height: 1rem;
+  width: 1rem;
+}
+
+.mobile-nav-search-input {
+  background: var(--navbar-button-background);
+  border: 1px solid var(--navbar-button-border-color);
+  border-radius: 0.375rem;
+  color: var(--navbar-font-color);
+  flex: 1;
+  font-family: inherit;
+  font-size: calc(14 / var(--rem-base) * 1rem);
+  height: 2.125rem;
+  outline: none;
+  padding: 0 0.75rem;
+}
+
+.mobile-nav-search-input::placeholder {
+  color: var(--color-gray-30);
 }

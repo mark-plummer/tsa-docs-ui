@@ -1,8 +1,16 @@
 <main class="article">
-{{> toolbar}}
-  <div class="content">
+      <div class="content">
 {{#if (eq page.layout '404')}}
 {{> article-404}}
+{{else if (or (eq page.layout 'default-cloud-beta') (eq page.layout 'default-beta') (eq page.layout 'default-cloud-beta-no-index') (eq page.layout 'default-beta-no-index'))}}
+{{> toc}}
+{{> article-beta}}
+{{else if (or (eq page.layout 'default-cloud-early-access') (eq page.layout 'default-early-access') (eq page.layout 'default-cloud-early-access-no-index') (eq page.layout 'default-early-access-no-index'))}}
+{{> toc}}
+{{> article-early-access}}
+{{else if (eq page.layout 'default-cloud-early-access-spotter-3')}}
+{{> toc}}
+{{> article-early-access-spotter3}}
 {{else}}
 {{> toc}}
 {{> article}}

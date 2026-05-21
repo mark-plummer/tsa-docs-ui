@@ -47,9 +47,9 @@ module.exports = (src, dest, preview) => () => {
         },
       },
     ]),
-    postcssVar({ preserve: preview }),
+    postcssVar({ preserve: true }),
     // NOTE to make vars.css available to all top-level stylesheets, use the next line in place of the previous one
-    //postcssVar({ importFrom: path.join(src, 'css', 'vars.css'), preserve: preview }),
+    //postcssVar({ importFrom: path.join(src, 'css', 'vars.css'), preserve: true }),
     preview ? postcssCalc : () => {}, // cssnano already applies postcssCalc
     autoprefixer,
     preview
@@ -74,11 +74,14 @@ module.exports = (src, dest, preview) => () => {
       .pipe(map((file, enc, next) => next(null, Object.assign(file, { extname: '' }, { extname: '.js' })))),
     // NOTE use the next line to bundle a JavaScript library that cannot be browserified, like jQuery
     //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
+    vfs.src(require.resolve('particles.js'), opts).pipe(concat('js/vendor/particles.js')),
+    vfs.src(require.resolve('@popperjs/core/dist/umd/popper.min.js'), opts).pipe(concat('js/vendor/popper.js')),
+    vfs.src(require.resolve('tippy.js/dist/tippy-bundle.umd.min.js'), opts).pipe(concat('js/vendor/tippy.js')),
     vfs
       .src(['css/site.css', 'css/vendor/*.css'], { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } }))),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
-    vfs.src('img/**/*.{gif,ico,jpg,png,svg}', opts).pipe(
+    vfs.src('img/**/*.{gif,ico,jpg,png,svg,webp}', opts).pipe(
       preview
         ? through()
         : imagemin(

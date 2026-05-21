@@ -1,0 +1,235 @@
+/* Home page */
+body.home {
+  background-color: #0a082d;
+
+  --body-top: var(--navbar-height);
+}
+
+body.home .subnav {
+  display: none;
+}
+
+body.home .theme-toggle {
+  display: none;
+}
+
+body.home .mobile-section-dropdown {
+  display: none;
+}
+
+body.home .mobile-nav-toggle {
+  display: none;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+body.home .header,
+body.home .home-main {
+  position: relative;
+  z-index: 1;
+}
+
+body.home .navbar-search-wrapper {
+  display: none;
+}
+
+.home-main {
+  padding-top: var(--body-top);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title wrapper */
+.openblock.tt1-wrapper,
+.openblock.tt1-wrapper > .content {
+  width: 100%;
+  padding: 15px 20px 0;
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  body.home {
+    --body-top: 3.5rem;
+  }
+
+  .openblock.tt1-wrapper,
+  .openblock.tt1-wrapper > .content {
+    padding-top: 0;
+  }
+}
+
+/* Title — AsciiDoc renders [.tt1-title] paragraph as .paragraph.tt1-title */
+.paragraph.tt1-title > p {
+  font-family: "Geist Mono", monospace;
+  font-size: 60px;
+  font-weight: 300;
+  background-image: linear-gradient(120.62deg, #fff 39.59%, #80e9ff 84.18%, #00d2ff 128.76%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: -0.01px;
+}
+
+.paragraph.tt1-title > p::after {
+  content: "";
+  display: block;
+  background: linear-gradient(120.62deg, #fff 39.59%, #80e9ff 84.18%, #00d2ff 128.76%);
+  height: 2px;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .paragraph.tt1-title > p {
+    font-size: 36px;
+  }
+}
+
+/* Subtitle */
+.tt1-sub-title,
+.paragraph.tt1-sub-title > p {
+  color: #b8b8b8 !important;
+  font-family: "Geist Mono", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  margin: 20px 0 10px !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* Cards grid container — targets AsciiDoc open block .cards */
+.openblock.cards,
+.exampleblock.cards {
+  width: 100%;
+}
+
+.openblock.cards > .content,
+.exampleblock.cards > .content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 600px) {
+  .openblock.cards > .content,
+  .exampleblock.cards > .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .openblock.cards > .content,
+  .exampleblock.cards > .content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Individual card — applied after JS wraps .card-* in <a> */
+a.card {
+  position: relative;
+  display: block;
+  background: linear-gradient(180deg, transparent, hsla(0, 0%, 100%, 0.12));
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+a.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(0deg, #fba76f, #d89af0 29%, #99d8da 67%, #0a6cf9 96%, transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+a.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(64, 150, 255, 0.35), 0 0 32px rgba(64, 150, 255, 0.25);
+  z-index: 2;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.card:active {
+  transform: scale(1);
+  transition: transform 80ms ease-out;
+}
+
+/* Card inner content wrapper */
+a.card > .content {
+  padding: 30px 20px;
+}
+
+/* Image inside card */
+a.card img {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+a.card .imageblock {
+  margin: 0;
+}
+
+a.card .imageblock > .content {
+  padding: 0;
+}
+
+/* Card title text */
+a.card .paragraph {
+  margin: 0;
+}
+
+a.card .paragraph > p {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 300;
+  color: #fff;
+  font-family: "Geist", sans-serif;
+}
+
+/* Card description text */
+a.card .paragraph.card-body > p {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+/* Hide AsciiDoc-generated H1 on home page (title rendered by template) */
+body.home .page {
+  display: none;
+}

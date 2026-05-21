@@ -3,8 +3,17 @@
 
   var article = document.querySelector('article.doc')
   if (!article) return
-  var toolbar = document.querySelector('.toolbar')
   var supportsScrollToOptions = 'scrollTo' in document.documentElement
+
+  function getHeaderBottom () {
+    var toolbar = document.querySelector('.toolbar')
+    if (toolbar) return toolbar.getBoundingClientRect().bottom
+    var subnav = document.querySelector('.subnav')
+    if (subnav && window.getComputedStyle(subnav).display !== 'none') {
+      return subnav.getBoundingClientRect().bottom
+    }
+    return (document.querySelector('.navbar') || document.body).getBoundingClientRect().bottom
+  }
 
   function decodeFragment (hash) {
     return hash && (~hash.indexOf('%') ? decodeURIComponent(hash) : hash).slice(1)
@@ -20,7 +29,7 @@
       window.location.hash = '#' + this.id
       e.preventDefault()
     }
-    var y = computePosition(this, 0) - toolbar.getBoundingClientRect().bottom
+    var y = computePosition(this, 0) - getHeaderBottom()
     var instant = e === false && supportsScrollToOptions
     instant ? window.scrollTo({ left: 0, top: y, behavior: 'instant' }) : window.scrollTo(0, y)
   }

@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:developers.openai.com)",
+      "WebSearch",
+      "WebFetch(domain:mobbin.com)",
+      "WebFetch(domain:openai.com)",
+      "WebFetch(domain:brandpalettes.com)",
+      "WebFetch(domain:daily.promptperfect.xyz)",
+      "WebFetch(domain:www.designgurus.io)",
+      "WebFetch(domain:www.wallpaper.com)",
+      "WebFetch(domain:mobilesyrup.com)",
+      "WebFetch(domain:jurnals.net)",
+      "WebFetch(domain:docs.antora.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL \"https://developers.openai.com/api/docs\")",
+      "Bash(curl -sL \"https://developers.openai.com/_astro/platform-docs.C8tKlvDz.css\")",
+      "Bash(curl -sL \"https://developers.openai.com/_astro/PageLayout.Bo4rsqoC.css\")",
+      "Bash(grep -oE '\\\\.sidebar[^ ,{]*' /Users/mark.plummer/.claude/projects/-Users-mark-plummer-repos-antora-ui-default/eda3370d-ed31-4e8e-92c4-ffacfe57a790/tool-results/bpirup8bg.txt)",
+      "Bash(npx gulp *)",
+      "Bash(grep -v \"^$\")",
+      "Bash(echo \"PID: $!\")",
+      "Bash(lsof -ti:5252)",
+      "Bash(xargs kill *)",
+      "Bash(open http://localhost:5252)",
+      "Bash(screencapture -x /tmp/nav-preview.png)",
+      "Bash(screencapture /tmp/nav-preview.png)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --screenshot=/tmp/nav-preview.png --window-size=1440,900 --hide-scrollbars http://localhost:5252)",
+      "WebFetch(domain:platform.openai.com)",
+      "Bash(git *)",
+      "Bash(curl -s \"https://g-docs-staging.vercel.app/home/particles.json\")"
+    ]
+  }
+}

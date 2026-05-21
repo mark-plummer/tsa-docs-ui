@@ -1,0 +1,51 @@
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.6em;
+  font-size: 0.7em;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 0.25rem;
+  cursor: default;
+  border: none;
+}
+
+.badge-beta {
+  display: inline-block;
+  font-size: 13px;
+  padding: 3.5px 5px 3.5px;
+  border-radius: 6px;
+  border: none;
+  background-color: #06bf7f;
+  font-style: normal;
+  color: #fff;
+}
+
+.badge-early-access {
+  display: inline-block;
+  font-size: 13px;
+  padding: 3.5px 5px 3.5px;
+  border-radius: 6px;
+  border: none;
+  background-color: #8c62f5;
+  font-style: normal;
+  color: #fff;
+}
+
+.badge-early-access-spotter3 {
+  display: inline-block;
+  background-color: transparent;
+  color: #8c62f5;
+  border: 1px solid #8c62f5;
+  font-size: 13px;
+  position: relative;
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: -0.08px;
+  border-radius: 6px;
+  font-style: normal;
+}

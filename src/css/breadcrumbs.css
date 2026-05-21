@@ -1,23 +1,15 @@
 .breadcrumbs {
-  display: none;
-  flex: 1 1;
-  padding: 0 0.5rem 0 0.75rem;
-  line-height: 1.25;
-}
-
-@media screen and (min-width: 1024px) {
-  .breadcrumbs {
-    display: block;
-  }
-}
-
-a + .breadcrumbs {
-  padding-left: 0.05rem;
+  font-size: calc(13 / var(--rem-base) * 1rem);
+  color: var(--toolbar-font-color);
+  margin: 0 0 0.75rem;
+  padding: 0;
+  line-height: 1.5;
 }
 
 .breadcrumbs ul {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -29,10 +21,36 @@ a + .breadcrumbs {
 }
 
 .breadcrumbs li::after {
-  content: "/";
-  padding: 0 0.5rem;
+  content: ">";
+  padding: 0 0.4rem;
+  opacity: 0.5;
 }
 
 .breadcrumbs li:last-of-type::after {
   content: none;
+}
+
+.breadcrumbs a {
+  color: var(--link-font-color);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .breadcrumb-home img {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.1em;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .breadcrumbs .breadcrumb-home img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+[data-theme="dark"] .breadcrumbs .breadcrumb-home img {
+  filter: brightness(0) invert(1);
 }
