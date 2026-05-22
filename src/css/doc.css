@@ -461,7 +461,7 @@
 .doc .admonitionblock.warning td.icon i.icon-warning,
 .doc .admonitionblock.caution td.icon i.icon-caution,
 .doc .admonitionblock.important td.icon i.icon-important {
-  margin-top: 0.1rem;
+  margin-top: 0.05rem;
 }
 
 .doc .admonitionblock.caution > table {
