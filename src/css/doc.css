@@ -1089,7 +1089,7 @@
   content: counter(step-counter);
   position: absolute;
   left: 0;
-  top: -3px;
+  top: -4.5px;
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;

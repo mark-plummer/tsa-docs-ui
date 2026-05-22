@@ -276,9 +276,9 @@
   background-color: transparent;
 }
 
-/* current page uses background highlight instead of bold */
 .is-current-page > .nav-link {
   background-color: var(--nav-item-hover-background);
+  font-weight: var(--body-font-weight-bold);
 }
 
 .is-current-page > .nav-text {
