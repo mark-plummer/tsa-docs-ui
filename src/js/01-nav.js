@@ -35,6 +35,10 @@
       navItemSpan.style.cursor = 'pointer'
       navItemSpan.addEventListener('click', toggleActive.bind(li))
     }
+    var navLink = li.querySelector('.nav-link')
+    if (navLink) {
+      navLink.addEventListener('click', toggleActive.bind(li))
+    }
   })
 
   if (navMenuToggle && menuPanel.querySelector('.nav-item-toggle')) {
