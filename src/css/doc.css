@@ -1068,6 +1068,15 @@
   padding-bottom: 1.5rem;
 }
 
+.doc .olist.arabic > ol > li > .paragraph:first-child,
+.doc .olist.arabic > ol > li > p:first-child {
+  margin-top: 0;
+}
+
+.doc .olist.arabic > ol > li > .paragraph:first-child > p {
+  padding-top: calc((1.75rem - var(--doc-line-height) * 1em) / 2);
+}
+
 .doc .olist.arabic > ol > li + li {
   margin-top: 0;
 }
@@ -1080,7 +1089,7 @@
   content: counter(step-counter);
   position: absolute;
   left: 0;
-  top: 0;
+  top: -3px;
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;

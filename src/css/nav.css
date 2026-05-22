@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 769px) {
   .nav-container {
-    width: calc(250 / var(--rem-base) * 1rem);
+    width: calc(300 / var(--rem-base) * 1rem);
   }
 }
 
@@ -92,7 +92,7 @@
 
 .nav-menu {
   min-height: 100%;
-  padding: 0.125rem 1.75rem 1.5rem;
+  padding: 0.125rem 0.875rem 1.5rem;
   line-height: var(--nav-line-height);
   position: relative;
   padding-left: 2.5rem;
@@ -163,7 +163,7 @@
   flex-wrap: wrap;
   align-items: center;
   margin-top: 0.0625rem;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .nav-item[data-depth="0"] > .nav-list:first-child {
