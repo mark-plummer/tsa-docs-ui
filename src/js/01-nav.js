@@ -35,9 +35,12 @@
       navItemSpan.style.cursor = 'pointer'
       navItemSpan.addEventListener('click', toggleActive.bind(li))
     }
-    var navLink = li.querySelector('.nav-link')
+    var navLink = li.querySelector(':scope > .nav-link')
     if (navLink) {
-      navLink.addEventListener('click', toggleActive.bind(li))
+      navLink.addEventListener('click', function (e) {
+        e.preventDefault()
+        toggleActive.call(li)
+      })
     }
   })
 

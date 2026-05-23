@@ -148,17 +148,34 @@ body {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
   border-radius: 6px;
   border: none;
   background-color: #06bf7f;
+  font-style: normal;
+}
+
+.badge-ga {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+  font-weight: 400;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: -1px;
+  border-radius: 6px;
+  border: none;
+  background-color: #346DC9;
   font-style: normal;
 }
 
@@ -207,11 +224,11 @@ body {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -315,11 +332,11 @@ a.badge.badge-private-preview {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -333,11 +350,11 @@ a.badge.badge-private-preview {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -346,16 +363,34 @@ a.badge.badge-private-preview {
   font-style: normal;
 }
 
+.badge-ga-relnotes {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+  font-weight: 400;
+  /* vertical-align: top; */
+  /* margin-left: 7px; */
+  padding-bottom: 3px;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: -1px;
+  border-radius: 6px;
+  background-color: #346DC9;
+  font-style: normal;
+}
+
 .badge-private-preview-relnotes {
   display: inline-block;
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -369,11 +404,11 @@ a.badge.badge-private-preview {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 34.5px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -387,11 +422,11 @@ a.badge.badge-private-preview {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -405,11 +440,11 @@ a.badge.badge-private-preview {
   color: #fff;
   font-size: 13px;
   position: relative;
-  /* font-weight: 800; */
+  font-weight: 400;
   /* vertical-align: top; */
   /* margin-left: 7px; */
   padding-bottom: 3px;
-  padding-top: 4.5px;
+  padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
   top: -1px;
@@ -1712,9 +1747,11 @@ li::marker {
 }
 
 .doc-snippet .sidebarblock {
-  background: var(--sidebar-background);
+  position: relative;
+  background-color: #fef19f;
   border-radius: 0.75rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 0.7rem 0.75rem 0.7rem;
+  padding-right: 2rem;
 }
 
 .doc-home .sidebarblock {
@@ -1940,6 +1977,16 @@ li::marker {
   border: solid var(--section-divider-color);
   border-width: 2px 0 0;
   height: 0;
+}
+
+.border {
+  border: 1px solid #c1c3c7;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bordered {
+  border: 1px solid #c1c3c7;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .doc-snippet b.button {
@@ -2211,3 +2258,404 @@ td {
 /* END: Privileges table in security-matrix.md */
 
 /* https://css-tricks.com/rotated-table-column-headers/ */
+
+/* Spotter UI tour - start */
+
+.doc #container-tour {
+  background: url(https://docs.thoughtspot.com/cloud/latest/_images/spotter-explainer3_26_2c.png) no-repeat;
+  background-size: 771px 775px;
+  width: 771px;
+  height: 775px;
+}
+
+.doc #container-tour-2 {
+  background: url(https://docs.thoughtspot.com/cloud/latest/_images/spotter-explainer4_26_2b.png) no-repeat;
+  background-size: 771px 95px;
+  width: 771px;
+  height: 95px;
+}
+
+.doc .image-tour {
+  position: absolute;
+  z-index: -1;
+}
+
+.doc .tooltip-tour {
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  position: absolute;
+  background: rgba(255, 255, 200, 0);
+  z-index: 9999;
+}
+
+.doc .tooltip-tour:hover {
+  -webkit-animation-play-state: paused;
+}
+
+.doc .tooltip-tour:hover .info,
+.doc .tooltip-tour:hover .info2,
+.doc .tooltip-tour:hover .info3,
+.doc .tooltip-tour:hover .info4,
+.doc .tooltip-tour:hover .info5,
+.doc .tooltip-tour:hover .info6,
+.doc .tooltip-tour:hover .info7,
+.doc .tooltip-tour:hover .info8,
+.doc .tooltip-tour:hover .info9 {
+  visibility: visible;
+}
+
+.doc #first { margin: 651px 0 0 35px; }
+.doc #second { margin: 689px 0 0 35px; }
+.doc #third { margin: 612px 0 0 148px; }
+.doc #fourth { margin: 614px 0 0 206px; }
+.doc #fifth { margin: 615px 0 0 278px; }
+.doc #sixth { margin: 614px 0 0 353px; }
+.doc #seventh { margin: 733px 0 0 195px; }
+.doc #eighth { margin: 733px 0 0 255px; }
+.doc #ninth { margin: 737px 0 0 685px; }
+.doc #ninth-b { margin: 737px 0 0 287px; }
+.doc #tenth { margin: 614px 0 0 718px; }
+.doc #eleventh { margin: 188px 0 0 712px; }
+.doc #twelfth { margin: 98px 0 0 722px; }
+.doc #thirteenth { margin: 4px 0 0 695px; }
+.doc #fourteenth { margin: 48px 0 0 310px; }
+.doc #fifteenth { margin: 84px 0 0 178px; }
+.doc #sixteenth { margin: 196px 0 0 85px; }
+.doc #seventeenth { margin: 340px 0 0 85px; }
+.doc #eighteenth { margin: 10px 0 0 13px; }
+.doc #nineteenth { margin: 110px 0 0 13px; }
+.doc #twentieth { margin: 745px 0 0 13px; }
+.doc #twentifirst { margin: 17px 0 0 538px; }
+.doc #twentisecond { margin: 17px 0 0 538px; }
+.doc #twentithird { margin: 63px 0 0 238px; }
+
+.doc .info,
+.doc .info2,
+.doc .info3,
+.doc .info4,
+.doc .info5,
+.doc .info6,
+.doc .info7,
+.doc .info8,
+.doc .info9 {
+  width: 200px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  position: absolute;
+  visibility: hidden;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+}
+
+.doc .info { margin: -105px 0 0 -100px; }
+.doc .info2 { margin: -80px 0 0 -100px; }
+.doc .info3 { margin: -95px 0 0 -100px; }
+.doc .info4 { margin: -132px 0 0 -100px; }
+.doc .info5 { margin: -200px 0 0 -100px; }
+.doc .info6 { margin: -160px 0 0 -100px; }
+.doc .info7 { margin: -120px 0 0 -100px; }
+.doc .info8 { margin: -140px 0 0 -100px; }
+.doc .info9 { margin: -120px 0 0 -100px; }
+
+.doc .tooltip-h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  margin: 0 0 5px 0;
+}
+
+.doc .tooltip-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.doc .tooltip-arrow {
+  position: absolute;
+  margin: 10px 0 0 90px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+
+/* Spotter UI tour - end */
+
+/* Bootstrap-style buttons - start */
+
+.doc .btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.doc .btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.doc .btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+/* Bootstrap-style buttons - end */
+
+/* Bootstrap-style doc cards - start */
+
+.doc .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: left;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+}
+
+.doc .bd-example > :last-child {
+  margin-bottom: 0;
+}
+
+.doc .card-body {
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.doc .card-title {
+  font-size: 18px;
+  color: #333;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+
+.doc .card-text {
+  color: #333;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.doc img.card-img-top {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Bootstrap-style doc cards - end */
+
+/* Announce box role - start */
+
+.doc .openblock.announce-box {
+  background-color: #fff3e2;
+  border-radius: 8px;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+.doc .openblock.announce-box > .title {
+  position: relative;
+  font-size: 18px;
+  font-weight: var(--heading-font-weight);
+  font-style: normal;
+  color: var(--heading-font-color);
+  padding-left: 42px;
+  min-height: 30px;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.doc .openblock.announce-box > .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/megaphone_ts.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.doc .openblock.announce-box > .title::after {
+  content: " ";
+  display: block;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
+  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  height: 1px;
+  margin-top: 0;
+}
+
+.doc .openblock.announce-box > .content {
+  padding: 0;
+}
+
+.doc .openblock.announce-box > .content > :first-child {
+  margin-top: 0.5rem;
+}
+
+.doc .openblock.announce-box .paragraph + .paragraph {
+  margin-top: 0.5rem;
+}
+
+/* Announce box role - end */
+
+/* Release notes styles - start */
+
+.doc .admonitionblock.announce td.icon {
+  display: none;
+}
+
+.doc .admonitionblock.announce td.content {
+  background-color: #fff3e2;
+  border-radius: 8px;
+}
+
+.doc h2#_announcement {
+  position: relative;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-top: -0.6rem;
+  font-size: 18px;
+  text-align: left;
+  padding: 0.4rem 1rem 0.1rem calc(1rem + 42px);
+  border-bottom: 0 solid #e1e1e1;
+  min-height: 30px;
+}
+
+.doc h2#_announcement::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  bottom: -2px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/megaphone_ts.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+.doc h2#_announcement::after {
+  content: " ";
+  display: block;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
+  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  height: 1px;
+  margin-top: 0;
+}
+
+.doc h4#_highlights_of_the_new_navigation_and_homepage.discrete {
+  color: #444;
+  font-weight: 500;
+  font-family: Optimo-Plain, sans-serif;
+  hyphens: none;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 1rem 0 0;
+}
+
+.doc-snippet h3 {
+  color: #444;
+  font-weight: 500;
+  font-family: Optimo-Plain, sans-serif;
+  hyphens: none;
+  line-height: 1.3;
+  margin: 1rem 0 0;
+}
+
+.doc-snippet .sidebarblock::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
+  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.doc-snippet .sidebarblock > .content > .title:not(.discrete)::after {
+  content: " ";
+  display: block;
+  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
+  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  height: 1px;
+  margin-top: 0;
+}
+
+.doc-snippet i.fac {
+  hyphens: none;
+  font-style: normal;
+  padding-left: 5px;
+}
+
+.doc-snippet .admonitionblock td.icon-announce i::before {
+  background: no-repeat;
+  content: "";
+  margin-top: -10px;
+  margin-left: 10px;
+  margin-right: -3px;
+  display: block;
+  height: 18px;
+  width: 18px;
+}
+
+.doc-snippet table.wide_table td,
+.doc-snippet table.wide_table th {
+  border: none;
+}
+
+.doc-home .admonitionblock {
+  margin-top: 1rem;
+}
+
+.doc-home .admonitionblock td.icon {
+  padding-left: 0.1rem;
+  margin-top: 0;
+}
+
+.doc-home .admonitionblock > table > tbody,
+.doc-home .admonitionblock > table > tbody > tr > td {
+  padding-left: 2px;
+}
+
+.doc-home .admonitionblock > table > tbody > tr {
+  display: flex;
+}
+
+.doc-home .admonitionblock td.icon i::before {
+  background-image: url(../img/megaphone_ts.png);
+  vertical-align: middle;
+  padding-left: 25px;
+}
+
+.doc-home .admonitionblock.announce td.content::before,
+.doc-snippet .admonitionblock.announce td.content::before,
+.doc .admonitionblock.announce td.content::before {
+  color: #00aeef;
+}
+
+/* Release notes styles - end */

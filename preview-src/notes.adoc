@@ -1,0 +1,216 @@
+= {version} Release Notes
+:experimental:
+:page-last_updated: May 14, 2026
+:linkattrs:
+:page-aliases:
+:page-layout: default-cloud
+:description: These release notes include information about new and enhanced features.
+:jira: SCAL-277691, SCAL-305410
+
+ifdef::preview-docs[]
+++++
+<div class="admonitionblock announce">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-announce" title="Announce"></i>
+</td>
+<td class="content">
+<h2 id="_new_navigation_and_homepage_coming_soon"><a class="anchor" href="#_new_navigation_and_homepage_coming_soon"></a>26.6.0.cl preview documentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These release notes include draft information about the new and updated features in the 26.6.0.cl release.</p><br>
+<p>Each time information is added or updated we will <mark>highlight</mark> it below.</p><br><p>As new or updated feature articles are added, we will add links to them in the corresponding sections describing them.</p>
+</tr>
+</tbody></table>
+</div>
+++++
+endif::[]
+
+
+ThoughtSpot Cloud {version} is now available.
+
+These release notes include information about new and enhanced features.
+
+For information about previous releases, see xref:release-history.adoc[Release history].
+
+For information about features deprecated or removed in this and future releases see xref:deprecation.adoc[].
+
+ThoughtSpot also provides weekly updates containing bug fixes and enhancements which are automatically deployed on customer instances. For details, see xref:notes-weekly.adoc[Weekly release notes].
+
+
+[#new]
+== New features and functionality
+
+The latest release of ThoughtSpot Cloud contains several new and enhanced features.
+
+[#26-6-0-cl-business-user]
+++++
+<div class="admonitionblock announce">
+<table>
+<tbody><tr>
+<td class="icon">
+<i class="fa icon-announce" title="Announce"></i>
+</td>
+<td class="content">
+<h2 id="_announcement"><a class="anchor" href="#_announcement"></a>ThoughtSpot Sage removal in 26.6.0.cl</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.</p><br>
+<p>All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled  will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.</p>
+<br>
+<p>For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to <a href="deprecation">Deprecated and removed features</a> for details.</p>
+</tr>
+</tbody></table>
+</div>
+++++
+
+[.announce-box]
+.New doc site coming soon!
+--
+ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.
+
+All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled  will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.
+
+For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to Deprecated and removed features for details.
+--
+
+SPOTTER: Spotter features are subject to change without notice.
+NOTE: help me!
+
+[#26-6-0-cl-business-user]
+=== For the Business User
+
+// Naomi. jira: SCAL-293519, SCAL-298380. docs jira: SCAL-293521, SCAL-298381
+// PM: Aaghran
+#Spotter CSV upload support#::
+
+You can now upload CSV files directly to Spotter, enabling ad-hoc data analysis without requiring a pre-built data model. This feature makes it faster to explore and get insights from external data files directly in the Spotter interface. Simply click the *+* icon next to the Model selection button in the search bar and select the file you plan to upload. Note that the files you upload remain only in your conversation, and are not stored in ThoughtSpot. Files persist in your conversation for up to an hour. The size limit is 5 mb per file, 10 files per message.
++
+For more information, see xref:spotter-getting-started.adoc#csv-upload[Spotter CSV upload].
+
+// Naomi. jira: SCAL-257617. docs jira: SCAL-268083
+// PM: Mayur
+#Spotter answer stop button#::
+
+You can now stop in-progress answer generation in Spotter, giving greater control over query execution and improving the experience when you need to revise a query. For more information, see
+xref:spotter-getting-started.adoc[Getting started with Spotter].
+
+// Naomi. jira: SCAL-305012. docs jira: SCAL-305013
+// PM: Rahul PJP.
+#SpotterViz enhancements#::
+We have made the following enhancements to SpotterViz:
++
+--
+* When you create a new Liveboard and SpotterViz is enabled, the Liveboard opens in edit mode.
+* You can now drag the SpotterViz window to resize it.
+* While SpotterViz is working, you can add additional prompts.
+--
++
+For more information, see
+xref:spotter-viz.adoc[SpotterViz].
+
+// Naomi. jira: SCAL-303119. docs jira: SCAL-303120
+// PM: Dilip
+#SpotterViz charting skills#::
+
+You can now make the following types of changes by prompting SpotterViz:
+
+Visual editing::: Reference and modify specific visualizations, groups, or tabs.
+Bulk formatting::: Apply changes across multiple objects simultaneously.
+Structural transformation::: Change visual representations (chart types, axes, stacking).
+Cosmetic styling::: Fine-tune colors, labels, legends, and branding.
++
+For more information, see xref:spotter-viz.adoc[SpotterViz].
+
+// Mark – jira: SCAL-289824. docs jira: SCAL-289825
+// PM: Rudram
+#Command palette# [.badge.badge-early-access-relnotes]#Early Access#::
+
+You can now access anything in ThoughtSpot from a single keystroke. The command palette (kbd:[`Cmd`] + kbd:[`K`] on Mac / kbd:[`Ctrl`] + kbd:[`K`] on Windows and Linux) is a global command center that unifies navigation, search, and actions across the ThoughtSpot platform. Instead of switching between menus, list pages, and contextual controls, you can find content, trigger workflows, and navigate to any part of the product — all from one place.
++
+With the command palette, you can:
++
+--
+* Search across Liveboards, Answers, Models, and more in one place.
+* Launch a new Answer, Liveboard, or Spotter chat.
+* Jump to any section of ThoughtSpot directly, from Home to Admin settings.
+* Type your data question and send it straight to Spotter.
+* Press forward slash (/) to filter your search by Liveboards, Answers, Admin Settings, Create, Spotter, Models, Tables, and Collections.
+--
+
+[#26-6-0-cl-analyst]
+=== For the Analyst
+
+// Naomi. jira: SCAL-292250, SCAL-290534. docs jira: SCAL-292251
+// PM: Damian/Abhijit
+#Dynamic values for date type parameters#::
+You can now configure dynamic date type parameters when creating parameters, meaning that you can specify a dynamic rule like "start of current month", which updates with the current date rather than remaining static (for example, "June 14th"). For more information, see xref:parameters-create.adoc[Creating parameters].
+
+// Mark. jira: SCAL-300025. docs jira: SCAL-300026
+// PM: Rudram
+#Models in object search# [.badge.badge-beta-relnotes]#Beta#::
+Models are now fully discoverable through ThoughtSpot's unified search. Whether you're using the global search bar or the search results page, Models appear alongside Answers and Liveboards — making it faster and easier to find the data foundation your analyses are built on.
+
+// Mary. jira: SCAL-295148. docs jira: SCAL-295149
+// PM: Siddhant
+#Centralized filter window#::
+The centralized filter window is now generally available (GA). This feature introduces a single, unified interface for managing all Liveboard filters. Users can use this to view, update, and apply multiple filters at once, rather than interacting with each filter individually. This feature supports bulk filter changes, clear and reset actions, and provides a streamlined workflow for complex analyses. This improves efficiency, especially when working with Liveboards containing many filters or when users need to adjust several dimensions simultaneously.
+
+
+[#26-6-0-cl-data-engineer]
+=== For the Data Engineer
+
+// Naomi. jira: SCAL-293535, SCAL-302617. docs jira: SCAL-293536, SCAL-303390
+// PM: Aaghran
+#Spotter instructions#::
+Administrators and Org administrators can now configure instructions at the agent level to customize how Spotter responds to queries across your organization. Spotter instructions let you tailor Spotter's behavior for specific use cases, ensuring more consistent and relevant AI-generated answers. You can use Spotter instructions to specify output defaults like format and currency, tell Spotter how to handle ambiguous queries, and set guardrails for sensitive data. For example, you can say, “If the user doesn't specify a breakdown, default to department, region, and location. Always compare year-over-year.”
++
+To configure Spotter instructions, click the gear icon in the lower left corner of your Spotter conversation and select *Spotter instructions*.
++
+For more information, see
+xref:spotter-instructions.adoc[Spotter instructions].
+
+// Naomi. jira: SCAL-286534. docs jira: SCAL-286535
+// PM: Akshat
+#SpotterModel# [.badge.badge-early-access-relnotes]#Early Access#::
+
+You can now use SpotterModel to generate comprehensive, optimized Models ready to use in your analysis. SpotterModel automates table selection, join creation, and column selection, while allowing you to review and customize each step. To enable this feature, contact your administrator.
++
+For more information, see xref:spotter-model-create.adoc[SpotterModel].
+
+// Naomi. jira: SCAL-312267
+#Asana connector in Spotter#:: Because Asana has sunset its previous MCP server, we have removed Asana as a default connector in Spotter. You can still xref:spotter-connectors.adoc#register[register Asana as a connector], but an Asana admin must first link:https://developers.asana.com/docs/integrating-with-asanas-mcp-server[create and configure an OAuth app in Asana].
+
+// Naomi. jira: SCAL-295866. docs jira: SCAL-295867
+// PM: Anant
+#Memory from Liveboards enhancements#::
+You can now reference the Status field in the Memory sources page to see whether your memory has been generated. ThoughtSpot also notifies you once the Liveboard memory is fully generated. To enable memory from Liveboards and conversations, contact your administrator. For more information, see
+xref:spotter-memory-manage.adoc[Manage memory].
+
+// Mary. jira:SCAL-299280. docs jira: SCAL-299281
+// PM: Prayansh
+#Snowflake Semantic Views integration# [.badge.badge-early-access-relnotes]#Early Access#::
+Snowflake Semantic Views integration is now available in ThoughtSpot. This integration allows you to connect directly to Semantic Views defined in Snowflake and use them to automatically create Models in ThoughtSpot. You can import Semantic Views, including metrics, formulas, and column metadata, and immediately use them for building Liveboards, running queries, and analytics. The integration supports both direct connection to Snowflake and YAML file uploads for flexibility. Administrators can manage and resync Semantic Views as needed to reflect changes made in Snowflake. To enable this feature, contact {support-url}.
+
+// Naomi – jira: SCAL-297519. docs jira: SCAL-297520
+// PM: Prayansh
+#Connect to Iomete# [.badge.badge-early-access-relnotes]#Early Access#::
+You can now connect to Iomete cloud data warehouses. To enable this feature, contact your administrator. For more information, see xref:connections-iomete.adoc[Connect to Iomete].
+
+[#26-6-0-cl-developer]
+=== For the Developer
+
+ThoughtSpot Embedded:: For information about the new features and enhancements introduced in this release, refer to https://developers.thoughtspot.com/docs/?pageid=whats-new[ThoughtSpot Developer Documentation^].
+
+[#26-5-0-cl-analyst-studio]
+=== For Analyst Studio users
+
+Analyst Studio:: For information about the new features and enhancements introduced in the latest release, refer to xref:analyst-studio-release.adoc[Analyst Studio release notes].
+
+
+
+[#26-5-0-cl-mobile]
+=== For Mobile users
+
+ThoughtSpot Mobile:: For information about the new features and enhancements introduced in the latest release, refer to https://docs.thoughtspot.com/mobile/latest[ThoughtSpot Mobile Documentation^].

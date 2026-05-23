@@ -1,0 +1,767 @@
+[.conceal-title]
+= {empty}
+:page-layout: snippet
+:experimental:
+:pendo-links:
+:page-noindex:
+
+ifdef::coming-soon[]
+[month-year-whats-new]#June 2026#
+[label label-dep-whats-new]#26.6.0.cl#
+endif::[]
+
+ifdef::pendo-links[]
+[month-year-whats-new]#June 2026#
+[label label-dep-whats-new]#26.6.0.cl#
+endif::[]
+// NOTE: Only provide a link for features transitioning to Early Access/GA where no functionality has changed.
+
+[#primary-26-6-0-cl]
+
+// Business User
+
+[#26-6-0-cl-csv]
+[discrete]
+=== Spotter CSV upload support
+
+// Naomi. jira: SCAL-293519, SCAL-298380. docs jira: SCAL-293521, SCAL-298381
+// PM: Aaghran. add image. try to edit the "are not added to ThoughtSpot" phrase.
+
+You can now upload CSV files directly to Spotter, enabling ad-hoc data analysis without requiring a pre-built data model. This feature makes it faster to explore and get insights from external data files directly in the Spotter interface. Simply click the *+* icon next to the Model selection button in the search bar and select the file you plan to upload. Note that the files you upload remain only in your conversation, and are not stored in ThoughtSpot. Files persist in your conversation for up to an hour. The size limit is 5 mb per file, 10 files per message.
+
+For more information, see
+ifndef::pendo-links[]
+xref:spotter-getting-started.adoc#csv-upload[Spotter CSV upload].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-getting-started.adoc#csv-upload[Spotter CSV upload,window=_blank].
+endif::[]
+
+[.bordered]
+image::spotter-csv.png[Add files]
+
+
+[#26-6-0-cl-stop]
+[discrete]
+=== Spotter answer stop button
+// Naomi. jira: SCAL-257617. docs jira: SCAL-268083
+// PM: Mayur. add screenshot with highlighted box.
+
+You can now stop in-progress answer generation in Spotter, giving greater control over query execution and improving the experience when you need to revise a query. For more information, see
+ifndef::pendo-links[]
+xref:spotter-getting-started.adoc[Getting started with Spotter].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-getting-started.adoc[Getting started with Spotter,window=_blank].
+endif::[]
+
+[.bordered]
+image::spotter-stop-button.png[Stop query button]
+
+////
+[#26-6-0-cl-agent]
+[discrete]
+=== Allow users to select multiple Models in Spotter
+// Naomi. jira: SCAL-283614. docs jira: SCAL-283615
+// PM: Aaghran. didn't make it in.
+////
+
+
+
+
+[#26-6-0-cl-spotterviz]
+[discrete]
+=== SpotterViz enhancements
+// Naomi. jira: SCAL-305012. docs jira: SCAL-305013
+// PM: Rahul PJP.
+
+We have made the following enhancements to SpotterViz:
+
+* When you create a new Liveboard and SpotterViz is enabled, the Liveboard opens in edit mode.
+* You can now drag the SpotterViz window to resize it.
+* While SpotterViz is working, you can add additional prompts.
+
+For more information, see
+ifndef::pendo-links[]
+xref:spotter-viz.adoc[SpotterViz].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-viz.adoc[SpotterViz,window=_blank].
+endif::[]
+
+
+////
+[#26-6-0-cl-viz-consumption]
+[discrete]
+=== SpotterViz consumption
+// Naomi. jira: SCAL-294933. docs jira: SCAL-294934
+// PM: Rahul PJP
+
+[#26-6-0-cl-creation]
+[discrete]
+=== SpotterViz creation agent
+// Naomi. jira: SCAL-290427. docs jira: SCAL-290428
+// PM: Dilip
+////
+
+[#26-6-0-cl-integration]
+[discrete]
+=== SpotterViz charting skills
+// Naomi. jira: SCAL-303119. docs jira: SCAL-303120
+// PM: Dilip. how do you reference the chart you're trying to change. add example. create video, zoom in and out of prompt window.
+
+You can now make the following types of changes by prompting SpotterViz:
+
+Visual editing:: Reference and modify specific visualizations, groups, or tabs.
+Bulk formatting:: Apply changes across multiple objects simultaneously.
+Structural transformation:: Change visual representations (chart types, axes, stacking).
+Cosmetic styling:: Fine-tune colors, labels, legends, and branding.
+
+For more information, see
+ifndef::pendo-links[]
+xref:spotter-viz.adoc[SpotterViz].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-viz.adoc[SpotterViz,window=_blank].
+endif::[]
+
+++++
+<div class="border">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/9jwx0q72t4.js" async type="module"></script><style>wistia-player[media-id='9jwx0q72t4']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/9jwx0q72t4/swatch'); display: block; filter: blur(5px); padding-top:56.46%; }</style> <wistia-player media-id="9jwx0q72t4" aspect="1.7712177121771218"></wistia-player>
+</div>
+++++
+
+////
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-chart]
+[discrete]
+=== Charting skills for Spotter and Liveboard agents [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-chart]
+[discrete]
+=== Charting skills for Spotter and Liveboard agents [.badge.badge-early-access-whats-new]#Early Access#
+endif::[]
+
+// Mark – jira: SCAL-252716. docs jira: SCAL-?
+// PM: Manan. talk to PMs and see if this can be merged to SpotterViz charting improvements. edit this down. what is a Liveboard agent? is it SpotterViz? removed re: Anshul
+
+Charting skills for agents brings intelligent, conversational control to every chart and visualization in ThoughtSpot. Agents and developers can now read, modify, and persist nearly any chart configuration — from colors and axes to conditional formatting and table themes — directly through natural language or programmatic requests.
+
+When a user makes a chart customization request in Spotter — or when an agent applies configurations to a Liveboard or embedded view — charting skills translates those instructions into precise chart settings automatically. There is no need to manually edit visualization properties; the agent understands the intent and applies the right configuration.
+
+Chart state is preserved across follow-up interactions. If a user refines a chart and then asks a further question, previously applied settings are retained rather than reset. Axis configuration control and custom charts require additional work and are not supported at this time.
+
+endif::free-trial-feature[]
+////
+
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-cmd-k]
+[discrete]
+=== Command palette [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-cmd-k]
+[discrete]
+=== Command palette [.badge.badge-early-access-whats-new]#Early Access#
+endif::[]
+
+// Mark – jira: SCAL-289824. docs jira: SCAL-289825
+// PM: Rudram. make the button syntax. add video. check if it searches training as well. possibly remove the "jump from Home to Admin" point, does it actually lead you there?
+
+You can now access anything in ThoughtSpot from a single keystroke. The command palette (kbd:[`Cmd`] + kbd:[`K`] on Mac / kbd:[`Ctrl`] + kbd:[`K`] on Windows and Linux) is a global command center that unifies navigation, search, and actions across the ThoughtSpot platform. Instead of switching between menus, list pages, and contextual controls, you can find content, trigger workflows, and navigate to any part of the product — all from one place.
+
+With the command palette, you can:
+
+* Search across Liveboards, Answers, Models, and more in one place.
+* Launch a new Answer, Liveboard, or Spotter chat.
+* Jump to any section of ThoughtSpot directly, from Home to Admin settings.
+* Type your data question and send it straight to Spotter.
+* Press forward slash (/) to filter your search by Liveboards, Answers, Admin Settings, Create, Spotter, Models, Tables, and Collections.
+
+++++
+<div class="border">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ob9bsm5u9l.js" async type="module"></script><style>wistia-player[media-id='ob9bsm5u9l']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ob9bsm5u9l/swatch'); display: block; filter: blur(5px); padding-top:84.79%; }</style> <wistia-player media-id="ob9bsm5u9l" aspect="1.1793611793611793"></wistia-player>
+</div>
+++++
+
+endif::free-trial-feature[]
+
+// Analyst
+
+[#26-6-0-cl-date]
+[discrete]
+=== Dynamic values for date type parameters
+
+// Naomi. jira: SCAL-292250, SCAL-290534. docs jira: SCAL-292251
+// PM: Damian/Abhijit. document at GA in 26.6. dynamic dates in Liveboard filters, is that a separate feature?
+
+You can now configure dynamic date type parameters when creating parameters, meaning that you can specify a dynamic rule like "start of current month", which updates with the current date rather than remaining static (for example, "June 14th"). For more information, see
+ifndef::pendo-links[]
+xref:parameters-create.adoc[Creating parameters].
+endif::[]
+ifdef::pendo-links[]
+xref:parameters-create.adoc[Creating parameters,window=_blank].
+endif::[]
+//You can also set dynamic date fields in the filter chip in Liveboards.
+
+[.bordered]
+image::dynamic-date-filter.png[Dynamic date filter in parameter.]
+
+////
+[#26-6-0-cl-dynamic]
+[discrete]
+=== Dynamic date filter chip changes
+// Naomi. jira: SCAL-290534. docs jira: SCAL-?
+// PM: Damian? Abhijit?. included in dynamic values
+////
+
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-serp]
+[discrete]
+=== Models in object search [.badge.badge-beta]#Beta#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-serp]
+[discrete]
+=== Models in object search [.badge.badge-beta-whats-new]#Beta#
+endif::[]
+// Mark. jira: SCAL-300025. docs jira: SCAL-300026
+// PM: Rudram. put second paragraph in release notes. add video (searching for 'sales').
+
+Models are now fully discoverable through ThoughtSpot's unified search. Whether you're using the global search bar or the search results page, Models appear alongside Answers and Liveboards — making it faster and easier to find the data foundation your analyses are built on. To enable this feature, contact {support-url}.
+
+//Models are indexed alongside Answers and Liveboards. When you search for a term, relevant Models surface in both the inline suggestions and the full results page, identified by a distinct icon. You can use the same filters you already use for other object types — such as author, creation date, and object type — to narrow results down to the Model you need.
+
+++++
+<br>
+<div class="border">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/vky63f6tp2.js" async type="module"></script><style>wistia-player[media-id='vky63f6tp2']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vky63f6tp2/swatch'); display: block; filter: blur(5px); padding-top:60.83%; }</style> <wistia-player media-id="vky63f6tp2" aspect="1.643835616438356"></wistia-player>
+</div>
+++++
+
+endif::free-trial-feature[]
+
+[#26-6-0-cl-filter-ux]
+[discrete]
+=== Centralized filter window
+The centralized filter window is now generally available (GA). This feature introduces a single, unified interface for managing all Liveboard filters. Users can use this to view, update, and apply multiple filters at once, rather than interacting with each filter individually. This feature supports bulk filter changes, clear and reset actions, and provides a streamlined workflow for complex analyses. This improves efficiency, especially when working with Liveboards containing many filters or when users need to adjust several dimensions simultaneously.
+// Mary. jira: SCAL-295148. docs jira: SCAL-295149
+// PM: Siddhant. add image.
+
+[#secondary-26-6-0-cl]
+[discrete]
+=== _Other features and enhancements_
+
+// Data Engineer
+
+[#26-6-0-cl-instructions]
+[discrete]
+=== Spotter instructions
+// Naomi. jira: SCAL-293535, SCAL-302617. docs jira: SCAL-293536, SCAL-303390
+// PM: Aaghran. confirm where you add the instructions
+
+Administrators and Org administrators can now configure instructions at the agent level to customize how Spotter responds to queries across your organization. Spotter instructions let you tailor Spotter's behavior for specific use cases, ensuring more consistent and relevant AI-generated answers. You can use Spotter instructions to specify output defaults like format and currency, tell Spotter how to handle ambiguous queries, and set guardrails for sensitive data. For example, you can say, “If the user doesn't specify a breakdown, default to department, region, and location. Always compare year-over-year.”
+
+To configure Spotter instructions, click the gear icon in the lower left corner of your Spotter conversation and select *Spotter instructions*.
+
+For more information, see
+ifndef::pendo-links[]
+xref:spotter-instructions.adoc[Spotter instructions].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-instructions.adoc[Spotter instructions,window=_blank].
+endif::[]
+
+[.bordered]
+image::spotter-instructions.png[Spotter instructions]
+
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-4-0-cl-spottermodel]
+[discrete]
+=== SpotterModel [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-4-0-cl-spottermodel]
+[discrete]
+=== SpotterModel [.badge.badge-early-access-whats-new]#Early Access#
+endif::[]
+
+// Naomi. jira: SCAL-286534. docs jira: SCAL-286535
+// PM: Akshat. add image or gif.
+
+You can now use SpotterModel to generate comprehensive, optimized Models ready to use in your analysis. SpotterModel automates table selection, join creation, and column selection, while allowing you to review and customize each step. To enable this feature, contact your administrator.
+
+For more information, see
+ifndef::pendo-links[]
+xref:spotter-model-create.adoc[SpotterModel].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-model-create.adoc[SpotterModel,window=_blank].
+endif::[]
+
+++++
+<div class="border">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/gqyfnxkspw.js" async type="module"></script><style>wistia-player[media-id='gqyfnxkspw']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/gqyfnxkspw/swatch'); display: block; filter: blur(5px); padding-top:57.29%; }</style> <wistia-player media-id="gqyfnxkspw" aspect="1.7454545454545454"></wistia-player>
+</div>
+++++
+
+endif::free-trial-feature[]
+
+[#26-6-0-cl-memory]
+[discrete]
+=== Memory from Liveboards enhancements
+// Naomi. jira: SCAL-295866. docs jira: SCAL-295867
+// PM: Anant. image.
+
+You can now reference the Status field in the Memory sources page to see whether your memory has been generated. ThoughtSpot also notifies you once the Liveboard memory is fully generated. To enable memory from Liveboards and conversations, contact your administrator. For more information, see
+ifndef::pendo-links[]
+xref:spotter-memory-manage.adoc[Manage memory].
+endif::[]
+ifdef::pendo-links[]
+xref:spotter-memory-manage.adoc[Manage memory,window=_blank].
+endif::[]
+
+[.bordered]
+image::memory-sources-status.png[Liveboard memory status]
+
+////
+[#26-6-0-cl-stream]
+[discrete]
+=== Streaming support in SpotterModel
+// Naomi. jira: SCAL-301808. docs jira: SCAL-301809
+// PM: Akshat. waiting on info. not a significant change.
+////
+
+////
+[#26-6-0-cl-llm]
+[discrete]
+=== Large Language Model visibility dashboard
+
+// Naomi. jira: SCAL-294273. docs jira: SCAL-294274
+// PM: Mayur. waiting on info.
+////
+
+////
+[#26-6-0-cl-ea]
+[discrete]
+=== Easy opt-in to Early Access features
+The *Early Access features* page in the Admin portal is now generally available (GA). Administrators have access to a centralized library of early access (EA) features with clear information and value propositions. This new design allows for immediate discovery and intuitive management of EA features, where administrators can enable or disable multiple features at once for the entire cluster or specific Orgs.
+
+NOTE: Enabling or disabling EA features may cause a brief service interruption. Schedule changes during maintenance windows to minimize disruption.
+// Mary. jira: SCAL-288982, docs jira: SCAL-288983
+// PM: Reshma
+////
+
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-snowflake]
+[discrete]
+=== Snowflake Semantic Views resync [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-snowflake]
+[discrete]
+=== Snowflake Semantic Views resync [.badge.badge-early-access]#Early Access#
+endif::[]
+You can now resync Snowflake Semantic Views integrations when the Snowflake semantic model or uploaded definition changes. Administrators can manage and resync Semantic Views as needed to reflect changes made in Snowflake. To enable this feature, contact {support-url}.
+// Mary. jira:SCAL-299280. docs jira: SCAL-299281
+// PM: Prayansh - confirm how phase 2 is different
+endif::free-trial-feature[]
+
+////
+[#26-6-0-cl-split-download-privilege]
+[discrete]
+=== Split download permissions for Liveboards and schedules
+Separate download permissions for Liveboards and schedules are now generally available (GA). The download privilege has been split into separate, more granular permissions to enhance data security and administrative control. Administrators can now assign download privileges for visual downloads (PDF/PNG) and data exports (XLSX/CSV) independently. These new permissions are respected for both direct downloads and scheduled reports.
+
+Users who previously had the general download privilege will automatically receive both new permissions, while users without prior download access will not be assigned the new privileges by default. Administrators can manage these permissions in the Admin settings under roles and groups.
+// Mary. jira: SCAL-273333. docs jira: SCAL-273334
+// PM: Siddhant. what are the names of the new privileges? add image of new settings.
+////
+////
+[#26-6-0-cl-warning]
+[discrete]
+=== Update cannot delete modal in publishing
+// Mary. jira: SCAL-292274. docs jira: SCAL-292275
+// PM: Sejal - waiting on information from PM - suspect no doc req.
+////
+////
+[#26-6-0-cl-tml]
+[discrete]
+=== TML flows for Answer-level Sets
+// Mary. jira: SCAL-291088. docs jira: SCAL-?
+// PM: Damian - waiting on confirmation of no doc req
+////
+
+
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-iomete]
+[discrete]
+=== Connect to Iomete [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-iomete]
+[discrete]
+=== Connect to Iomete [.badge.badge-early-access-whats-new]#Early Access#
+endif::[]
+// Naomi – jira: SCAL-297519. docs jira: SCAL-297520
+// PM: Prayansh. replace with image of all connection types including Iomete?
+
+You can now connect to Iomete cloud data warehouses. To enable this feature, contact your administrator. For more information, see
+ifndef::pendo-links[]
+xref:connections-iomete.adoc[Connect to Iomete].
+endif::[]
+ifdef::pendo-links[]
+xref:connections-iomete.adoc[Connect to Iomete,window=_blank].
+endif::[]
+
+endif::free-trial-feature[]
+
+////
+ifndef::free-trial-feature[]
+ifndef::pendo-links[]
+[#26-6-0-cl-deactivate]
+[discrete]
+=== Deactivate connections [.badge.badge-early-access]#Early Access#
+endif::[]
+ifdef::pendo-links[]
+[#26-6-0-cl-deactivate]
+[discrete]
+=== Deactivate connections [.badge.badge-early-access-whats-new]#Early Access#
+endif::[]
+
+// Rani – jira: SCAL-294844. docs jira: SCAL-294845
+// PM: Prayansh
+
+endif::free-trial-feature[]
+////
+
+
+'''
+=== Previous releases
+
+[%collapsible]
+.26.5.0.cl
+====
+--
+include::partial$whats-new-26-5-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.26.4.0.cl
+====
+--
+include::partial$whats-new-26-4-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.26.3.0.cl
+====
+--
+include::partial$whats-new-26-3-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.26.2.0.cl
+====
+--
+include::partial$whats-new-26-2-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.15.0.cl
+====
+--
+include::partial$whats-new-10-15-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.14.0.cl
+====
+--
+include::partial$whats-new-10-14-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.13.0.cl
+====
+--
+include::partial$whats-new-10-13-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.12.0.cl
+====
+--
+include::partial$whats-new-10-12-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.11.0.cl
+====
+--
+include::partial$whats-new-10-11-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.10.0.cl
+====
+--
+include::partial$whats-new-10-10-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.9.0.cl
+====
+--
+include::partial$whats-new-10-9-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.8.0.cl
+====
+--
+include::partial$whats-new-10-8-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.6.0.cl
+====
+--
+include::partial$whats-new-10-6-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.5.0.cl
+====
+--
+include::partial$whats-new-10-5-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.4.0.cl
+====
+--
+include::partial$whats-new-10-4-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.3.0.cl
+====
+--
+include::partial$whats-new-10-3-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.1.0.cl
+====
+--
+include::partial$whats-new-10-1-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.10.0.0.cl
+====
+--
+include::partial$whats-new-10-0-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.12.5.cl
+====
+--
+include::partial$whats-new-9-12-5-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.12.0.cl
+====
+--
+include::partial$whats-new-9-12-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.10.5.cl
+====
+--
+include::partial$whats-new-9-10-5-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.10.0.cl
+====
+--
+include::partial$whats-new-9-10-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.8.0.cl
+====
+--
+include::partial$whats-new-9-8-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.7.0.cl
+====
+--
+include::partial$whats-new-9-7-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.6.0.cl
+====
+--
+include::partial$whats-new-9-6-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.5.0.cl
+====
+--
+include::partial$whats-new-9-5-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.4.0.cl
+====
+--
+include::partial$whats-new-9-4-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.3.0.cl
+====
+--
+include::partial$whats-new-9-3-0-cl.adoc[]
+--
+====
+
+
+[%collapsible]
+.9.2.0.cl
+====
+--
+include::partial$whats-new-9-2-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.9.0.0.cl
+====
+--
+include::partial$whats-new-9-0-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.10.0.cl
+====
+--
+include::partial$whats-new-8-10-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.9.0.cl
+====
+--
+include::partial$whats-new-8-9-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.8.0.cl
+====
+--
+include::partial$whats-new-8-8-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.7.0.cl
+====
+--
+include::partial$whats-new-8-7-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.6.0.cl
+====
+--
+include::partial$whats-new-8-6-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.5.0.cl
+====
+--
+include::partial$whats-new-8-5-0-cl.adoc[]
+--
+====
+
+[%collapsible]
+.8.4.0.cl
+====
+--
+include::partial$whats-new-8-4-0-cl.adoc[]
+--
+====
+[%collapsible]
+.8.3.0.cl
+====
+--
+include::partial$whats-new-8-3-0-cl.adoc[]
+--
+====
+[%collapsible]
+.8.2.0.cl
+====
+--
+include::partial$whats-new-8-2-0-cl.adoc[]
+--
+====
+[%collapsible]
+.8.1.0.cl
+====
+--
+include::partial$whats-new-8-1-0-cl.adoc[]
+--
+====
+'''
+

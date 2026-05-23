@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+{{> head defaultPageTitle='Untitled'}}
+  </head>
+  <body class="article snippet">
+<main class="snippet-main">
+  <div class="content">
+    <article class="doc">
+{{#with page.title}}
+<h1 class="page">{{{this}}}</h1>
+{{/with}}
+{{{page.contents}}}
+    </article>
+  </div>
+</main>
+{{> footer-scripts}}
+  </body>
+</html>

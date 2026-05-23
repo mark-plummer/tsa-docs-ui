@@ -75,6 +75,11 @@ Description for card 4.
 --
 
 
+image::spotter-answer3.png[]
+
+
+Click on this: image:spotter-approve-mapping-grey.png[]
+
 
 
 
@@ -103,6 +108,64 @@ E = mc^2^.
 *Alphabet* *алфавит* _алфавит_ *_алфавит_*.
 Eum an doctus <<liber-recusabo,maiestatis efficiantur>>.
 Eu mea inani iriure.footnote:[Quisque porta facilisis tortor, vitae bibendum velit fringilla vitae! Lorem ipsum dolor sit amet, consectetur adipiscing elit.]
+
+== Administrator capabilities by edition
+
+[cols="30%,10%,10%,10%,10%" stripes="even"]
+|===
+.^|Capability ^.^|Team ^.^|Essentials ^.^|Pro ^.^|Enterprise
+
+|Org creation and management
+^.^|
+^.^|
+^.^|
+^.^|image:checkmark_black.svg[Yes,15]
+
+|User management
+^.^|{set:cellbgcolor:#FFFFF}image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+
+|Group management
+^.^|
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+
+|Role management (RBAC)
+^.^|
+^.^|
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+
+|SAML authentication
+^.^|
+^.^|
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+
+|System Liveboards
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+
+|Developer privileges*
+^.^|
+^.^|
+^.^|image:checkmark_black.svg[Yes,15] *#*
+^.^|image:checkmark_black.svg[Yes,15]
+
+|Style customization*
+^.^|
+^.^|
+^.^|image:checkmark_black.svg[Yes,15]
+^.^|image:checkmark_black.svg[Yes,15]
+|===
++*+ _Requires license for ThoughtSpot Embedded or internal analytics add-on._
+
++#+ _Requires license for ThoughtSpot Embedded or internal analytics add-on. Not available for multi-tenant editions._
 
 [,json]
 ----

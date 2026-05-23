@@ -1,0 +1,33 @@
+/* Snippet layout — no navbar, no nav, white background, light mode only */
+
+body.snippet {
+  background: #fff;
+  color: #191919;
+  padding-top: 0;
+}
+
+body.snippet .snippet-main {
+  padding: 0rem 0.3rem 0.3rem;
+  margin-top: -4px;
+  width: 100%;
+}
+
+body.snippet .snippet-main > .content {
+  display: block;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.snippet .doc {
+  max-width: 100%;
+  margin: 0;
+  font-size: 15px;
+  color: #191919;
+}
+
+body.snippet .doc h1.page {
+  margin-top: 0;
+}
