@@ -320,6 +320,19 @@
   border-width: 1px 0;
 }
 
+.doc table.tableblock thead th {
+  border-bottom: 2.5px solid #e1e1e1 !important;
+  font-size: 16px;
+}
+
+.doc table.tableblock {
+  border-width: 0 !important;
+}
+
+.doc table.tableblock > * > tr > * {
+  border-bottom: 1px solid #cecece !important;
+}
+
 .doc table.grid-all > thead th,
 .doc table.grid-rows > thead th {
   border-bottom-width: 2.5px;
@@ -1775,4 +1788,22 @@
 [data-theme="dark"] .doc .admonitionblock.announce td.content p,
 [data-theme="dark"] .doc .openblock.announce-box p {
   color: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc table.tableblock thead th {
+    border-bottom-color: #555 !important;
+  }
+
+  :root:not([data-theme="light"]) .doc table.tableblock > * > tr > * {
+    border-bottom-color: #3d3d3d !important;
+  }
+}
+
+[data-theme="dark"] .doc table.tableblock thead th {
+  border-bottom-color: #555 !important;
+}
+
+[data-theme="dark"] .doc table.tableblock > * > tr > * {
+  border-bottom-color: #3d3d3d !important;
 }

@@ -110,7 +110,7 @@
   --quote-attribution-font-color: var(--color-gray-40);
   --sidebar-background: var(--color-smoke-90);
   --table-border-color: var(--panel-border-color);
-  --table-stripe-background: var(--panel-background);
+  --table-stripe-background: #ebebeb;
   --table-footer-background: linear-gradient(to bottom, var(--color-smoke-70) 0%, var(--color-white) 100%);
   /* toc */
   --toc-font-color: var(--nav-muted-color);
@@ -216,7 +216,7 @@
     --quote-attribution-font-color: #666;
     --sidebar-background: #2d2d2d;
     --table-border-color: #3d3d3d;
-    --table-stripe-background: #2d2d2d;
+    --table-stripe-background: rgba(255, 255, 255, 0.04);
     --table-footer-background: linear-gradient(to bottom, #2d2d2d 0%, #1e1e1e 100%);
     --toc-font-color: #888;
     --toc-heading-font-color: #c8c8c8;
@@ -286,7 +286,7 @@
   --quote-attribution-font-color: #666;
   --sidebar-background: #2d2d2d;
   --table-border-color: #3d3d3d;
-  --table-stripe-background: #252525;
+  --table-stripe-background: rgba(255, 255, 255, 0.04);
   --table-footer-background: linear-gradient(to bottom, #2d2d2d 0%, #1e1e1e 100%);
   --toc-font-color: #888;
   --toc-heading-font-color: #c8c8c8;
