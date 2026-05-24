@@ -7,7 +7,7 @@ body.snippet {
 }
 
 body.snippet .snippet-main {
-  padding: 0rem 0.3rem 0.3rem;
+  padding: 0 0.3rem 0.3rem;
   margin-top: -4px;
   width: 100%;
 }
@@ -30,4 +30,8 @@ body.snippet .doc {
 
 body.snippet .doc h1.page {
   margin-top: 0;
+}
+
+body.snippet .doc h3 {
+  font-size: 17px;
 }
