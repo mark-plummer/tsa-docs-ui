@@ -2660,3 +2660,63 @@ td {
 }
 
 /* Release notes styles - end */
+
+body.home-branch .doc h3.discrete {
+  font-size: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) body.home-branch .border,
+  :root:not([data-theme="light"]) body.home-branch .bordered {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+[data-theme="dark"] body.home-branch .border,
+[data-theme="dark"] body.home-branch .bordered {
+  border: none;
+  box-shadow: none;
+}
+
+/* Tabs: underline style (Pinecone-inspired) - start */
+
+.tablist > ul {
+  border-bottom: 1px solid var(--panel-border-color);
+  gap: 0;
+}
+
+.tablist > ul li {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid transparent !important;
+  color: var(--nav-muted-color);
+  font-weight: 500;
+  padding: 0.5em 1em;
+  margin-bottom: -1px;
+}
+
+.tabs:not(.is-loading) .tablist li.is-selected,
+.tabs.is-loading .tablist li:first-child {
+  background-color: transparent !important;
+  border-bottom: 2px solid var(--link-font-color) !important;
+  color: var(--body-font-color) !important;
+}
+
+.tabs.is-loading .tablist li:not(:first-child),
+.tabs:not(.is-loading) .tablist li:not(.is-selected) {
+  background-color: transparent !important;
+}
+
+.tabs .tablist li::after {
+  display: none;
+}
+
+.tabpanel {
+  background-color: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  padding: 1.25em 0;
+}
+
+/* Tabs: underline style (Pinecone-inspired) - end */

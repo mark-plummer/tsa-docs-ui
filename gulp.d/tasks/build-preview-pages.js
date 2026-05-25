@@ -1,6 +1,7 @@
 'use strict'
 
 const Asciidoctor = require('@asciidoctor/core')()
+require('@asciidoctor/tabs').register(Asciidoctor.Extensions)
 const fs = require('fs-extra')
 
 Asciidoctor.Extensions.register(function () {

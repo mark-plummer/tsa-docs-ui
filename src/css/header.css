@@ -297,7 +297,11 @@ body {
 
 @media screen and (max-width: 1023.5px) {
   :root {
-    --navbar-height: 6.5rem;
+    --navbar-height: 7rem;
+  }
+
+  body {
+    padding-top: 7rem;
   }
 
   .navbar {

@@ -9,11 +9,12 @@ Author Name
 :page-pagination:
 :description: A "preview" site for the UI.
 
-xref:home.adoc[]
+
 
 [.lead]
-
 This is it!
+
+xref:home.adoc[]
 
 [.card-link]
 --
@@ -71,12 +72,94 @@ Description for card 3.
 
 Description for card 4.
 ====
-
 --
 
+#Last updated#: {page-last_updated}
+
+ThoughtSpot Cloud™ is our hosted and managed Software as a Service (SaaS) offering. ThoughtSpot Cloud is available on xref:ts-cloud-requirements-support.adoc#aws[Amazon Web Services (AWS)] and xref:ts-cloud-requirements-support.adoc#gcp[Google Cloud Platform (GCP)]. Customers can choose the cloud and region where they would like their ThoughtSpot Cloud service deployed.
+
+ThoughtSpot Cloud offers multiple advantages over deployment form factors that you have to manage and maintain within your own organization.
+
+Find topics for the common types of ThoughtSpot users.
+
+[tabs]
+====
+Tab A::
++
+--
+Content for tab A.
+--
+
+Tab B::
++
+--
+Content for tab B.
+--
+====
+
+
+[tabs]
+====
+Tab A:: Contents of Tab A.
+
+Tab B::
++
+Contents of Tab B.
+
+Tab C::
++
+--
+Contents of Tab C.
+
+Contains more than one block.
+--
+====
+
+
+[.card-link-grid]
+****
+[.card-link]
+--
+xref:coming-soon.adoc[Coming soon!]
+
+Description text here.
+--
+
+[.card-link]
+--
+[.light-only]
+image::Spotter.svg[Icon,36,36]
+[.dark-only]
+image::Spotter_Dark.svg[Icon,36,36]
+
+xref:spotter.adoc[Spotter]
+
+Your personal AI analyst, delivering business-ready insights with enterprise-grade trust. Learn how to deploy, coach and use Spotter.
+--
+
+[.card-link]
+--
+link:page.html[Another Card]
+
+Description text here.
+--
+
+[.card-link]
+--
+link:page.html[Another Card]
+
+Description text here.
+--
+
+[.card-link]
+--
+link:page.html[Another Card]
+
+Description text here.
+--
+****
 
 image::spotter-answer3.png[]
-
 
 Click on this: image:spotter-approve-mapping-grey.png[]
 
@@ -117,6 +200,23 @@ Click on this: image:spotter-approve-mapping-grey.png[]
 |ThoughtSpot ensures high availability and security with proactive monitoring and monthly updates.
 |===
 
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../../../test/test-utils')
+----
+****
+
+[sidebar]
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
 
 [.float-group]
 --

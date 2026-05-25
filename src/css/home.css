@@ -97,7 +97,9 @@ body.home .navbar::after {
 
 @media (max-width: 1023px) {
   body.home {
-    --body-top: 3.5rem;
+    --body-top: var(--navbar-height);
+
+    padding-top: 0;
   }
 
   .openblock.tt1-wrapper,

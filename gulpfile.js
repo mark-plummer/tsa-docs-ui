@@ -102,7 +102,7 @@ const previewBuildTask = createTask({
 
 const previewServeTask = createTask({
   name: 'preview:serve',
-  call: task.serve(previewDestDir, serverConfig, () => watch(glob.all, previewBuildTask)),
+  call: task.serve(previewDestDir, serverConfig, () => watch(glob.all, { delay: 2000 }, previewBuildTask)),
 })
 
 const previewTask = createTask({
