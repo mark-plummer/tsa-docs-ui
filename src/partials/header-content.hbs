@@ -23,15 +23,25 @@
         <div class="mobile-section-dropdown">
           <button class="mobile-section-toggle" aria-expanded="false">{{#if (eq page.layout 'home')}}Home{{else}}{{page.component.title}}{{/if}}</button>
           <div class="mobile-section-menu">
-            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
-            {{#if (eq @root.page.layout 'home')}}
+            {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3'))}}
+            <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
             <a class="mobile-section-link" href="{{{site.url}}}/software/latest">Software</a>
-            {{else}}
-            {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
-            <a class="mobile-section-link is-current" href="{{{./url}}}">{{./title}}</a>
-            {{/if}}{{/each}}
-            {{/if}}
             <a class="mobile-section-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+            {{else if (or (eq @root.page.layout 'default-mobile') (eq @root.page.layout 'home-branch-mobile'))}}
+            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+            <a class="mobile-section-link" href="{{{site.url}}}/software/latest">Software</a>
+            <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Mobile</a>
+            {{else if (eq @root.page.layout 'home')}}
+            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+            <a class="mobile-section-link" href="{{{site.url}}}/software/latest">Software</a>
+            <a class="mobile-section-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+            {{else}}
+            <a class="mobile-section-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+            {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
+            <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
+            {{/if}}{{/each}}
+            <a class="mobile-section-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+            {{/if}}
             <a class="mobile-section-link" href="https://developers.thoughtspot.com/docs">Developer</a>
           </div>
         </div>

@@ -1613,6 +1613,7 @@
 .doc .exampleblock.card-link > .content:hover::after {
   opacity: 1;
   animation: card-link-arrow 0.3s ease-out forwards;
+  background-color: #3d2894;
 }
 
 @keyframes card-link-arrow {
@@ -1623,7 +1624,29 @@
 .doc .openblock.card-link > .content:hover,
 .doc .exampleblock.card-link > .content:hover {
   background: var(--color-smoke-70);
-  border-color: var(--panel-border-color);
+  border-color: #3d2894;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.card-link > .content:hover,
+  :root:not([data-theme="light"]) .doc .exampleblock.card-link > .content:hover {
+    border-color: #9fe9ff;
+  }
+
+  :root:not([data-theme="light"]) .doc .openblock.card-link > .content:hover::after,
+  :root:not([data-theme="light"]) .doc .exampleblock.card-link > .content:hover::after {
+    background-color: #9fe9ff;
+  }
+}
+
+[data-theme="dark"] .doc .openblock.card-link > .content:hover,
+[data-theme="dark"] .doc .exampleblock.card-link > .content:hover {
+  border-color: #9fe9ff;
+}
+
+[data-theme="dark"] .doc .openblock.card-link > .content:hover::after,
+[data-theme="dark"] .doc .exampleblock.card-link > .content:hover::after {
+  background-color: #9fe9ff;
 }
 
 .doc .openblock.card-link .content > .imageblock:first-child,
