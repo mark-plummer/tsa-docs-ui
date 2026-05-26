@@ -20,12 +20,18 @@
 
   var currentPageItem = menuPanel.querySelector('.is-current-page')
   var originalPageItem = currentPageItem
+  nav.classList.add('is-initializing')
   if (currentPageItem) {
     activateCurrentPath(currentPageItem)
     scrollItemToMidpoint(menuPanel, currentPageItem.querySelector('.nav-link'))
   } else {
     menuPanel.scrollTop = 0
   }
+  window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(function () {
+      nav.classList.remove('is-initializing')
+    })
+  })
 
   find(menuPanel, '.nav-item-toggle').forEach(function (btn) {
     var li = btn.parentElement
@@ -38,8 +44,11 @@
     var navLink = li.querySelector(':scope > .nav-link')
     if (navLink) {
       navLink.addEventListener('click', function (e) {
-        e.preventDefault()
-        toggleActive.call(li)
+        var href = navLink.getAttribute('href')
+        if (!href || href.charAt(0) === '#') {
+          e.preventDefault()
+          toggleActive.call(li)
+        }
       })
     }
   })

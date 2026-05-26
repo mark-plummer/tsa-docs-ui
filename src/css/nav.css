@@ -285,6 +285,11 @@
   font-weight: var(--body-font-weight-bold);
 }
 
+/* suppress chevron animation during initial page-load nav setup */
+.nav.is-initializing .nav-item-toggle {
+  transition: none;
+}
+
 /* toggle button — right-side chevron, rotates 90° when expanded */
 .nav-item-toggle {
   background: transparent url(../img/chevron-right.svg) no-repeat center / 55%;
