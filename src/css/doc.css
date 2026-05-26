@@ -176,7 +176,7 @@
 
 .doc .paragraph.lead > p {
   font-size: 16px;
-  color: #808080;
+  color: var(--doc-font-color);
   margin-top: -20px;
 }
 
