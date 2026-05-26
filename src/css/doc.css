@@ -1639,11 +1639,6 @@
   }
 }
 
-[data-theme="dark"] .doc .openblock.card-link > .content:hover,
-[data-theme="dark"] .doc .exampleblock.card-link > .content:hover {
-  border-color: #9fe9ff;
-}
-
 [data-theme="dark"] .doc .openblock.card-link > .content:hover::after,
 [data-theme="dark"] .doc .exampleblock.card-link > .content:hover::after {
   background-color: #9fe9ff;
@@ -1763,6 +1758,7 @@
 [data-theme="dark"] .doc .openblock.card-link > .content:hover,
 [data-theme="dark"] .doc .exampleblock.card-link > .content:hover {
   background: #122246;
+  border-color: #9fe9ff;
 }
 
 [data-theme="dark"] .doc .openblock.card-link .content > .paragraph + .paragraph,
