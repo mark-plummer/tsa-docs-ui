@@ -210,6 +210,40 @@ Learn how to deploy, coach and use Spotter.
 --
 ****
 
+[.card-link-grid-2]
+****
+[.card-link]
+--
+xref:page.adoc[Card title]
+
+Description text.
+--
+
+[.card-link]
+--
+xref:page.adoc[Card title]
+
+Description text.
+--
+****
+
+[.card-link-grid-2]
+****
+[.card-link]
+--
+xref:page.adoc[Card title]
+
+Description text.
+--
+
+[.card-link]
+--
+xref:page.adoc[Card title]
+
+Description text.
+--
+****
+
 
 image::spotter-answer3.png[]
 

@@ -1965,6 +1965,57 @@
   margin: 0;
 }
 
+/* card-link-grid-2 role: 2-column fixed grid */
+.doc .openblock.card-link-grid-2,
+.doc .exampleblock.card-link-grid-2,
+.doc .sidebarblock.card-link-grid-2 {
+  margin-top: 1.75rem;
+}
+
+.doc .sidebarblock.card-link-grid-2 {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.doc .exampleblock.card-link-grid-2 > .content {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.doc .openblock.card-link-grid-2 > .content,
+.doc .exampleblock.card-link-grid-2 > .content,
+.doc .sidebarblock.card-link-grid-2 > .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (max-width: 599.5px) {
+  .doc .openblock.card-link-grid-2 > .content,
+  .doc .exampleblock.card-link-grid-2 > .content,
+  .doc .sidebarblock.card-link-grid-2 > .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doc .openblock.card-link-grid-2 > .content > .openblock.card-link,
+.doc .openblock.card-link-grid-2 > .content > .exampleblock.card-link,
+.doc .openblock.card-link-grid-2 > .content > .openblock.card-link-ext,
+.doc .openblock.card-link-grid-2 > .content > .exampleblock.card-link-ext,
+.doc .exampleblock.card-link-grid-2 > .content > .openblock.card-link,
+.doc .exampleblock.card-link-grid-2 > .content > .exampleblock.card-link,
+.doc .exampleblock.card-link-grid-2 > .content > .openblock.card-link-ext,
+.doc .exampleblock.card-link-grid-2 > .content > .exampleblock.card-link-ext,
+.doc .sidebarblock.card-link-grid-2 > .content > .openblock.card-link,
+.doc .sidebarblock.card-link-grid-2 > .content > .exampleblock.card-link,
+.doc .sidebarblock.card-link-grid-2 > .content > .openblock.card-link-ext,
+.doc .sidebarblock.card-link-grid-2 > .content > .exampleblock.card-link-ext {
+  margin: 0;
+}
+
 /* card-link-grid-4 role: 4-column fixed grid for home-branch full-width layouts */
 .doc .openblock.card-link-grid-4,
 .doc .exampleblock.card-link-grid-4,
