@@ -16,6 +16,44 @@ This is it!
 
 xref:home.adoc[]
 
+[.card-link-grid-4]
+****
+[.card-link]
+--
+image::spotteragent.svg[Icon,36,36]
+
+xref:Spotter.adoc[Spotter]
+
+Your AI-powered analyst.
+--
+
+[.card-link]
+--
+image::spottermodel.svg[Icon,36,36]
+xref:page.adoc[SpotterModel]
+
+Turn raw data into models in minutes.
+--
+
+[.card-link]
+--
+image::spotterviz.svg[Icon,36,36]
+
+xref:page.adoc[SpotterViz]
+
+Plan your story and build a Liveboard automatically.
+--
+
+[.card-link-ext]
+--
+image::spottercode.svg[Icon,36,36]
+
+xref:page.adoc[SpotterCode]
+
+AI-assisted coding right in your IDE.
+--
+****
+
 SPOTTER: Spotter 3 is now GA!
 
 [.card-link]
@@ -76,6 +114,7 @@ Description for card 4.
 ====
 --
 
+
 #Last updated#: {page-last_updated}
 
 ThoughtSpot Cloud™ is our hosted and managed Software as a Service (SaaS) offering. ThoughtSpot Cloud is available on xref:ts-cloud-requirements-support.adoc#aws[Amazon Web Services (AWS)] and xref:ts-cloud-requirements-support.adoc#gcp[Google Cloud Platform (GCP)]. Customers can choose the cloud and region where they would like their ThoughtSpot Cloud service deployed.
@@ -122,9 +161,40 @@ Contains more than one block.
 ****
 [.card-link]
 --
-xref:coming-soon.adoc[Coming soon!]
+image::spotteragent.svg[Icon,36,36]
 
-Description text here.
+xref:Spotter.adoc[Spotter]
+
+Learn how to deploy, coach and use Spotter.
+--
+
+[.card-link]
+--
+
+image::spottermodel.svg[Icon,36,36]
+
+link:page.html[SpotterModel]
+
+Turn raw data into models in minutes.
+--
+
+[.card-link]
+--
+
+image::spotterviz.svg[Icon,36,36]
+
+link:page.html[SpotterViz]
+
+Plan your story and build a Liveboard automatically.
+--
+
+[.card-link-ext]
+--
+image::spottercode.svg[Icon,36,36]
+
+xref:spotter.adoc[SpotterCode]
+
+AI-assisted coding right in your IDE.
 --
 
 [.card-link]
@@ -136,30 +206,10 @@ image::Spotter_Dark.svg[Icon,36,36]
 
 xref:spotter.adoc[Spotter]
 
-Your personal AI analyst, delivering business-ready insights with enterprise-grade trust. Learn how to deploy, coach and use Spotter.
---
-
-[.card-link]
---
-link:page.html[Another Card]
-
-Description text here.
---
-
-[.card-link]
---
-link:page.html[Another Card]
-
-Description text here.
---
-
-[.card-link]
---
-link:page.html[Another Card]
-
-Description text here.
+Learn how to deploy, coach and use Spotter.
 --
 ****
+
 
 image::spotter-answer3.png[]
 
