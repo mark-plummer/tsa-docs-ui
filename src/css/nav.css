@@ -92,7 +92,7 @@
 
 .nav-menu {
   min-height: 100%;
-  padding: 0.125rem 0.875rem 1.5rem;
+  padding: calc(0.125rem + 10px) 0.875rem 1.5rem;
   line-height: var(--nav-line-height);
   position: relative;
   padding-left: 2.5rem;
