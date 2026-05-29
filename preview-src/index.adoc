@@ -16,6 +16,8 @@ This is it!
 
 xref:home.adoc[]
 
+SPOTTER: Spotter 3 is now GA!
+
 [.card-link]
 --
 link:/path/to/page[Responses API]

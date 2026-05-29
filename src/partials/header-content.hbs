@@ -66,6 +66,18 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
+{{#if page.versions}}
+        <div class="navbar-item page-versions">
+          <div class="page-versions-inner">
+            <button class="version-menu-toggle" title="Show other versions of page">{{page.componentVersion.displayVersion}}</button>
+            <div class="version-menu">
+              {{#each page.versions}}
+              <a class="version{{~#if (eq ./version @root.page.version)}} is-current{{/if~}}{{~#if ./missing}} is-missing{{/if}}" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+              {{/each}}
+            </div>
+          </div>
+        </div>
+{{/if}}
 <div class="navbar-item">
           <button class="theme-toggle" aria-label="Toggle dark mode">
             <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
