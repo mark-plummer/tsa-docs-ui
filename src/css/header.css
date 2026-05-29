@@ -24,6 +24,10 @@ body {
   text-decoration: none;
 }
 
+.navbar-search-wrapper .algolia_search_wrapper {
+  width: 600px;
+}
+
 .navbar-brand {
   display: flex;
   flex: auto;
@@ -48,6 +52,12 @@ body {
   max-width: none;
   display: block;
   filter: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 90%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

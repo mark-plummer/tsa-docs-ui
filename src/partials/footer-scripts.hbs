@@ -2,6 +2,107 @@
 <script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
 <script src="{{{uiRootPath}}}/js/vendor/tabs.js"></script>
 <script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
+
+<script>
+    document.body.classList.add('algolia_docs');
+
+    async function initializeAlgolia() {
+        const deployment = 'software'
+        const version = '26.3.0.sw'
+        let filters = { docs: {} }
+
+        if (deployment) {
+            filters.docs.deployment = deployment
+        }
+
+        if (version) {
+            filters.docs.version = version
+        }
+
+        const fullScreenSearchWrapper = document.createElement('div')
+        const fullScreenSearchContainer = document.createElement('div')
+        fullScreenSearchWrapper.classList.add('full_screen_search_wrapper')
+        fullScreenSearchWrapper.style.display = 'none'
+        fullScreenSearchContainer.classList.add('full_screen_search')
+        fullScreenSearchContainer.classList.add('algolia_search_wrapper')
+        document.body.appendChild(fullScreenSearchWrapper)
+        fullScreenSearchWrapper.appendChild(fullScreenSearchContainer)
+
+
+        function themeFunction(algoliaSearchWrapper) {
+            const html = document.documentElement;
+            function onThemeChange(theme) {
+                theme = theme == 'dark' ? 'theme_docs_dark' : 'theme_docs_light';
+                algoliaSearchWrapper.classList.remove('theme_docs_light', 'theme_docs_dark');
+                algoliaSearchWrapper.classList.add(theme);
+                console.log('data-theme is now:', theme);
+            }
+            onThemeChange(html.getAttribute('data-theme'));
+            const observer = new MutationObserver((mutations) => {
+                for (const mutation of mutations) {
+                    if (
+                        mutation.type === 'attributes' &&
+                        mutation.attributeName === 'data-theme'
+                    ) {
+                        onThemeChange(html.getAttribute('data-theme'));
+                    }
+                }
+            });
+            observer.observe(html, {
+                attributes: true,
+                attributeFilter: ['data-theme'], // only this attribute
+            });
+        }
+
+        const fullScreenAlgoliaSearch = await new window.AlgoliaSearchComponent(fullScreenSearchContainer, {
+            inline: false,
+            firstResults: 'docs',
+            theme: themeFunction,
+            onCloseButton: () => {
+                fullScreenSearchWrapper.style.display = 'none'
+                document.body.classList.remove('full_screen_search_open')
+            }
+        });
+
+        const algoliaSearch = await window.AlgoliaSearchComponent(document.getElementById('algolia-search'), {
+            inline: true,
+            firstResults: 'docs',
+            placeholderText: 'Search...',
+            theme: themeFunction,
+            addClass: 'algolia_docs header_algolia_search inline',
+            viewMoreFunction: (section, searchValue, instance) => {
+                fullScreenSearchWrapper.style.display = 'block';
+                fullScreenAlgoliaSearch.setQuery(searchValue)
+                fullScreenAlgoliaSearch.viewMoreFilter(section)
+                document.body.classList.add('full_screen_search_open')
+                // instance.api.closeSearchResults()
+
+                // Key is refinement list class name. Value is value of element to click
+                fullScreenAlgoliaSearch.selectFilters({
+                    deployment: filters?.docs?.deployment,
+                    docs_version: filters?.docs?.version
+                })
+                    fullScreenAlgoliaSearch.focusSearchInput()
+            }
+        });
+    }
+
+    if (!window.loadedLocalScript && window.location.search.indexOf('use_local_script=1') > -1) {
+        console.log('loading_local_script')
+        window.loadedLocalScript = true
+        const localScript = document.createElement('script')
+        localScript.src = 'https://thoughtspotscripts.ngrok.io/public/algolia/dist/algolia_search.bundled.js'
+        localScript.onload = initializeAlgolia
+        document.body.appendChild(localScript)
+    } else {
+        const algoliaScript = document.createElement('script')
+        algoliaScript.src = 'https://scripts.thoughtspot.com/algolia_search.bundled.docs.js'
+        algoliaScript.onload = initializeAlgolia
+        document.body.appendChild(algoliaScript)
+    }
+</script>
+
+
 {{#if env.SITE_SEARCH_PROVIDER}}
 {{> search-scripts}}
 {{/if}}

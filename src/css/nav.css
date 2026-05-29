@@ -95,7 +95,12 @@
   padding: calc(0.125rem + 10px) 0.875rem 1.5rem;
   line-height: var(--nav-line-height);
   position: relative;
-  padding-left: 2.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-menu {
+    padding-left: 2.5rem;
+  }
 }
 
 .nav-menu-toggle {
