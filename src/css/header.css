@@ -645,6 +645,22 @@ html.is-clipped--nav .mobile-section-dropdown {
   opacity: 1;
 }
 
+.subnav-link-ext {
+  padding-right: 0.8rem;
+}
+
+.subnav-link-ext::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  right: 0.2rem;
+  width: 10px;
+  height: 10px;
+  background-color: currentColor;
+  -webkit-mask: url(../img/arrow-up-right.svg) no-repeat center / contain;
+  mask: url(../img/arrow-up-right.svg) no-repeat center / contain;
+}
+
 @media screen and (max-width: 1023.5px) {
   .navbar::before {
     content: " ";
