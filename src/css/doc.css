@@ -2079,6 +2079,40 @@
   margin: 0;
 }
 
+/* card-gradient-box role: rounded container with gradient border */
+.doc .openblock.card-gradient-box,
+.doc .exampleblock.card-gradient-box {
+  margin-top: 1.75rem;
+  padding: 2px;
+  border-radius: 1rem;
+  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+}
+
+.doc .openblock.card-gradient-box > .content,
+.doc .exampleblock.card-gradient-box > .content {
+  background: var(--body-background);
+  border-radius: calc(1rem - 2px);
+  border: none;
+  padding: 1.5rem;
+}
+
+.doc .openblock.card-gradient-box > .content > .openblock.card-link-grid-4,
+.doc .openblock.card-gradient-box > .content > .exampleblock.card-link-grid-4,
+.doc .openblock.card-gradient-box > .content > .sidebarblock.card-link-grid-4,
+.doc .exampleblock.card-gradient-box > .content > .openblock.card-link-grid-4,
+.doc .exampleblock.card-gradient-box > .content > .exampleblock.card-link-grid-4,
+.doc .exampleblock.card-gradient-box > .content > .sidebarblock.card-link-grid-4,
+.doc .openblock.card-gradient-box > .content > .openblock.card-link-grid-2,
+.doc .openblock.card-gradient-box > .content > .sidebarblock.card-link-grid-2,
+.doc .exampleblock.card-gradient-box > .content > .openblock.card-link-grid-2,
+.doc .exampleblock.card-gradient-box > .content > .sidebarblock.card-link-grid-2,
+.doc .openblock.card-gradient-box > .content > .openblock.card-link-grid,
+.doc .openblock.card-gradient-box > .content > .sidebarblock.card-link-grid,
+.doc .exampleblock.card-gradient-box > .content > .openblock.card-link-grid,
+.doc .exampleblock.card-gradient-box > .content > .sidebarblock.card-link-grid {
+  margin-top: 0;
+}
+
 /* card-box role: static styled box, no hover or link */
 .doc .openblock.card-box {
   margin: 1rem 0 0;

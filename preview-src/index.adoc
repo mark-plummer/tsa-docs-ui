@@ -16,6 +16,8 @@ This is it!
 
 xref:home.adoc[]
 
+[.card-gradient-box]
+====
 [.card-link-grid-4]
 ****
 [.card-link]
@@ -53,6 +55,7 @@ xref:page.adoc[SpotterCode]
 Build faster with AI-assisted coding in your IDE.
 --
 ****
+====
 
 SPOTTER: Spotter 3 is now GA!
 
