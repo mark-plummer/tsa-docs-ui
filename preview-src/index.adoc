@@ -24,7 +24,7 @@ image::spotteragent.svg[Icon,36,36]
 
 xref:Spotter.adoc[Spotter]
 
-Your AI-powered analyst.
+Ask questions, get instant answers from your data.
 --
 
 [.card-link]
@@ -50,7 +50,7 @@ image::spottercode.svg[Icon,36,36]
 
 xref:page.adoc[SpotterCode]
 
-AI-assisted coding right in your IDE.
+Build faster with AI-assisted coding in your IDE.
 --
 ****
 

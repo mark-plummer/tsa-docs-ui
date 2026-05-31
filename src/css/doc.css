@@ -1650,8 +1650,8 @@
   margin-bottom: 0.75rem;
 }
 
-.doc .openblock.card-link .content > .imageblock:first-child img,
-.doc .exampleblock.card-link .content > .imageblock:first-child img {
+.doc .openblock.card-link .content > .imageblock img,
+.doc .exampleblock.card-link .content > .imageblock img {
   display: block;
   width: 36px;
   height: 36px;
@@ -1682,7 +1682,9 @@
   }
 
   :root:not([data-theme="light"]) .doc .openblock.card-link .content > .imageblock.dark-only,
-  :root:not([data-theme="light"]) .doc .exampleblock.card-link .content > .imageblock.dark-only {
+  :root:not([data-theme="light"]) .doc .exampleblock.card-link .content > .imageblock.dark-only,
+  :root:not([data-theme="light"]) .doc .openblock.card-link-ext .content > .imageblock.dark-only,
+  :root:not([data-theme="light"]) .doc .exampleblock.card-link-ext .content > .imageblock.dark-only {
     margin-top: 0;
     margin-bottom: 0.75rem;
   }
@@ -1697,7 +1699,9 @@
 }
 
 [data-theme="dark"] .doc .openblock.card-link .content > .imageblock.dark-only,
-[data-theme="dark"] .doc .exampleblock.card-link .content > .imageblock.dark-only {
+[data-theme="dark"] .doc .exampleblock.card-link .content > .imageblock.dark-only,
+[data-theme="dark"] .doc .openblock.card-link-ext .content > .imageblock.dark-only,
+[data-theme="dark"] .doc .exampleblock.card-link-ext .content > .imageblock.dark-only {
   margin-top: 0;
   margin-bottom: 0.75rem;
 }
@@ -1847,8 +1851,8 @@
   margin-bottom: 0.75rem;
 }
 
-.doc .openblock.card-link-ext .content > .imageblock:first-child img,
-.doc .exampleblock.card-link-ext .content > .imageblock:first-child img {
+.doc .openblock.card-link-ext .content > .imageblock img,
+.doc .exampleblock.card-link-ext .content > .imageblock img {
   display: block;
   width: 36px;
   height: 36px;
