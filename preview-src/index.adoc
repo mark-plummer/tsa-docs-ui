@@ -4,7 +4,7 @@ Author Name
 :idseparator: -
 :!example-caption:
 :!table-caption:
-:page-layout: default-cloud
+:page-layout: home-branch-cloud
 //:page-role: -toc
 :page-pagination:
 :description: A "preview" site for the UI.
@@ -18,6 +18,11 @@ xref:home.adoc[]
 
 [.card-gradient-box]
 ====
+[discrete]
+== Spotter agents
+
+Automate key parts of your analytics workflow—from exploring and analyzing data to building visualizations and modeling your data. Each Spotter agent is built for a specific task, so you can move faster from question to insight without manual steps slowing you down.
+
 [.card-link-grid-4]
 ****
 [.card-link]
@@ -26,7 +31,7 @@ image::spotteragent.svg[Icon,36,36]
 
 xref:Spotter.adoc[Spotter]
 
-Ask questions, get instant answers from your data.
+Discover insights from your data, just by asking.
 --
 
 [.card-link]
@@ -52,7 +57,8 @@ image::spottercode.svg[Icon,36,36]
 
 xref:page.adoc[SpotterCode]
 
-Build faster with AI-assisted coding in your IDE.
+Build with AI-assisted +
+coding in your IDE.
 --
 ****
 ====
