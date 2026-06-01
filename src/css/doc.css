@@ -2093,7 +2093,7 @@
   background: var(--body-background);
   border-radius: calc(1rem - 2px);
   border: none;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .doc .openblock.card-gradient-box > .content > .openblock.card-link-grid-4,
