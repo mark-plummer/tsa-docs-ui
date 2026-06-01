@@ -2090,7 +2090,7 @@
 
 .doc .openblock.card-gradient-box > .content,
 .doc .exampleblock.card-gradient-box > .content {
-  background: #EEF7FF;
+  background: #eef7ff;
   border-radius: calc(1rem - 2px);
   border: none;
   padding: 1rem;
@@ -2099,13 +2099,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .doc .openblock.card-gradient-box > .content,
   :root:not([data-theme="light"]) .doc .exampleblock.card-gradient-box > .content {
-    background: #1B3E61;
+    background: #1b3e61;
   }
 }
 
 [data-theme="dark"] .doc .openblock.card-gradient-box > .content,
 [data-theme="dark"] .doc .exampleblock.card-gradient-box > .content {
-  background: #1B3E61;
+  background: #1b3e61;
 }
 
 .doc .openblock.card-gradient-box > .content > .openblock.card-link-grid-4,
