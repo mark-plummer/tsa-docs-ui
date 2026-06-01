@@ -11,3 +11,52 @@
     console.log('callback - particles.js config loaded');
   });
 </script>
+<script
+  async
+  src="https://widget.kapa.ai/kapa-widget.bundle.js"
+  data-website-id="877f0138-e315-40d5-8ec0-6dc0db51387b"
+  data-project-name="ThoughtSpot"
+  data-project-color="#000000"
+  data-project-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZQUbVL5Pone33KK3D4r10e9VQmQoG4tWoQJFyPApGiuAU0llE4yie1pNkZkCC3VPfAM&usqp=CAU"
+  data-view-mode="sidebar"
+  data-modal-open-on-command-k="false"
+  data-modal-title="ThoughtSpot AI Assistant"
+  data-modal-example-questions-title="Try asking me..."
+  data-modal-example-questions="What is Search Assist in ThoughtSpot?,How do I log in to the Linux shell?"
+  data-modal-disclaimer="This AI assistant answers ThoughtSpot questions using your [documentation](https://docs.thoughtspot.com/home/) and [developer docs](https://developers.thoughtspot.com/docs/)."
+  data-user-analytics-fingerprint-enabled="true"
+  data-button-text-color="#000000"
+  data-launcher-button-hidden="true"
+  data-modal-override-open-id="ask-ai-input"
+  data-modal-override-open-class="ask-ai-btn"
+  <!-- data-modal-override-open-class="search-input" -->
+></script>
+<script>
+  (function () {
+    const navbarHeight = getComputedStyle(document.documentElement).getPropertyValue('--navbar-height').trim() || '3.5rem';
+    function applyKapaOffset (root) {
+      const shadow = root.shadowRoot;
+      if (!shadow) return;
+      let style = shadow.querySelector('#kapa-offset-style');
+      if (!style) {
+        style = document.createElement('style');
+        style.id = 'kapa-offset-style';
+        shadow.appendChild(style);
+      }
+      style.textContent = [
+        'div[data-kapa-ui="sidebar"],',
+        'div[class*="sidebar"],',
+        'div[class*="panel"],',
+        'div[class*="modal"] {',
+        '  top: ' + navbarHeight + ' !important;',
+        '  height: calc(100vh - ' + navbarHeight + ') !important;',
+        '}'
+      ].join('\n');
+    }
+    const observer = new MutationObserver(function () {
+      const root = document.getElementById('kapa-widget-container') || document.getElementById('kapa-widget-root');
+      if (root) applyKapaOffset(root);
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+  })();
+</script>

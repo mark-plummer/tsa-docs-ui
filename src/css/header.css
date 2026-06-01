@@ -740,3 +740,12 @@ html.is-clipped--nav .mobile-section-dropdown {
     opacity: 0.15;
   }
 }
+
+/* Kapa AI sidebar panel — offset below fixed navbar */
+#kapa-widget-root,
+#kapa-widget-container {
+  position: fixed !important;
+  top: var(--navbar-height) !important;
+  height: calc(100vh - var(--navbar-height)) !important;
+  z-index: 10 !important;
+}
