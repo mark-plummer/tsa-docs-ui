@@ -2249,25 +2249,35 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box {
+    background-color: rgba(252, 200, 56, 0.08);
+    border-color: #713f12;
+  }
+
   :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content h2,
   :root:not([data-theme="light"]) .doc .openblock.announce-box > .title {
-    color: #191919;
+    color: inherit;
   }
 
   :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content p,
   :root:not([data-theme="light"]) .doc .openblock.announce-box p {
-    color: #444;
+    color: inherit;
   }
+}
+
+[data-theme="dark"] .doc .openblock.announce-box {
+  background-color: rgba(252, 200, 56, 0.08);
+  border-color: #713f12;
 }
 
 [data-theme="dark"] .doc .admonitionblock.announce td.content h2,
 [data-theme="dark"] .doc .openblock.announce-box > .title {
-  color: #191919;
+  color: inherit;
 }
 
 [data-theme="dark"] .doc .admonitionblock.announce td.content p,
 [data-theme="dark"] .doc .openblock.announce-box p {
-  color: #444;
+  color: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

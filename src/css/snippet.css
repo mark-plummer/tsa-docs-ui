@@ -2470,6 +2470,7 @@ td {
 
 .doc .openblock.announce-box {
   background-color: #fff3e2;
+  border: 1px solid var(--panel-border-color);
   border-radius: 8px;
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin-top: 1rem;
@@ -2497,6 +2498,16 @@ td {
   background-image: url(../img/megaphone_ts.png);
   background-repeat: no-repeat;
   background-size: 30px 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box > .title::before {
+    background-image: url(../img/megaphone_ts-dark.png);
+  }
+}
+
+[data-theme="dark"] .doc .openblock.announce-box > .title::before {
+  background-image: url(../img/megaphone_ts-dark.png);
 }
 
 .doc .openblock.announce-box > .title::after {

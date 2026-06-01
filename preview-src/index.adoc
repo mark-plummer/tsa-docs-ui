@@ -14,6 +14,17 @@ Author Name
 [.lead]
 This is it!
 
+.ThoughtSpot Sage removal in 26.6.0.cl
+[.announce-box]
+--
+ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.
+
+All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.
+
+For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to Deprecated and removed features for details.
+--
+
+
 xref:home.adoc[]
 
 [.card-gradient-box]
