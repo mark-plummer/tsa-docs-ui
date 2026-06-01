@@ -31,32 +31,3 @@
   data-modal-override-open-class="ask-ai-btn"
   <!-- data-modal-override-open-class="search-input" -->
 ></script>
-<script>
-  (function () {
-    const navbarHeight = getComputedStyle(document.documentElement).getPropertyValue('--navbar-height').trim() || '3.5rem';
-    function applyKapaOffset (root) {
-      const shadow = root.shadowRoot;
-      if (!shadow) return;
-      let style = shadow.querySelector('#kapa-offset-style');
-      if (!style) {
-        style = document.createElement('style');
-        style.id = 'kapa-offset-style';
-        shadow.appendChild(style);
-      }
-      style.textContent = [
-        'div[data-kapa-ui="sidebar"],',
-        'div[class*="sidebar"],',
-        'div[class*="panel"],',
-        'div[class*="modal"] {',
-        '  top: ' + navbarHeight + ' !important;',
-        '  height: calc(100vh - ' + navbarHeight + ') !important;',
-        '}'
-      ].join('\n');
-    }
-    const observer = new MutationObserver(function () {
-      const root = document.getElementById('kapa-widget-container') || document.getElementById('kapa-widget-root');
-      if (root) applyKapaOffset(root);
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-  })();
-</script>
