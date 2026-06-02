@@ -7,8 +7,11 @@
     document.body.classList.add('algolia_docs');
 
     async function initializeAlgolia() {
-        const deployment = 'software'
-        const version = '26.3.0.sw'
+
+
+        const deployment = document.querySelector('.mobile-section-toggle').textContent.trim().toLowerCase()
+        const version = document.querySelector('.version-menu-toggle').textContent.trim()
+
         let filters = { docs: {} }
 
         if (deployment) {
@@ -35,7 +38,7 @@
                 theme = theme == 'dark' ? 'theme_docs_dark' : 'theme_docs_light';
                 algoliaSearchWrapper.classList.remove('theme_docs_light', 'theme_docs_dark');
                 algoliaSearchWrapper.classList.add(theme);
-                console.log('data-theme is now:', theme);
+                {{!-- console.log('data-theme is now:', theme); --}}
             }
             onThemeChange(html.getAttribute('data-theme'));
             const observer = new MutationObserver((mutations) => {
@@ -57,6 +60,8 @@
         const fullScreenAlgoliaSearch = await new window.AlgoliaSearchComponent(fullScreenSearchContainer, {
             inline: false,
             firstResults: 'docs',
+            //initialVersion: filters?.docs?.version,
+            //initialDeployment: filters?.docs?.deployment,
             theme: themeFunction,
             onCloseButton: () => {
                 fullScreenSearchWrapper.style.display = 'none'
@@ -78,11 +83,11 @@
                 // instance.api.closeSearchResults()
 
                 // Key is refinement list class name. Value is value of element to click
-                fullScreenAlgoliaSearch.selectFilters({
-                    deployment: filters?.docs?.deployment,
-                    docs_version: filters?.docs?.version
-                })
-                    fullScreenAlgoliaSearch.focusSearchInput()
+                // fullScreenAlgoliaSearch.selectFilters({
+                //     deployment: filters?.docs?.deployment,
+                //     docs_version: filters?.docs?.version
+                // })
+                fullScreenAlgoliaSearch.focusSearchInput()
             }
         });
     }
