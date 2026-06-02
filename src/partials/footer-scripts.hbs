@@ -75,6 +75,7 @@
             placeholderText: 'Search...',
             theme: themeFunction,
             addClass: 'algolia_docs header_algolia_search inline',
+            filters: filters,
             viewMoreFunction: (section, searchValue, instance) => {
                 fullScreenSearchWrapper.style.display = 'block';
                 fullScreenAlgoliaSearch.setQuery(searchValue)
