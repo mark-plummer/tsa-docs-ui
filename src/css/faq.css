@@ -1,7 +1,15 @@
 /* FAQ accordion — Apple-style */
+.faq {
+  margin-top: 1.5rem;
+}
+
 .faq .dlist dl {
   margin: 0;
   border-bottom: 1px solid #d2d2d7;
+}
+
+.faq .dlist dd + dt {
+  margin-top: 0;
 }
 
 .faq .dlist dt {
@@ -54,7 +62,7 @@
 
 .faq .dlist dd p {
   color: #6e6e73;
-  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-size: calc(16 / var(--rem-base) * 1rem);
   line-height: 1.6;
   margin-top: 0;
 }

@@ -15,7 +15,7 @@
 
       if (isOpen) {
         dd.style.maxHeight = dd.scrollHeight + 'px'
-        requestAnimationFrame(function () { dd.style.maxHeight = '0' })
+        window.requestAnimationFrame(function () { dd.style.maxHeight = '0' })
       } else {
         dd.style.maxHeight = dd.scrollHeight + 'px'
         dd.addEventListener('transitionend', function onEnd () {
