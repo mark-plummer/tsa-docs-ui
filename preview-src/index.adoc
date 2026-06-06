@@ -469,6 +469,22 @@ IMPORTANT: Don't forget this step!
 
 SPOTTER: New Spotter feature!! SpotterModel 2.0!!!
 
+== Frequently asked questions
+
+The are some of the most commonly asked questions.
+[.faq]
+--
+Where can I buy ThoughtSpot?::
+You can purchase ThoughtSpot directly from our website or through an authorized reseller.
+
+Can I try ThoughtSpot before I buy?::
+Yes, ThoughtSpot offers a free trial for 30 days, no credit card required.
+
+Can I buy ThoughtSpot before I try?::
+Yes, ThoughtSpot offers a free trial for 30 days, no credit card required.
+--
+
+
 
 === Steps
 
@@ -768,6 +784,26 @@ ____
 The fog comes
 on little cat feet.
 ____
+
+== Questions? Answers.
+
+[.faq]
+--
+Where can I buy ThoughtSpot?::
+You can purchase ThoughtSpot directly from our website or through an authorized reseller. Contact our sales team for pricing and licensing options.
+
+Can I try ThoughtSpot before I buy?::
+Yes, ThoughtSpot offers a free trial. Sign up on our website to get started with full access to the platform for 30 days, no credit card required.
+
+What cloud platforms does ThoughtSpot support?::
+ThoughtSpot Cloud is available on Amazon Web Services (AWS) and Google Cloud Platform (GCP). You can choose the cloud and region that best suits your needs.
+
+How does ThoughtSpot keep my data secure?::
+ThoughtSpot uses industry-standard AES-256 encryption for data at rest and TLS for data in transit. All backups are encrypted and access is controlled through role-based permissions.
+
+What support options are available?::
+ThoughtSpot offers multiple support tiers, including community forums, email support, and dedicated enterprise support with SLAs. All plans include access to our documentation and learning resources.
+--
 
 == Fin
 
