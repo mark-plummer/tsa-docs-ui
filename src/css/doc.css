@@ -63,7 +63,7 @@
 }
 
 .doc h2 {
-  font-size: 21px;
+  font-size: calc(24 / var(--rem-base) * 1rem);
 }
 
 .doc h2:not(.discrete) {
@@ -124,6 +124,15 @@
 .doc p,
 .doc dl {
   margin: 0;
+  font-size: calc(16 / var(--rem-base) * 1rem);
+}
+
+.doc .admonitionblock p,
+.doc .announce-box p,
+.doc .card-box p,
+.doc .card-link p,
+.doc .card-link-ext p,
+.doc table p {
   font-size: 14px;
 }
 
@@ -175,7 +184,7 @@
 }
 
 .doc .paragraph.lead > p {
-  font-size: 16px;
+  font-size: calc(18 / var(--rem-base) * 1rem);
   color: var(--doc-font-color);
   margin-top: -20px;
 }
@@ -1096,7 +1105,7 @@
 }
 
 .doc .olist.arabic > ol > li > .paragraph:first-child > p {
-  padding-top: calc((1.75rem - var(--doc-line-height) * 1em) / 2);
+  padding-top: 0;
 }
 
 .doc .olist.arabic > ol > li + li {
@@ -1115,7 +1124,7 @@
   content: counter(step-counter);
   position: absolute;
   left: 0;
-  top: -4.5px;
+  top: -2px;
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 50%;

@@ -20,10 +20,10 @@
   padding: 20px 0;
   border-top: 1px solid #d2d2d7;
   cursor: pointer;
-  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-size: calc(16 / var(--rem-base) * 1rem);
   font-weight: 600;
   font-style: normal;
-  color: #1d1d1f;
+  color: #4a4a4a;
   user-select: none;
   list-style: none;
 }
@@ -51,10 +51,6 @@
   transition: max-height 0.35s ease;
 }
 
-.faq .dlist dd > :first-child {
-  margin-top: 0;
-}
-
 .faq .dlist dd > :last-child {
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -62,7 +58,7 @@
 
 .faq .dlist dd p {
   color: #6e6e73;
-  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-size: calc(15 / var(--rem-base) * 1rem);
   line-height: 1.6;
   margin-top: 0;
 }

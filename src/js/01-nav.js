@@ -21,6 +21,19 @@
   var currentPageItem = menuPanel.querySelector('.is-current-page')
   var originalPageItem = currentPageItem
   nav.classList.add('is-initializing')
+
+  // Validate is-current-page against the actual URL and correct if needed.
+  // This handles cases where the nav is built with a hardcoded page URL that
+  // doesn't match the page being served (e.g. the UI preview server).
+  var currentFile = window.location.pathname.split('/').pop() || 'index.html'
+  var urlMatchedLink = menuPanel.querySelector('.nav-link[href="' + currentFile + '"]') ||
+    menuPanel.querySelector('.nav-link[href$="/' + currentFile + '"]')
+  if (urlMatchedLink && urlMatchedLink.parentElement !== currentPageItem) {
+    if (currentPageItem) currentPageItem.classList.remove('is-current-page')
+    currentPageItem = urlMatchedLink.parentElement
+    currentPageItem.classList.add('is-current-page')
+    originalPageItem = currentPageItem
+  }
   if (currentPageItem) {
     activateCurrentPath(currentPageItem)
     scrollItemToMidpoint(menuPanel, currentPageItem.querySelector('.nav-link'))
@@ -48,6 +61,9 @@
         if (!href || href.charAt(0) === '#') {
           e.preventDefault()
           toggleActive.call(li)
+        } else if (li.classList.contains('is-active') &&
+            (li.classList.contains('is-current-path') || li.classList.contains('is-current-page'))) {
+          e.preventDefault()
         }
       })
     }

@@ -7,7 +7,7 @@ Author Name
 :page-layout: home-branch-cloud
 //:page-role: -toc
 :page-pagination:
-:description: A "preview" site for the UI.
+:description: A "preview" site for the new UI.
 
 
 

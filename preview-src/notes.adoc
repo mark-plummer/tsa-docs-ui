@@ -3,7 +3,7 @@
 :page-last_updated: May 14, 2026
 :linkattrs:
 :page-aliases:
-:page-layout: default-cloud
+:page-layout: default-cloud-early-access-spotter-3
 :description: These release notes include information about new and enhanced features.
 :jira: SCAL-277691, SCAL-305410
 

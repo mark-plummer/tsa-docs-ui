@@ -23,7 +23,7 @@
         <div class="mobile-section-dropdown">
           <button class="mobile-section-toggle" aria-expanded="false">{{#if (eq page.layout 'home')}}Home{{else}}{{page.component.title}}{{/if}}</button>
           <div class="mobile-section-menu">
-            {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3'))}}
+            {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3') (eq @root.page.layout 'default-cloud-spotter-3'))}}
             <a class="mobile-section-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">Cloud</a>
             <a class="mobile-section-link" href="{{{site.url}}}/software/latest">Software</a>
             <a class="mobile-section-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
@@ -101,7 +101,7 @@
     </div>
   </nav>
   <nav class="subnav" aria-label="Section navigation">
-    {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3'))}}
+    {{#if (or (eq @root.page.layout 'default-cloud') (eq @root.page.layout 'home-branch-cloud') (eq @root.page.layout 'default-cloud-no-index') (eq @root.page.layout 'home-branch-cloud-no-index') (eq @root.page.layout 'default-cloud-beta') (eq @root.page.layout 'default-cloud-early-access') (eq @root.page.layout 'default-cloud-beta-no-index') (eq @root.page.layout 'default-cloud-early-access-no-index') (eq @root.page.layout 'default-cloud-early-access-spotter-3') (eq @root.page.layout 'default-cloud-spotter-3'))}}
     {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}

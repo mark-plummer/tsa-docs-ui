@@ -113,6 +113,13 @@ page:
     - content: Liber Recusabo
       url: '#liber-recusabo'
       urlType: fragment
+    - content: Release notes
+      url: 'notes.html'
+      urlType: fragment
+      items:
+      - content: Coming soon
+        url: 'coming-soon.html'
+        urlType: fragment
     - content: Reference
       items:
       - content: Keyboard Shortcuts
