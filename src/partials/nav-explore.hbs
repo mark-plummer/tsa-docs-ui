@@ -6,14 +6,14 @@
   </div>
   {{/if}}
   <ul class="components">
-    {{#each site.components}}
-    <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+    {{#each (componentVersionSorter "components" site.components page.attributes.component-sort-order)}}
+    <li class="component{{#if (eq this.name @root.page.component.name)}} is-current{{/if}}">
       <div class="title"><a href="{{{relativize ./url}}}">{{{./title}}}</a></div>
       {{#if (or ./versions.[1] ./versions.[0].version (ne ./versions.[0].displayVersion 'default'))}}
       <ul class="versions">
         {{#each ./versions}}
         <li class="version
-          {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+          {{~#if (and (eq ../name @root.page.component.name) (eq this @root.page.componentVersion))}} is-current{{/if~}}
           {{~#if (eq this ../latest)}} is-latest{{/if}}">
           <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
         </li>

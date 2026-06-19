@@ -1404,7 +1404,9 @@
 }
 
 .doc .dlist dt {
-  font-style: italic;
+  font-style: normal;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  font-weight: 600;
 }
 
 .doc .dlist dd {
@@ -2155,6 +2157,23 @@
   color: var(--nav-muted-color);
 }
 
+.doc .openblock.card-box ul,
+.doc .openblock.card-box ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.doc .openblock.card-box .ulist li + li,
+.doc .openblock.card-box .olist li + li {
+  margin-top: 0.25rem;
+}
+
+.doc .openblock.card-box .ulist,
+.doc .openblock.card-box .olist {
+  margin-top: 0.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .doc .openblock.card-box > .content {
     background: #151241;
@@ -2212,6 +2231,23 @@
   margin-top: 0.375rem;
   font-size: calc(14 / var(--rem-base) * 1rem);
   color: var(--nav-muted-color);
+}
+
+.doc .exampleblock.card-box ul,
+.doc .exampleblock.card-box ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.doc .exampleblock.card-box .ulist li + li,
+.doc .exampleblock.card-box .olist li + li {
+  margin-top: 0.25rem;
+}
+
+.doc .exampleblock.card-box .ulist,
+.doc .exampleblock.card-box .olist {
+  margin-top: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {

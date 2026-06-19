@@ -24,7 +24,7 @@ b,
 dt,
 strong,
 th {
-  font-weight: 500;
+  font-weight: 600;
   /* font-size: 14px; */
   font-size: 0.84444rem;
 }
@@ -2437,11 +2437,21 @@ td {
 /* Announce box role - start */
 
 .doc .openblock.announce-box {
-  background-color: #fff3e2;
+  background-color: #eef7ff;
   border: 1px solid var(--panel-border-color);
   border-radius: 8px;
   padding: 0.75rem 1rem 0.75rem 1rem;
   margin-top: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box {
+    background-color: #1b3e61;
+  }
+}
+
+[data-theme="dark"] .doc .openblock.announce-box {
+  background-color: #1b3e61;
 }
 
 .doc .openblock.announce-box > .title {
@@ -2463,19 +2473,19 @@ td {
   bottom: 2px;
   width: 30px;
   height: 30px;
-  background-image: url(../img/megaphone_ts.png);
+  background-image: url(../img/megaphone.svg);
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .doc .openblock.announce-box > .title::before {
-    background-image: url(../img/megaphone_ts-dark.png);
+    background-image: url(../img/megaphone-dark.svg);
   }
 }
 
 [data-theme="dark"] .doc .openblock.announce-box > .title::before {
-  background-image: url(../img/megaphone_ts-dark.png);
+  background-image: url(../img/megaphone-dark.svg);
 }
 
 .doc .openblock.announce-box > .title::after {
@@ -2531,7 +2541,7 @@ td {
   bottom: -2px;
   width: 30px;
   height: 30px;
-  background-image: url(../img/megaphone_ts.png);
+  background-image: url(../img/megaphone.svg);
   background-repeat: no-repeat;
   background-size: 30px 30px;
 }
@@ -2627,7 +2637,7 @@ td {
 }
 
 .doc-home .admonitionblock td.icon i::before {
-  background-image: url(../img/megaphone_ts.png);
+  background-image: url(../img/megaphone.svg);
   vertical-align: middle;
   padding-left: 25px;
 }

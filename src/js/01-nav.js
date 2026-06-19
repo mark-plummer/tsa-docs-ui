@@ -61,8 +61,7 @@
         if (!href || href.charAt(0) === '#') {
           e.preventDefault()
           toggleActive.call(li)
-        } else if (li.classList.contains('is-active') &&
-            (li.classList.contains('is-current-path') || li.classList.contains('is-current-page'))) {
+        } else if (li.classList.contains('is-active') && li.classList.contains('is-current-page')) {
           e.preventDefault()
         }
       })

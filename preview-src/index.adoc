@@ -38,7 +38,7 @@ Automate key parts of your analytics workflow—from exploring and analyzing dat
 ****
 [.card-link]
 --
-image::spotteragent.svg[Icon,36,36]
+image::Spot.svg[Icon,36,36]
 
 xref:Spotter.adoc[Spotter]
 
@@ -47,7 +47,7 @@ Discover insights from your data, just by asking.
 
 [.card-link]
 --
-image::spottermodel.svg[Icon,36,36]
+image::Lumos.svg[Icon,36,36]
 xref:page.adoc[SpotterModel]
 
 Turn raw data into models in minutes.
@@ -55,7 +55,7 @@ Turn raw data into models in minutes.
 
 [.card-link]
 --
-image::spotterviz.svg[Icon,36,36]
+image::##Kaios.svg##[Icon,36,36]
 
 xref:page.adoc[SpotterViz]
 
@@ -64,7 +64,7 @@ Plan your story and build a Liveboard automatically.
 
 [.card-link-ext]
 --
-image::spottercode.svg[Icon,36,36]
+image::Camo.svg[Icon,36,36]
 
 xref:page.adoc[SpotterCode]
 
@@ -134,6 +134,78 @@ Description for card 4.
 ====
 --
 
+[.card-grid]
+--
+[.card-box]
+====
+image::persona-business-user.png[Icon,40,40]
+*Business User*
+
+* xref:safelisting-our-ip-address.adoc[Safelist our IP address]
+* xref:local-database.adoc[Connect to a local database]
+* xref:public-blocks.adoc[Share blocks]
+* xref:granting-access-via-service-account.adoc[Grant access via Service account]
+====
+
+[.card-box]
+====
+image::persona-analyst.png[Icon,40,40]
+*Analyst*
+
+* xref:snippets.adoc[Snippets]
+* xref:local-database.adoc[Connect to a local database]
+* xref:sqlite.adoc[SQLite]
+* xref:stories.adoc[Stories]
+* xref:triggers.adoc[Triggers]
+* xref:dashboards.adoc[Dashboards]
+* xref:forms.adoc[Forms]
+* xref:tables.adoc[Tables]
+* xref:pivot-tables.adoc[Pivot tables]
+====
+
+[.card-box]
+====
+image::persona-data-engineer.png[Icon,40,40]
+*Data Engineer*
+
+* xref:database-source.adoc[Add a new SQL database]
+* xref:airtable.adoc[Airtable]
+* xref:bigquery.adoc[BigQuery]
+* xref:microsoft-sql-server-ms-sql.adoc[Microsoft SQL Server (MS SQL)]
+* xref:connecting-to-panoply.adoc[Panoply]
+* xref:connect-to-snowflake.adoc[Snowflake]
+* xref:query-sheets-using-sql.adoc[Query Sheets using SQL]
+* xref:query-blocks.adoc[Query blocks]
+* xref:query-a-csv.adoc[Query a CSV]
+* xref:excel-source.adoc[Excel]
+* xref:salesforce-source.adoc[Salesforce]
+====
+
+[.card-box]
+====
+image::persona-it-ops.png[Icon,40,40]
+*IT and Operations*
+
+* xref:google-sheets.adoc[Google Sheets]
+* xref:excel.adoc[Excel]
+* xref:slack.adoc[Slack alerts]
+* xref:email.adoc[Email alerts]
+* xref:blocks-as-a-destination.adoc[Blocks]
+* xref:database-destination.adoc[Database]
+* xref:intercom.adoc[Intercom]
+* xref:salesforce.adoc[Salesforce]
+* xref:hubspot.adoc[Hubspot]
+* xref:zoho.adoc[Zoho]
+* xref:enter-manually.adoc[Enter manually]
+* xref:front.adoc[Front]
+* xref:microsoft-teams.adoc[Microsoft Teams]
+* xref:drift.adoc[Drift]
+* xref:customerio.adoc[Customer.io]
+* xref:active-campaign.adoc[Active Campaign]
+* xref:facebook.adoc[Facebook]
+* xref:close.adoc[Close]
+====
+--
 
 #Last updated#: {page-last_updated}
 
@@ -181,7 +253,7 @@ Contains more than one block.
 ****
 [.card-link]
 --
-image::spotteragent.svg[Icon,36,36]
+image::Spot.svg[Icon,36,36]
 
 xref:Spotter.adoc[Spotter]
 
@@ -191,7 +263,7 @@ Learn how to deploy, coach and use Spotter.
 [.card-link]
 --
 
-image::spottermodel.svg[Icon,36,36]
+image::Lumos.svg[Icon,36,36]
 
 link:page.html[SpotterModel]
 
@@ -201,7 +273,7 @@ Turn raw data into models in minutes.
 [.card-link]
 --
 
-image::spotterviz.svg[Icon,36,36]
+image::Kaios.svg[Icon,36,36]
 
 link:page.html[SpotterViz]
 
@@ -210,7 +282,7 @@ Plan your story and build a Liveboard automatically.
 
 [.card-link-ext]
 --
-image::spottercode.svg[Icon,36,36]
+image::Camo.svg[Icon,36,36]
 
 xref:spotter.adoc[SpotterCode]
 
@@ -227,6 +299,57 @@ image::Spotter_Dark.svg[Icon,36,36]
 xref:spotter.adoc[Spotter]
 
 Learn how to deploy, coach and use Spotter.
+--
+****
+
+[discrete]
+== New product icons
+
+[.card-link-grid]
+****
+[.card-link]
+--
+image::Brix.svg[Icon,36,36]
+
+xref:page.adoc[Brix]
+
+Description text.
+--
+
+[.card-link]
+--
+image::Camo.svg[Icon,36,36]
+
+xref:page.adoc[Camo]
+
+Description text.
+--
+
+[.card-link]
+--
+image::Kaios.svg[Icon,36,36]
+
+xref:page.adoc[Kaios]
+
+Description text.
+--
+
+[.card-link]
+--
+image::Lumos.svg[Icon,36,36]
+
+xref:page.adoc[Lumos]
+
+Description text.
+--
+
+[.card-link]
+--
+image::Spot.svg[Icon,36,36]
+
+xref:page.adoc[Spot]
+
+Description text.
 --
 ****
 
