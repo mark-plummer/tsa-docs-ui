@@ -2437,7 +2437,7 @@ td {
 /* Announce box role - start */
 
 .doc .openblock.announce-box {
-  background-color: #eef7ff;
+  background-color: #e8e8e8;
   border: 1px solid var(--panel-border-color);
   border-radius: 8px;
   padding: 0.75rem 1rem 0.75rem 1rem;
@@ -2491,8 +2491,7 @@ td {
 .doc .openblock.announce-box > .title::after {
   content: " ";
   display: block;
-  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
-  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  background: linear-gradient(90deg, #08062b 0, #00d2ff 35.39%, #08062b 100%);
   height: 1px;
   margin-top: 0;
 }
@@ -2510,6 +2509,82 @@ td {
 }
 
 /* Announce box role - end */
+
+/* Coming soon box role - start */
+
+.doc .openblock.coming-soon-box {
+  background-color: #e8e8e8;
+  border: 1px solid var(--panel-border-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box {
+    background-color: #1b3e61;
+  }
+}
+
+[data-theme="dark"] .doc .openblock.coming-soon-box {
+  background-color: #1b3e61;
+}
+
+.doc .openblock.coming-soon-box > .title {
+  position: relative;
+  font-size: 18px;
+  font-weight: var(--heading-font-weight);
+  font-style: normal;
+  color: var(--heading-font-color);
+  padding-left: 42px;
+  min-height: 30px;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+.doc .openblock.coming-soon-box > .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/calendar-check.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box > .title::before {
+    background-image: url(../img/calendar-check-dark.svg);
+  }
+}
+
+[data-theme="dark"] .doc .openblock.coming-soon-box > .title::before {
+  background-image: url(../img/calendar-check-dark.svg);
+}
+
+.doc .openblock.coming-soon-box > .title::after {
+  content: " ";
+  display: block;
+  background: linear-gradient(90deg, #08062b 0, #00d2ff 35.39%, #08062b 100%);
+  height: 1px;
+  margin-top: 0;
+}
+
+.doc .openblock.coming-soon-box > .content {
+  padding: 0;
+}
+
+.doc .openblock.coming-soon-box > .content > :first-child {
+  margin-top: 0.5rem;
+}
+
+.doc .openblock.coming-soon-box .paragraph + .paragraph {
+  margin-top: 0.5rem;
+}
+
+/* Coming soon box role - end */
 
 /* Release notes styles - start */
 

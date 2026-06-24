@@ -76,8 +76,7 @@
 .doc h2:not(.discrete)::after {
   content: " ";
   display: block;
-  background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
-  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  background: linear-gradient(90deg, #08062b 0, #00d2ff 35.39%, #08062b 100%);
   height: 1px;
   margin-top: 0;
 }
@@ -436,7 +435,7 @@
 }
 
 .doc .admonitionblock td.content {
-  padding: 1rem 1rem 0.75rem;
+  padding: 1rem 1rem 0.75rem 0.5rem;
   background: var(--admonition-background);
   width: 100%;
   word-wrap: anywhere;
@@ -606,12 +605,18 @@
   border-color: #581c87;
 }
 
+.doc .admonitionblock.spotter {
+  padding: 1px;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%);
+}
+
 .doc .admonitionblock.spotter > table {
   position: static;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: #fff;
+  border: none;
   border-collapse: separate;
-  border-radius: 1rem;
+  border-radius: calc(1rem - 1px);
   overflow: hidden;
   width: 100%;
 }
@@ -622,17 +627,17 @@
   transform: none;
   left: auto;
   top: auto;
-  padding: 0.875rem 0 0.875rem 1rem;
-  vertical-align: top;
+  padding: 0.875rem 1.5rem 0.875rem 1rem;
+  vertical-align: middle;
   width: 2rem;
 }
 
 .doc .admonitionblock.spotter td.icon i.icon-spotter {
-  background: url(../img/Spotter.svg) no-repeat center / contain;
+  background: url(../img/Spot.svg) no-repeat center / contain;
   color: transparent;
-  width: 1.125rem;
-  height: 1.125rem;
-  min-width: 1.125rem;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
   padding: 0;
   border-radius: 0;
   display: inline-block;
@@ -647,7 +652,7 @@
 .doc .admonitionblock.spotter td.content {
   background: transparent;
   padding: 1rem 0.875rem;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .doc .admonitionblock.spotter td.content::before {
@@ -655,19 +660,25 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .admonitionblock.spotter {
+    background: linear-gradient(180deg, #00d2ff 0%, #33c 100%);
+  }
+
   :root:not([data-theme="light"]) .doc .admonitionblock.spotter > table {
-    background: rgba(156, 163, 175, 0.08);
-    border-color: #374151;
+    background: #151241;
   }
 
   :root:not([data-theme="light"]) .doc .admonitionblock.spotter td.icon i.icon-spotter {
-    background-image: url(../img/Spotter_Dark.svg);
+    background-image: url(../img/Spot.svg);
   }
 }
 
+[data-theme="dark"] .doc .admonitionblock.spotter {
+  background: linear-gradient(180deg, #00d2ff 0%, #33c 100%);
+}
+
 [data-theme="dark"] .doc .admonitionblock.spotter > table {
-  background: rgba(156, 163, 175, 0.08);
-  border-color: #374151;
+  background: #151241;
 }
 
 [data-theme="dark"] .doc .admonitionblock.spotter td.icon i.icon-spotter {
@@ -2094,24 +2105,34 @@
 .doc .openblock.card-gradient-box,
 .doc .exampleblock.card-gradient-box {
   margin-top: 1.75rem;
-  padding: 2px;
+  padding: 1px;
   border-radius: 1rem;
-  background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+  background: linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%);
 }
 
 .doc .openblock.card-gradient-box > .content,
 .doc .exampleblock.card-gradient-box > .content {
-  background: #eef7ff;
+  background: linear-gradient(180deg, #e8f8fd 0%, #fff 100%);
   border-radius: calc(1rem - 2px);
   border: none;
   padding: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .openblock.card-gradient-box,
+  :root:not([data-theme="light"]) .doc .exampleblock.card-gradient-box {
+    background: linear-gradient(180deg, #00d2ff 0%, #00d2ff 10%, #33c 100%);
+  }
+
   :root:not([data-theme="light"]) .doc .openblock.card-gradient-box > .content,
   :root:not([data-theme="light"]) .doc .exampleblock.card-gradient-box > .content {
     background: #1b3e61;
   }
+}
+
+[data-theme="dark"] .doc .openblock.card-gradient-box,
+[data-theme="dark"] .doc .exampleblock.card-gradient-box {
+  background: linear-gradient(180deg, #00d2ff 0%, #00d2ff 20%, #33c 100%);
 }
 
 [data-theme="dark"] .doc .openblock.card-gradient-box > .content,
@@ -2294,34 +2315,40 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .doc .openblock.announce-box {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box,
+  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box {
     background-color: rgba(252, 200, 56, 0.08);
     border-color: #713f12;
   }
 
   :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content h2,
-  :root:not([data-theme="light"]) .doc .openblock.announce-box > .title {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box > .title,
+  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box > .title {
     color: inherit;
   }
 
   :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content p,
-  :root:not([data-theme="light"]) .doc .openblock.announce-box p {
+  :root:not([data-theme="light"]) .doc .openblock.announce-box p,
+  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box p {
     color: inherit;
   }
 }
 
-[data-theme="dark"] .doc .openblock.announce-box {
+[data-theme="dark"] .doc .openblock.announce-box,
+[data-theme="dark"] .doc .openblock.coming-soon-box {
   background-color: rgba(252, 200, 56, 0.08);
   border-color: #713f12;
 }
 
 [data-theme="dark"] .doc .admonitionblock.announce td.content h2,
-[data-theme="dark"] .doc .openblock.announce-box > .title {
+[data-theme="dark"] .doc .openblock.announce-box > .title,
+[data-theme="dark"] .doc .openblock.coming-soon-box > .title {
   color: inherit;
 }
 
 [data-theme="dark"] .doc .admonitionblock.announce td.content p,
-[data-theme="dark"] .doc .openblock.announce-box p {
+[data-theme="dark"] .doc .openblock.announce-box p,
+[data-theme="dark"] .doc .openblock.coming-soon-box p {
   color: inherit;
 }
 

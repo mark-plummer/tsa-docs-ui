@@ -29,7 +29,7 @@
   --monospace-font-family: "Geist Mono", monospace;
   --monospace-font-weight-bold: 600;
   /* base */
-  --body-background: #f5f5f5;
+  --body-background: #f2f6fa;
   --panel-background: var(--color-smoke-30);
   --panel-border-color: var(--color-smoke-90);
   --scrollbar-track-color: var(--color-smoke-30);

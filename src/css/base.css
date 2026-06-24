@@ -25,6 +25,123 @@ body {
   margin: 0;
   tab-size: 4;
   word-wrap: anywhere; /* aka overflow-wrap; used when hyphens are disabled or aren't sufficient */
+  position: relative;
+}
+
+.bg-ovals {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-oval {
+  display: block;
+  position: absolute;
+  background: no-repeat center / contain;
+}
+
+.bg-oval--1 {
+  width: 759px;
+  height: 600px;
+  right: -350px;
+  transform: rotate(90deg);
+  top: -305px;
+  background-image: url(../img/oval-1.png);
+  /* transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0); */
+}
+
+.bg-oval--3 {
+  width: 759px;
+  height: 600px;
+  right: -375px;
+  top: calc(58.82% + 800px);
+  transform: rotate(180deg);
+  background-image: url(../img/oval-3.png);
+  /* transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0); */
+}
+
+.bg-oval--4 {
+  width: 731px;
+  height: 731px;
+  right: -410px;
+  top: calc(30% - 731px / 2 + 800px);
+  background-image: url(../img/oval-4.png);
+  transform: rotate(-90deg);
+  opacity: 0.58;
+  /* transform: matrix(-0.97, 0.26, 0.26, 0.97, 0, 0); */
+}
+
+.bg-oval--5 {
+  width: 731px;
+  height: 731px;
+  right: -270px;
+  bottom: -450px;
+  background-image: url(../img/oval-5.png);
+  opacity: 0.58;
+  transform: rotate(270deg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bg-oval--1 {
+    background-image: url(../img/oval-1-dark.png);
+    top: -135px;
+    right: -470px;
+    transform: rotate(-90deg);
+    opacity: 0.8;
+  }
+
+  :root:not([data-theme="light"]) .bg-oval--3 {
+    background-image: url(../img/oval-3-dark.png);
+    right: -310px;
+  }
+
+  :root:not([data-theme="light"]) .bg-oval--4 {
+    background-image: url(../img/oval-4-dark.png);
+    opacity: 0.58 !important;
+    transform: rotate(0deg);
+    right: -350px;
+  }
+
+  :root:not([data-theme="light"]) .bg-oval--5 {
+    background-image: url(../img/oval-5-dark.png);
+    right: -225px;
+    bottom: -490px;
+    transform: rotate(50deg);
+  }
+}
+
+[data-theme="dark"] .bg-oval--1 {
+  background-image: url(../img/oval-1-dark.png);
+  top: -135px;
+  right: -470px;
+  transform: rotate(-90deg);
+  opacity: 0.8;
+}
+
+[data-theme="dark"] .bg-oval--3 {
+  background-image: url(../img/oval-3-dark.png);
+  right: -310px;
+}
+
+[data-theme="dark"] .bg-oval--4 {
+  background-image: url(../img/oval-4-dark.png);
+  opacity: 0.58 !important;
+  transform: rotate(0deg);
+  right: -350px;
+}
+
+[data-theme="dark"] .bg-oval--5 {
+  background-image: url(../img/oval-5-dark.png);
+  right: -200px;
+  bottom: -490px;
+  transform: rotate(50deg);
 }
 
 a {
