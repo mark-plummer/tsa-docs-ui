@@ -28,7 +28,8 @@
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless=new --screenshot=/tmp/nav-preview.png --window-size=1440,900 --hide-scrollbars http://localhost:5252)",
       "WebFetch(domain:platform.openai.com)",
       "Bash(git *)",
-      "Bash(curl -s \"https://g-docs-staging.vercel.app/home/particles.json\")"
+      "Bash(curl -s \"https://g-docs-staging.vercel.app/home/particles.json\")",
+      "WebFetch(domain:g-docs-staging.vercel.app)"
     ]
   }
 }

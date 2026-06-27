@@ -397,6 +397,122 @@ Description text.
 --
 ****
 
+== Quick links
+
+[.card-link-grid]
+****
+[.card-link]
+--
+[.light-only]
+image::megaphone_purp.svg[Icon,36,36]
+[.dark-only]
+image::megaphone-dark.svg[Icon,36,36]
+
+xref:notes.adoc[What's new]
+
+Learn about the latest features and enhancements.
+--
+
+[.card-link]
+--
+[.light-only]
+image::settings.svg[Icon,36,36]
+[.dark-only]
+image::settings-dark.svg[Icon,36,36]
+
+xref:administration.adoc[Administration]
+
+Manage users, settings, and security for ThoughtSpot Cloud.
+--
+
+[.card-link]
+--
+[.light-only]
+image::rocket.svg[Icon,36,36]
+[.dark-only]
+image::rocket-dark.svg[Icon,36,36]
+
+xref:ts-cloud-getting-started.adoc[Deploying ThoughtSpot]
+
+Learn how to set up ThoughtSpot Cloud for your organization.
+--
+
+[.card-link]
+--
+[.light-only]
+image::compass.svg[Icon,32,32]
+[.dark-only]
+image::compass-dark.svg[Icon,32,32]
+
+xref:user-onboarding-experience.adoc[Getting started for end users]
+
+Learn how to get started with ThoughtSpot Cloud.
+--
+
+[.card-link-ext]
+--
+[.light-only]
+image::embedded.svg[Icon,32,32]
+[.dark-only]
+image::embedded-dark.svg[Icon,32,32]
+
+https://developers.thoughtspot.com/docs[Embedded^]
+
+Embed AI-powered analytics into your own applications.
+--
+
+[.card-link]
+--
+[.light-only]
+image::icon-insights-light.svg[Icon,32,32]
+[.dark-only]
+image::icon-insights-dark.svg[Icon,32,32]
+
+xref:thoughtspot-homepage.adoc[Homepage and navigation]
+
+Learn about ThoughtSpot's homepage and navigation.
+--
+// third row
+
+[.card-link]
+--
+[.light-only]
+image::layout-dashboard.svg[Icon,36,36]
+[.dark-only]
+image::layout-dashboard-dark.svg[Icon,36,36]
+
+xref:liveboards.adoc[Liveboards]
+
+Monitor your data with interactive, +
+real-time dashboards.
+--
+
+[.card-link]
+--
+[.light-only]
+image::semantic_layer.svg[Icon,36,36]
+[.dark-only]
+image::semantic_layer-dark.svg[Icon,36,36]
+
+xref:semantic-layer.adoc[Spotter semantics]
+
+Learn about our semantic layer for +
+governed insights.
+--
+
+[.card-link]
+--
+[.light-only]
+image::chart-spline.svg[Icon,36,36]
+[.dark-only]
+image::chart-spline-dark.svg[Icon,36,36]
+
+xref:analyst-studio-getting-started.adoc[Analyst Studio]
+
+Learn how to get started with +
+Analyst Studio.
+--
+****
 
 image::spotter-answer3.png[]
 

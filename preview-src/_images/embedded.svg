@@ -1,5 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
-  <path d="M10.1 13.6998L6.74 12.3558L0.5 15.0518L10.1 18.8998L20.5 14.8998L13.74 12.2998L10.1 13.6998Z" stroke="#714BFB" stroke-linecap="square" stroke-linejoin="round"/>
-  <path d="M10.1 8.5001L6.74 7.1561L0.5 9.8521L10.1 13.7001L20.5 9.7001L13.74 7.1001L10.1 8.5001Z" stroke="#714BFB" stroke-linecap="square" stroke-linejoin="round"/>
-  <path d="M10.1 0.5L0.5 4.652L10.1 8.5L20.5 4.5L10.1 0.5Z" stroke="#714BFB" stroke-linecap="square" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 21 21">
+  <!-- Generator: Adobe Illustrator 29.8.7, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #714bfb;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 0.9px;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M10.1,14.2l-3-1.2-5.5,2.4,8.5,3.4,9.2-3.5-6-2.3-3.2,1.2Z"/>
+  <path class="st0" d="M10.1,9.6l-3-1.2-5.5,2.4,8.5,3.4,9.2-3.5-6-2.3-3.2,1.2Z"/>
+  <path class="st0" d="M10.1,2.5L1.6,6.2l8.5,3.4,9.2-3.5-9.2-3.5Z"/>
 </svg>

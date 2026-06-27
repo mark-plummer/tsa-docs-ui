@@ -9,8 +9,8 @@
     async function initializeAlgolia() {
 
 
-        const deployment = document.querySelector('.mobile-section-toggle').textContent.trim().toLowerCase()
-        const version = document.querySelector('.version-menu-toggle').textContent.trim()
+        const deployment = document.querySelector('.mobile-section-toggle')?.textContent.trim().toLowerCase() ?? ''
+        const version = document.querySelector('.version-menu-toggle')?.textContent.trim() ?? ''
 
         let filters = { docs: {} }
 
