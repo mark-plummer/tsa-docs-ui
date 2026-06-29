@@ -119,7 +119,8 @@ TIP: Use ==== for cards inside the grid, and -- for standalone cards
 ====
 *Card 1*
 
-Description for card 1.Description for card 1.Description for card 1.Description for card 1.Description for card 1.Description for card 1.
+Description for
+.Description for card 1.Description for card 1.Description for card 1.Description for card 1.Description for card 1.
 ====
 
 [.card-box]
@@ -1299,3 +1300,14 @@ image::chart-admin-portal-new.png[]
 =====
 --
 ====
+
+.image:Spotter.svg[width=35,role=light-only]image:Spotter_Dark.svg[width=35,role=dark-only] Spotter 3 new capabilities
+****
+For details on the new capabilities introduced in Spotter 3, see the following:
+
+- xref:spotter-auto-mode.adoc[Auto mode]
+- xref:spotter-research-mode.adoc[Search and Research modes]
+- xref:spotter-advanced-analysis.adoc[Advanced analysis]
+- xref:spotter-connectors-use.adoc[Connectors]
+- xref:spotter-conversation-history.adoc[Chat history]
+****

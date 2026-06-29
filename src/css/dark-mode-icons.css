@@ -1,0 +1,19 @@
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) img[src*="settings-agent-spot.svg"],
+  :root:not([data-theme="light"]) img[src*="download-agent-spot.svg"],
+  :root:not([data-theme="light"]) img[src*="plus.svg"],
+  :root:not([data-theme="light"]) img[src*="copy.svg"],
+  :root:not([data-theme="light"]) img[src*="thumbs-up.svg"],
+  :root:not([data-theme="light"]) img[src*="thumbs-down.svg"] {
+    filter: invert(1);
+  }
+}
+
+[data-theme="dark"] img[src*="settings-agent-spot.svg"],
+[data-theme="dark"] img[src*="download-agent-spot.svg"],
+[data-theme="dark"] img[src*="plus.svg"],
+[data-theme="dark"] img[src*="copy.svg"],
+[data-theme="dark"] img[src*="thumbs-up.svg"],
+[data-theme="dark"] img[src*="thumbs-down.svg"] {
+  filter: invert(1);
+}
