@@ -10,6 +10,10 @@
   "engines": {
     "node": ">= 8.0.0"
   },
+  "scripts": {
+    "preview": "gulp preview",
+    "hash_intercom": "gulp hash_intercom"
+  },
   "browserslist": [
     "last 2 versions"
   ],
