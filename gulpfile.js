@@ -111,6 +111,29 @@ const previewTask = createTask({
   call: series(previewBuildTask, previewServeTask),
 })
 
+async function hashString (input, algorithm = 'SHA-256') {
+  const crypto = require('crypto')
+  const data = new TextEncoder().encode(input)
+  const hashBuffer = await crypto.subtle.digest(algorithm, data)
+  // hex token
+  return [...new Uint8Array(hashBuffer)]
+    .map((b) => {
+      return b.toString(16).padStart(2, '0')
+    })
+    .join('')
+}
+
+const hashIntercomTask = createTask({
+  name: 'hash_intercom',
+  desc: 'Hash the intercom script',
+  call: async function () {
+    const intercomScript = await fetch('https://widget.intercom.io/widget/b4z6stjj') // eslint-disable-line no-undef
+    const intercomScriptText = await intercomScript.text()
+    const hash = await hashString(intercomScriptText)
+    console.log('intercom script hash:', hash)
+  },
+})
+
 module.exports = exportTasks(
   bundleTask,
   cleanTask,
@@ -121,5 +144,6 @@ module.exports = exportTasks(
   bundlePackTask,
   previewTask,
   previewBuildTask,
-  packTask
+  packTask,
+  hashIntercomTask
 )
