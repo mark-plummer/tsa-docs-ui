@@ -168,10 +168,12 @@
                 .join('');
         }
 
-        const intercomScriptHash = '118d4c8df153ee40317715bf1824dba0283bfb80428f07a6468b4adb75f5e688'; // Generate with npm run hash_intercom
+        const intercomScriptHash = '1f1929966660988313523d346dd6dc3db4d74b43b857bd8f3ea33d4385bea22f'; // Generate with npm run hash_intercom
         const currentIntercomScript = await fetch('https://widget.intercom.io/widget/b4z6stjj');
         const currentIntercomScriptText = await currentIntercomScript.text();
         const currentIntercomScriptHash = await hashString(currentIntercomScriptText);
+
+        console.log('currentIntercomScriptHash:', currentIntercomScriptHash, intercomScriptHash);
 
         if (currentIntercomScriptHash !== intercomScriptHash) {
             console.log('Intercom script has changed');
@@ -220,11 +222,14 @@
                 messengerDiv = el
                 
                 const computedStyle = getComputedStyle(messengerDiv);
-                hashString(JSON.stringify(computedStyle))
+                // Subset of computed styles to compare for changes
+                const computedStyleString = computedStyle.position + computedStyle.top + computedStyle.right + computedStyle.bottom + computedStyle.left + computedStyle.width + computedStyle.height + computedStyle.borderRadius + computedStyle.transform + computedStyle.transition + computedStyle.boxShadow + computedStyle.visibility;
+                console.log('computedStyleString:', computedStyleString);
+                hashString(computedStyleString)
                 .then(hash => {
                     // console.log('hash:', hash);
-                    if (hash !== 'fff1b0e9f0780e28e541e3b00142d2de9401c77acdee2dc3c6853649ce227ede') {
-                        console.log('Intercom script has changed.');
+                    if (hash !== 'c3f299724918c64bba70e1ea228cfa4150719d428f7ab7b60b3cbf33425f6fe4') {
+                        console.log('Intercom styles have changed.');
                         style.remove();
                         overrideIntercomScript = false;
                     } else {
