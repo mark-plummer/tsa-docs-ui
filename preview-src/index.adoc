@@ -14,6 +14,19 @@ Author Name
 [.lead]
 This is it!
 
+[.card-link]
+--
+xref:doc-update.adoc[Welcome to the new ThoughtSpot documentation!]
+
+We've redesigned the ThoughtSpot documentation site with a new navigation structure, updated search features, and a fresh new look.
+
+Navigation sections now mirror the ThoughtSpot product interface, so the content you need is always where you expect it. Search got smarter too — open it instantly with kbd:[Cmd+K] (Mac) or kbd:[Ctrl+K] (Windows/Linux), or ask *SpotLine AI* your question in plain language.
+
+
+
+*Click here*
+--
+
 == This is a heading
 
 .ThoughtSpot Sage removal in 26.6.0.cl
