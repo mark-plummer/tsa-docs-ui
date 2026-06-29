@@ -2437,9 +2437,10 @@ td {
 /* Announce box role - start */
 
 .doc .openblock.announce-box {
-  background: linear-gradient(var(--nav-item-hover-background), var(--nav-item-hover-background)) padding-box,
-              linear-gradient(var(--body-background), var(--body-background)) padding-box,
-              linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%) border-box;
+  background:
+    linear-gradient(var(--nav-item-hover-background), var(--nav-item-hover-background)) padding-box,
+    linear-gradient(var(--body-background), var(--body-background)) padding-box,
+    linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%) border-box;
   border: 1px solid transparent;
   border-radius: 1rem;
   padding: 0.75rem 1rem;
@@ -2505,9 +2506,10 @@ td {
 /* Coming soon box role - start */
 
 .doc .openblock.coming-soon-box {
-  background: linear-gradient(var(--nav-item-hover-background), var(--nav-item-hover-background)) padding-box,
-              linear-gradient(var(--body-background), var(--body-background)) padding-box,
-              linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%) border-box;
+  background:
+    linear-gradient(var(--nav-item-hover-background), var(--nav-item-hover-background)) padding-box,
+    linear-gradient(var(--body-background), var(--body-background)) padding-box,
+    linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%) border-box;
   border: 1px solid transparent;
   border-radius: 1rem;
   padding: 0.75rem 1rem;
