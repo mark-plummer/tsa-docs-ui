@@ -29,14 +29,12 @@ Navigation sections now mirror the ThoughtSpot product interface, so the content
 
 == This is a heading
 
-.ThoughtSpot Sage removal in 26.6.0.cl
-[.announce-box]
+.Welcome to the new ThoughtSpot documentation!
+[.announce-box-narrow]
 --
-ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.
+We've redesigned the site with a new navigation structure, updated search features, and a fresh new look.
 
-All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.
-
-For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to Deprecated and removed features for details.
+xref:doc-update.adoc[*Learn more*].
 --
 
 .Release 26.7.0.cl coming soon!

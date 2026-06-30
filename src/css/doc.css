@@ -2010,6 +2010,18 @@
   padding: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid,
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid > .content {
+    background: none;
+  }
+}
+
+[data-theme="dark"] .doc .sidebarblock.card-link-grid,
+[data-theme="dark"] .doc .sidebarblock.card-link-grid > .content {
+  background: none;
+}
+
 .doc .exampleblock.card-link-grid > .content {
   background: none;
   border: none;
@@ -2058,6 +2070,18 @@
   background: none;
   border-radius: 0;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid-2,
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid-2 > .content {
+    background: none;
+  }
+}
+
+[data-theme="dark"] .doc .sidebarblock.card-link-grid-2,
+[data-theme="dark"] .doc .sidebarblock.card-link-grid-2 > .content {
+  background: none;
 }
 
 .doc .exampleblock.card-link-grid-2 > .content {
@@ -2116,6 +2140,18 @@
   background: none;
   border-radius: 0;
   padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid-4,
+  :root:not([data-theme="light"]) .doc .sidebarblock.card-link-grid-4 > .content {
+    background: none;
+  }
+}
+
+[data-theme="dark"] .doc .sidebarblock.card-link-grid-4,
+[data-theme="dark"] .doc .sidebarblock.card-link-grid-4 > .content {
+  background: none;
 }
 
 .doc .exampleblock.card-link-grid-4 > .content {
@@ -2378,40 +2414,20 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .doc .openblock.announce-box,
-  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box {
-    background-color: rgba(252, 200, 56, 0.08);
-    border-color: #713f12;
-  }
-
-  :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content h2,
-  :root:not([data-theme="light"]) .doc .openblock.announce-box > .title,
-  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box > .title {
+  :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content h2 {
     color: inherit;
   }
 
-  :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content p,
-  :root:not([data-theme="light"]) .doc .openblock.announce-box p,
-  :root:not([data-theme="light"]) .doc .openblock.coming-soon-box p {
+  :root:not([data-theme="light"]) .doc .admonitionblock.announce td.content p {
     color: inherit;
   }
 }
 
-[data-theme="dark"] .doc .openblock.announce-box,
-[data-theme="dark"] .doc .openblock.coming-soon-box {
-  background-color: rgba(252, 200, 56, 0.08);
-  border-color: #713f12;
-}
-
-[data-theme="dark"] .doc .admonitionblock.announce td.content h2,
-[data-theme="dark"] .doc .openblock.announce-box > .title,
-[data-theme="dark"] .doc .openblock.coming-soon-box > .title {
+[data-theme="dark"] .doc .admonitionblock.announce td.content h2 {
   color: inherit;
 }
 
-[data-theme="dark"] .doc .admonitionblock.announce td.content p,
-[data-theme="dark"] .doc .openblock.announce-box p,
-[data-theme="dark"] .doc .openblock.coming-soon-box p {
+[data-theme="dark"] .doc .admonitionblock.announce td.content p {
   color: inherit;
 }
 
