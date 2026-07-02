@@ -123,13 +123,20 @@ async function hashString (input, algorithm = 'SHA-256') {
     .join('')
 }
 
+function normalizeIntercomBootstrap(src) {
+  return src
+  .replace(/sha384-[A-Za-z0-9+/=]+/g, 'sha384-STRIPPED')
+  .replace(/[a-z-]+\.[a-f0-9]{8}\.js/g, 'CHUNK.js');
+}
+
 const hashIntercomTask = createTask({
   name: 'hash_intercom',
   desc: 'Hash the intercom script',
   call: async function () {
     const intercomScript = await fetch('https://widget.intercom.io/widget/b4z6stjj') // eslint-disable-line no-undef
     const intercomScriptText = await intercomScript.text()
-    const hash = await hashString(intercomScriptText)
+    const intercomScriptTextNormalized = normalizeIntercomBootstrap(intercomScriptText)
+    const hash = await hashString(intercomScriptTextNormalized)
     console.log('intercom script hash:', hash)
   },
 })
