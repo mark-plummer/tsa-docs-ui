@@ -60,8 +60,11 @@
         const fullScreenAlgoliaSearch = await new window.AlgoliaSearchComponent(fullScreenSearchContainer, {
             inline: false,
             firstResults: 'docs',
-            //initialVersion: filters?.docs?.version,
-            //initialDeployment: filters?.docs?.deployment,
+            // excludeVersions: ['26.3.1.cl'],
+            // initialVersion: filters?.docs?.version,
+            // initialDeployment: filters?.docs?.deployment,
+            // showSections: ['docs'],
+            // docsIndexName: 'crawler_thoughtspot_preview_documentation',
             theme: themeFunction,
             onCloseButton: () => {
                 fullScreenSearchWrapper.style.display = 'none'
@@ -75,6 +78,7 @@
             placeholderText: 'Search...',
             theme: themeFunction,
             addClass: 'algolia_docs header_algolia_search inline',
+            // docsIndexName: 'crawler_thoughtspot_preview_documentation',
             filters: filters,
             viewMoreFunction: (section, searchValue, instance) => {
                 fullScreenSearchWrapper.style.display = 'block';
