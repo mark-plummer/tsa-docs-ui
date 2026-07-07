@@ -57,15 +57,20 @@
             });
         }
 
+        //filters.docs.version = 'current'
+        //filters.docs.version = '8.8.1.sw'
+        //filters.docs.deployment = 'software'
+
         const fullScreenAlgoliaSearch = await new window.AlgoliaSearchComponent(fullScreenSearchContainer, {
             inline: false,
             firstResults: 'docs',
             // excludeVersions: ['26.3.1.cl'],
             // initialVersion: filters?.docs?.version,
             // initialDeployment: filters?.docs?.deployment,
-            // showSections: ['docs'],
+            // showSections: {seekwell: ['docs', 'training'], 'software': ['docs']},
             // docsIndexName: 'crawler_thoughtspot_preview_documentation',
             theme: themeFunction,
+            filters: filters,
             onCloseButton: () => {
                 fullScreenSearchWrapper.style.display = 'none'
                 document.body.classList.remove('full_screen_search_open')
