@@ -1,0 +1,10 @@
+= Hardware and Software Requirements
+Author Name
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-layout: home-branch-agentspot-no-index
+//:page-role: -toc
+:page-pagination:
+:description: A "preview" site for the new UI.
