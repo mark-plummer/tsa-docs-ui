@@ -6,5 +6,19 @@ Author Name
 :!table-caption:
 :page-layout: home-branch-agentspot-no-index
 //:page-role: -toc
-:page-pagination:
 :description: A "preview" site for the new UI.
+
+AgentSpot is an AI-powered work assistant that connects your business data, internal knowledge, and external tools into one intelligent workspace so you can get answers, take action, and make decisions faster. AgentSpot lets your teams build and use AI agents on top of your organization’s data.
+
+[.light-only]
+image::tsu-logo.png[ThoughtSpot University,400]
+
+[.dark-only]
+image::tsu-logo-dark.png[ThoughtSpot University,400]
+
+'''
+> **image:tsu-logo.png[ThoughtSpot Training,role=light-only,width=400]image:tsu-logo-dark.png[ThoughtSpot Training,role=dark-only,width=400]**
+>
+> * For best results, we highly recommend that you register for the free ThoughtSpot University course that covers the material in this section, https://training.thoughtspot.com/getting-started-with-thoughtspot-cloud[Getting Started with ThoughtSpot Analytics Cloud^].
+> * See other training resources at https://training.thoughtspot.com/[ThoughtSpot University^].
+'''

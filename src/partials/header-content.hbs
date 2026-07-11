@@ -107,23 +107,26 @@
     {{/if}}{{/each}}
     <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
     <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
     {{else if (or (eq @root.page.layout 'default-mobile') (eq @root.page.layout 'home-branch-mobile'))}}
     <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
     <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
     {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
+    <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
     {{else if (or (eq @root.page.layout 'default-seekwell') (eq @root.page.layout 'home-branch-seekwell'))}}
-    <a class="subnav-link" href="{{{site.url}}}/cloud">Cloud</a>
-    <a class="subnav-link" href="{{{site.url}}}/software">Software</a>
-    <a class="subnav-link" href="{{{site.url}}}/mobile">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+    <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
+    <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
     {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
     {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
-    <a class="subnav-link" href="{{{site.url}}}/cloud">Cloud</a>
-    <a class="subnav-link" href="{{{site.url}}}/software">Software</a>
-    <a class="subnav-link" href="{{{site.url}}}/mobile">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
+    <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
+    <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
     {{#each site.components}}{{#if (eq ./name @root.page.component.name)}}
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
@@ -134,6 +137,7 @@
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
     <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>
+    <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
     {{/if}}
     {{#unless (or (eq @root.page.layout 'default-seekwell') (eq @root.page.layout 'home-branch-seekwell') (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
     <a class="subnav-link" href="{{{site.url}}}/seekwell">SeekWell</a>

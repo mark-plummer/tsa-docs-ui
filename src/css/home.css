@@ -311,3 +311,73 @@ body.home-branch .doc h1 {
 [data-theme="dark"] body.home-branch .doc h1 {
   background-image: linear-gradient(120.62deg, #fff 39.59%, #80e9ff 84.18%, #00d2ff 128.76%);
 }
+
+/* AgentSpot hero (home-branch-agentspot-no-index): logo + "Documentation" wordmark in place of the page title */
+.agentspot-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(10 / var(--rem-base) * 1rem);
+  padding: calc(48 / var(--rem-base) * 1rem) 0 0;
+  text-align: left;
+}
+
+article.doc .agentspot-hero + * {
+  margin-top: 0;
+}
+
+article.doc .agentspot-hero + #preamble > .sectionbody > :first-child {
+  margin-top: 0;
+}
+
+.agentspot-hero-logo {
+  width: clamp(12rem, 28vw, 20rem);
+  height: auto;
+}
+
+.agentspot-hero-logo.dark-only {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .agentspot-hero-logo.light-only {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .agentspot-hero-logo.dark-only {
+    display: block;
+  }
+}
+
+[data-theme="dark"] .agentspot-hero-logo.light-only {
+  display: none;
+}
+
+[data-theme="dark"] .agentspot-hero-logo.dark-only {
+  display: block;
+}
+
+.agentspot-hero .agentspot-hero-subtitle {
+  margin: 0;
+  margin-top: -0.7rem;
+  margin-left: -3px;
+  font-family: var(--body-font-family);
+  font-size: clamp(1.08rem, 2.52vw, 1.8rem);
+  font-weight: 400;
+  color: var(--nav-muted-color);
+}
+
+@media (max-width: 768px) {
+  .agentspot-hero {
+    padding: calc(32 / var(--rem-base) * 1rem) 0 calc(24 / var(--rem-base) * 1rem);
+  }
+
+  .agentspot-hero-logo {
+    width: clamp(9rem, 55vw, 12rem);
+  }
+
+  .agentspot-hero .agentspot-hero-subtitle {
+    font-size: clamp(0.81rem, 4.95vw, 1.08rem);
+    margin-left: -1.5px;
+  }
+}

@@ -123,10 +123,10 @@ async function hashString (input, algorithm = 'SHA-256') {
     .join('')
 }
 
-function normalizeIntercomBootstrap(src) {
+function normalizeIntercomBootstrap (src) {
   return src
-  .replace(/sha384-[A-Za-z0-9+/=]+/g, 'sha384-STRIPPED')
-  .replace(/[a-z-]+\.[a-f0-9]{8}\.js/g, 'CHUNK.js');
+    .replace(/sha384-[A-Za-z0-9+/=]+/g, 'sha384-STRIPPED')
+    .replace(/[a-z-]+\.[a-f0-9]{8}\.js/g, 'CHUNK.js')
 }
 
 const hashIntercomTask = createTask({

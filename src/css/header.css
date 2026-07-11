@@ -92,6 +92,11 @@ body {
   gap: 0.625rem;
 }
 
+/* Hide the search box on AgentSpot pages for now (kept in the DOM to bring back later). visibility (not display) so the version dropdown/theme toggle don't shift position when navigating between AgentSpot and other product sections. */
+body.agentspot .navbar-search-wrapper {
+  visibility: hidden;
+}
+
 .navbar-search {
   display: flex;
   align-items: center;
