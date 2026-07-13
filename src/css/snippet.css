@@ -2555,6 +2555,7 @@ td {
 
 .doc .openblock.announce-box-narrow {
   width: 600px;
+  max-width: 100%;
 }
 
 /* Announce box role - end */
@@ -2570,6 +2571,8 @@ td {
   border-radius: 1rem;
   padding: 0.75rem 1rem;
   margin-top: 1rem;
+  width: 600px;
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2674,12 +2677,6 @@ td {
 .doc .openblock.coming-soon-box .paragraph + .paragraph,
 .doc .openblock.coming-soon-box-narrow .paragraph + .paragraph {
   margin-top: 0.5rem;
-}
-
-/* Coming soon box narrow variant */
-
-.doc .openblock.coming-soon-box-narrow {
-  width: 600px;
 }
 
 /* Coming soon box role - end */

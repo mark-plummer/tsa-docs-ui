@@ -334,7 +334,17 @@ body.agentspot .navbar-search-wrapper {
 
   .navbar-search-wrapper {
     display: flex;
-    padding: 0.5rem 1rem 0.75rem;
+    justify-content: flex-start;
+    padding: 0.5rem 0.75rem 0.75rem 1rem;
+  }
+
+  .navbar-search-wrapper .algolia_search_wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .navbar-search-wrapper .algolia_search_wrapper input[type="search"] {
+    width: 100% !important;
   }
 
   .navbar-search {
@@ -443,6 +453,24 @@ html.is-clipped--nav .mobile-section-dropdown {
 .mobile-section-link:hover {
   background: var(--navbar-menu_hover-background);
   opacity: 1;
+}
+
+.mobile-section-link-ext {
+  position: relative;
+  padding-right: 1.75rem;
+}
+
+.mobile-section-link-ext::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: currentColor;
+  -webkit-mask: url(../img/arrow-up-right.svg) no-repeat center / contain;
+  mask: url(../img/arrow-up-right.svg) no-repeat center / contain;
 }
 
 @media screen and (min-width: 1024px) {
