@@ -2681,6 +2681,45 @@ td {
 
 /* Coming soon box role - end */
 
+/* Two-column media role: text in the left column, image in the right - start */
+
+.doc .openblock.two-col-media > .content {
+  display: grid;
+  grid-template-columns: minmax(0, 460px) minmax(220px, 1fr);
+  gap: 0 2rem;
+  align-items: start;
+}
+
+.doc .openblock.two-col-media > .content > .two-col-media-text {
+  grid-column: 1;
+  margin-top: 0;
+}
+
+.doc .openblock.two-col-media > .content > .imageblock {
+  grid-column: 2;
+  margin-top: 0;
+}
+
+.doc .exampleblock.two-col-media-text > .content {
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .doc .openblock.two-col-media > .content {
+    grid-template-columns: 1fr;
+  }
+
+  .doc .openblock.two-col-media > .content > .two-col-media-text,
+  .doc .openblock.two-col-media > .content > .imageblock {
+    grid-column: 1;
+  }
+}
+
+/* Two-column media role - end */
+
 /* Release notes styles - start */
 
 .doc .admonitionblock.announce td.icon {
@@ -2825,15 +2864,15 @@ body.home-branch .doc h3.discrete {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body.home-branch .border,
-  :root:not([data-theme="light"]) body.home-branch .bordered {
+  :root:not([data-theme="light"]) .border,
+  :root:not([data-theme="light"]) .bordered {
     border: none;
     box-shadow: none;
   }
 }
 
-[data-theme="dark"] body.home-branch .border,
-[data-theme="dark"] body.home-branch .bordered {
+[data-theme="dark"] .border,
+[data-theme="dark"] .bordered {
   border: none;
   box-shadow: none;
 }

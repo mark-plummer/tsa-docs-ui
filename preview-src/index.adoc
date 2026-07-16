@@ -1322,3 +1322,37 @@ For details on the new capabilities introduced in Spotter 3, see the following:
 - xref:spotter-connectors-use.adoc[Connectors]
 - xref:spotter-conversation-history.adoc[Chat history]
 ****
+
+=== Admin portal enhancements
+
+[.two-col-media]
+--
+[.two-col-media-text]
+====
+ThoughtSpot introduces a redesigned *Admin settings* experience. These changes provide administrators with a cleaner, more intuitive experience that is built to scale with multi-Org, enterprise deployments. Admin settings are now organized by users, Orgs, features, appearance, and security, so you only see the sections relevant to your role. The following are some of the enhancements:
+
+* Org and user management
+** Create, rename, and delete Orgs from one central place.
+** Users, Roles, Groups, and Provisioning tabs are now subtabs under the User Management tab.
+** When you click a user, a card pops up showing that user's details (including name, email, role, groups, and status), so you can quickly see their information without leaving the page.
+** When creating a new group, you can now assign its roles, nest child groups inside it, and add users to it.
+** Assign Org admins, and manage users across multiple Orgs without needing to contact your instance admin.
+** View Org details such as when it was created, who it was created by, users, groups, feature flags enabled in a single spot.
+** Manage Orgs and users in one interface customized for cluster administrators.
+** Manage users in another interface designed just for Org administrators.
+* Feature management
+** Enable or disable Early Access and GA features at the Org level without affecting other Orgs or requiring a system restart.
+** Org admins can customize settings like styles, features, and notifications for their own Org without touching instance defaults.
+** You can choose which Orgs are allowed to self-manage their own feature settings. Once an Org is allocated, the Org Admin gains the ability to go into Feature Management and turn features on or off for their Org.
+* Configuration
+** Configure application settings, customizations, AI settings, and Search & SpotIQ in one place.
+** All settings are organized into collapsible sections, that you can click to expand and access the settings inside.
+** Page is split into two sub-tabs — Application Settings, for system/functional configuration like auth, security, and email, and Customization, for branding/appearance like logos, colors, and styles.
+* Monitor
+** Everything that you need to monitor your system's health, performance, stats, adoption and usage is available in the same location.
+
+This feature will be released to customers throughout 26.8.0.cl. To inquire about the status of your deployment or for assistance, contact {support-url}.
+====
+
+image::admin2-cluster.png[]
+--
