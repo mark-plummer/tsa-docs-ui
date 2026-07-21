@@ -12,7 +12,10 @@
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+{{#unless noCookieyes}}
     <script id="cookieyes" type="text/javascript" src="https://scripts.thoughtspot.com/cookieyes.js"></script>
+{{/unless}}
+{{#unless noGTM}}
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -20,3 +23,4 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NQJWB5');</script>
     <!-- End Google Tag Manager -->
+{{/unless}}
