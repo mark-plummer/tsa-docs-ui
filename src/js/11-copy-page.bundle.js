@@ -81,7 +81,7 @@
 
   var chatgptLink = copyPage.querySelector('[data-action="chatgpt"]')
   var claudeLink = copyPage.querySelector('[data-action="claude"]')
-  chatgptLink.href = llmPromptUrl('https://chatgpt.com/?hints=search&q=')
+  chatgptLink.href = llmPromptUrl('https://chatgpt.com/?q=')
   claudeLink.href = llmPromptUrl('https://claude.ai/new?q=')
 
   var toggleMain = copyPage.querySelector('.copy-page-toggle-main')
