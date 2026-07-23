@@ -4,6 +4,8 @@
   var TurndownService = require('turndown')
   var gfm = require('turndown-plugin-gfm').gfm
 
+  if (document.body.classList.contains('home-branch')) return
+
   var article = document.querySelector('article.doc')
   if (!article) return
   var heading = article.querySelector('h1.page')
@@ -70,9 +72,9 @@
       '</div>' +
       '<div class="copy-page-menu">' +
         actionRow('copy', 'icon-copy', 'Copy page', 'Copy page as Markdown for LLMs', false) +
-        actionRow('view', 'icon-markdown', 'View as Markdown', 'View this page as plain text', true) +
         actionRow('chatgpt', 'icon-openai', 'Open in ChatGPT', 'Ask questions about this page', true) +
         actionRow('claude', 'icon-claude', 'Open in Claude', 'Ask questions about this page', true) +
+        actionRow('view', 'icon-markdown', 'View as Markdown', 'View this page as plain text', true) +
       '</div>' +
     '</div>'
   wrapper.appendChild(copyPage)
