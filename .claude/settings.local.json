@@ -31,7 +31,9 @@
       "Bash(curl -s \"https://g-docs-staging.vercel.app/home/particles.json\")",
       "WebFetch(domain:g-docs-staging.vercel.app)",
       "Bash(curl -s -o /tmp/clickhouse-connection.png -w \"%{http_code}\\\\n\" \"https://g-docs-staging.vercel.app/cloud/26.7.0.cl/_images/clickhouse-connection.png\" --max-time 15)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "WebFetch(domain:afdocs.dev)",
+      "WebFetch(domain:agentdocsspec.com)"
     ]
   }
 }
