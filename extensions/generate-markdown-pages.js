@@ -9,12 +9,16 @@ const { gfm } = require('turndown-plugin-gfm')
 // shouldn't appear in the generated Markdown
 const CHROME_SELECTOR = 'nav.pagination, .copy-page, aside.toc, .source-toolbox, a.anchor'
 
+const LLMS_TXT_URL = 'https://docs.thoughtspot.com/llms.txt'
+const LLMS_TXT_DIRECTIVE = `> For the complete documentation index, see [llms.txt](${LLMS_TXT_URL})`
+
 function toMarkdown (html, turndownService) {
   const $ = cheerio.load(html)
   const article = $('article.doc').first()
   if (!article.length) return undefined
   article.find(CHROME_SELECTOR).remove()
-  return turndownService.turndown(article.html() || '').trim()
+  const markdown = turndownService.turndown(article.html() || '').trim()
+  return `${LLMS_TXT_DIRECTIVE}\n\n${markdown}`
 }
 
 module.exports.register = function () {
