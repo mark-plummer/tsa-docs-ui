@@ -68,6 +68,9 @@
             initialVersion: filters?.docs?.version,
             initialDeployment: filters?.docs?.deployment,
             // showSections: {seekwell: ['docs', 'training'], 'software': ['docs']},
+{{#if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+            showSections: ['docs', 'community'],
+{{/if}}
             // docsIndexName: 'crawler_thoughtspot_preview_documentation',
             theme: themeFunction,
             onCloseButton: () => {
@@ -82,6 +85,9 @@
             placeholderText: 'Search...',
             theme: themeFunction,
             addClass: 'algolia_docs header_algolia_search inline',
+{{#if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+            showSections: ['docs', 'community'],
+{{/if}}
             // docsIndexName: 'crawler_thoughtspot_preview_documentation',
             filters: filters,
             viewMoreFunction: (section, searchValue, instance) => {

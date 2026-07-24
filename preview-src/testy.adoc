@@ -1,0 +1,10 @@
+= Welcome to ThoughtSpot Documentation
+:idprefix:
+:idseparator: -
+:!example-caption:
+:!table-caption:
+:page-layout: default-agentspot-no-index
+:page-pagination:
+:description: A "preview" site for the UI.
+
+testing26.
