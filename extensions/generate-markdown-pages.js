@@ -17,6 +17,13 @@ function toMarkdown (html, turndownService) {
   const article = $('article.doc').first()
   if (!article.length) return undefined
   article.find(CHROME_SELECTOR).remove()
+  // Asciidoctor wraps every table cell's content in <p class="tableblock">. Turndown
+  // treats <p> as a block element and surrounds it with blank lines even inside a
+  // <td>, which breaks the single-line GFM table row syntax and bloats output size.
+  article.find('td p, th p').each((i, el) => {
+    const $el = $(el)
+    $el.replaceWith($el.html())
+  })
   const markdown = turndownService.turndown(article.html() || '').trim()
   return `${LLMS_TXT_DIRECTIVE}\n\n${markdown}`
 }
