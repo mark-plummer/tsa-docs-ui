@@ -26,6 +26,9 @@
     position: static;
     top: 0;
     visibility: visible;
+    /* nav markup follows main in DOM order (so page.html has real content near the top
+       for agents/crawlers reading raw source), reordered back to the left visually */
+    order: -1;
   }
 }
 
