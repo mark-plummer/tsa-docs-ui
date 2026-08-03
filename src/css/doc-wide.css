@@ -1688,32 +1688,32 @@ li::marker {
 
 /* Privileges table in security-matrix.md */
 
-.doc-wide table.wide_table > caption {
+.doc table.wide_table > caption {
   /* font-size: larger; */
   margin-bottom: 2em;
   border-bottom: #ccc;
   border-bottom-style: double;
 }
 
-.doc-wide table.wide_table > tbody > tr > td {
+.doc table.wide_table > tbody > tr > td {
   border-right: 1px solid #ddd;
 }
 
-.doc-wide table.wide_table th,
-.doc-wide table.wide_table td {
+.doc table.wide_table th,
+.doc table.wide_table td {
   border: none !important;
 }
 
-.doc-wide table.wide_table > thead > tr > th {
+.doc table.wide_table > thead > tr > th {
   color: initial;
   background-color: initial;
 }
 
-.doc-wide table.wide_table > thead > tbody {
+.doc table.wide_table > thead > tbody {
   border: 1px;
 }
 
-.doc-wide table.wide_table {
+.doc table.wide_table {
   max-width: initial;
   margin-bottom: initial;
   table-layout: initial;
@@ -1724,14 +1724,14 @@ li::marker {
   font-size: 13px;
 }
 
-.doc-wide th.rotate {
+.doc table.wide_table th.rotate {
   /* Something you can count on */
   height: 160px;
   white-space: nowrap;
   /* font-size: x-small; */
 }
 
-.doc-wide th.rotate > div {
+.doc table.wide_table th.rotate > div {
   transform:
     /* Magic Numbers */
     translate(-10px, 51px)
@@ -1740,7 +1740,7 @@ li::marker {
   width: 30px;
 }
 
-.doc-wide th.rotate > div > span {
+.doc table.wide_table th.rotate > div > span {
   border-bottom: 1px solid #ccc;
   padding: 5px 10px;
 }
