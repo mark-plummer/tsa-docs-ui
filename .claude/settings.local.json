@@ -33,7 +33,11 @@
       "Bash(curl -s -o /tmp/clickhouse-connection.png -w \"%{http_code}\\\\n\" \"https://g-docs-staging.vercel.app/cloud/26.7.0.cl/_images/clickhouse-connection.png\" --max-time 15)",
       "Read(//tmp/**)",
       "WebFetch(domain:afdocs.dev)",
-      "WebFetch(domain:agentdocsspec.com)"
+      "WebFetch(domain:agentdocsspec.com)",
+      "Bash(cp /Users/mark.plummer/repos/antora-ui-default/extensions/generate-markdown-pages.js /Users/mark.plummer/repos/docs.thoughtspot.com/extensions/generate-markdown-pages.js)",
+      "Read(//Users/mark.plummer/repos/docs.thoughtspot.com/extensions/**)",
+      "Read(//Users/mark.plummer/repos/docs.thoughtspot.com/**)",
+      "Bash(npm run *)"
     ]
   }
 }
