@@ -1742,7 +1742,7 @@ li::marker {
 .doc table.wide_table th.rotate > div > span {
   border-bottom: 1px solid #ccc;
   padding: 5px 10px;
-  font-size: 0.5em;
+  font-size: 0.6em;
 }
 
 /* tooltip css - start */
