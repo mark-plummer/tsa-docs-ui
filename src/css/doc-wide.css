@@ -1380,6 +1380,10 @@ li::marker {
   text-align: left;
 }
 
+.doc-wide .admonitionblock .title {
+  font-style: normal;
+}
+
 .doc-wide .imageblock .title {
   margin-top: 0.5rem;
   padding-bottom: 0;

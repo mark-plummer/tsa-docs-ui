@@ -35,13 +35,13 @@ Navigation sections now mirror the ThoughtSpot product interface, so the content
 
 == This is a heading
 
-.Welcome to the new ThoughtSpot documentation!
-[.announce-box-narrow]
---
-We've redesigned the site with a new navigation structure, updated search features, and a fresh new look.
+  .Welcome to the new ThoughtSpot documentation!
+  [.announce-box-narrow]
+  --
+  We've redesigned the site with a new navigation structure, updated search features, and a fresh new look.
 
-xref:doc-update.adoc[*Learn more*].
---
+  xref:doc-update.adoc[*Learn more*].
+  --
 
 .Release 26.7.0.cl coming soon!
 [.coming-soon-box]
@@ -739,9 +739,7 @@ SPOTTER: New Spotter feature!! SpotterModel 2.0!!!
 == Frequently asked questions
 
 The are some of the most commonly asked questions.
-[.faq]
---
-Where can I buy ThoughtSpot?::
+
 You can purchase ThoughtSpot directly from our website or through an authorized reseller.
 
 Can I try ThoughtSpot before I buy?::
@@ -749,6 +747,32 @@ Yes, ThoughtSpot offers a free trial for 30 days, no credit card required.
 
 Can I buy ThoughtSpot before I try?::
 Yes, ThoughtSpot offers a free trial for 30 days, no credit card required.
+
+Bot is bound but never replies::
+
+When the bot is bound but never replies, it can be caused by any of the following:
+
++
+====
+- The signing secret is incorrect.
+- Socket mode is enabled.
+- Event Subscriptions are not enabled.
+- The Slack API needs to be reinstalled.
+====
+
++
+Recommended next steps:
+
++
+. Make sure the signing secret is correct. AgentSpot signature-verifies every inbound event, so a stale or mistyped signing secret means events arrive and are silently rejected. This produces exactly this symptom. For details, see <<part2, Part 2: Copy the credentials>>.
+. Make sure Socket Mode is disabled, see <<part1, Part 1: Create the Slack app from a manifest>>.
+. Make sure Event Subscriptions is enabled, the URL shows Verified, and `app_mention` is subscribed. If there is no Request URL field at all, Socket Mode is still on.
+. If the app was reinstalled after adding the event, Event subscriptions in Slack must be reinstalled.
+. The Slack email matches the AgentSpot email. That is what `users:read.email` is for. An unmatched sender is dropped.
+. The user has agent access. Slack does not widen access. Only users who already have the agent in AgentSpot can trigger it.
+
++
+In AgentSpot use *Admin Settings > Audit log* to split the problem. If nothing is logged it means Slack is not sending, so check causes 1 and 2. Logged but no run means AgentSpot is rejecting, so check causes 3 through 5.
 --
 
 
@@ -1362,3 +1386,11 @@ This feature will be released to customers throughout 26.8.0.cl. To inquire abou
 
 image::admin2-cluster.png[]
 --
+
+.Important notice about Spotter 3  [.badge.badge-early-access-relnotes]#Early Access#
+[CAUTION]
+====
+* Though the LLM configuration section in the *Admin > ThoughtSpot AI* page indicates manual model selection is not supported, BYOLLM configurations for Spotter 3 are supported but considered experimental. As a result, performance and stability may vary.
+* Spotter 3 requires you to provide both Claude and GPT LLMs in your BYOLLM configuration and has a dependency on GPT 5.1 using Microsoft Azure for code execution. Contact {support-url} for more information.
+* Manual presets for Microsoft Azure and Google Gemini are not supported in Spotter 3 at the moment.
+====

@@ -37,7 +37,22 @@
       "Bash(cp /Users/mark.plummer/repos/antora-ui-default/extensions/generate-markdown-pages.js /Users/mark.plummer/repos/docs.thoughtspot.com/extensions/generate-markdown-pages.js)",
       "Read(//Users/mark.plummer/repos/docs.thoughtspot.com/extensions/**)",
       "Read(//Users/mark.plummer/repos/docs.thoughtspot.com/**)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(grep -n -A12 \"^\\\\.badge-beta-whats-new {$\\\\|^\\\\.badge-early-access-whats-new {$\" /Users/mark.plummer/repos/antora-ui-default/src/css/snippet.css)",
+      "Bash(grep -n -A12 \"^\\\\.badge-beta-relnotes {$\\\\|^\\\\.badge-early-access-relnotes {$\" /Users/mark.plummer/repos/antora-ui-default/src/css/snippet.css)",
+      "Bash(pkill -f \"gulp preview\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(npx --yes playwright --version)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/before_after.png --window-size=900,500 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark.png --window-size=1200,7000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark2.png --window-size=1200,14000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5252/index.html)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark3.png --window-size=1200,14000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark4.png --window-size=1200,4000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html#\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark5.png --window-size=1200,20000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(pkill -f \"npm exec gulp preview\")"
     ]
   }
 }

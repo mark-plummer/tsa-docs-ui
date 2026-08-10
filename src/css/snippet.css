@@ -323,7 +323,7 @@ a.badge.badge-private-preview {
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  top: -2.5px;
+  top: -2.9px;
   border-radius: 6px;
   background-color: #06bf7f;
   font-style: normal;
@@ -341,7 +341,7 @@ a.badge.badge-private-preview {
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  top: -2.5px;
+  top: -2.9px;
   border-radius: 6px;
   background-color: #8c62f5;
   font-style: normal;
@@ -395,7 +395,7 @@ a.badge.badge-private-preview {
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  top: 2.9px;
+  top: -2.9px;
   border-radius: 6px;
   background-color: #06bf7f;
   font-style: normal;
@@ -413,7 +413,7 @@ a.badge.badge-private-preview {
   padding-top: 3px;
   padding-left: 5px;
   padding-right: 5px;
-  top: 2.9px;
+  top: -2.9px;
   border-radius: 6px;
   background-color: #8c62f5;
   font-style: normal;
@@ -1697,6 +1697,10 @@ li::marker {
   letter-spacing: 0.01em;
   padding-bottom: 0.075rem;
   text-align: left;
+}
+
+.doc-snippet .admonitionblock .title {
+  font-style: normal;
 }
 
 .doc-snippet .imageblock .title {

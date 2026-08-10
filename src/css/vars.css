@@ -200,6 +200,7 @@
     --abstract-font-color: #b0b0b0;
     --abstract-border-color: #3d3d3d;
     --admonition-background: #252525;
+    --caption-font-color: #a8a8a8;
     --code-background: #2a2a2a;
     --code-font-color: #d4d4d4;
     --example-background: #1e1e1e;
@@ -271,6 +272,7 @@
   --abstract-font-color: #b0b0b0;
   --abstract-border-color: #3d3d3d;
   --admonition-background: #252525;
+  --caption-font-color: #c8c8c8;
   --code-background: #2a2a2a;
   --code-font-color: #d4d4d4;
   --example-background: #1e1e1e;
