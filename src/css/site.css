@@ -25,4 +25,6 @@
 @import "snippet-layout.css";
 @import "snippet.css";
 @import "faq.css";
+@import "release-notes-filter.css";
+@import "release-notes-dates.css";
 @import "dark-mode-icons.css";

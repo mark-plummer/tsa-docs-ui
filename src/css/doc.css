@@ -339,6 +339,11 @@
   border-bottom: 1px solid #cecece !important;
 }
 
+.borderless-tables .doc table.tableblock,
+.borderless-tables .doc table.tableblock > * > tr > * {
+  border-bottom: 0 !important;
+}
+
 .doc table.grid-all > thead th,
 .doc table.grid-rows > thead th {
   border-bottom-width: 2.5px;

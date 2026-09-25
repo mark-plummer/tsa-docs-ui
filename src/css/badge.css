@@ -49,3 +49,35 @@
   border-radius: 6px;
   font-style: normal;
 }
+
+.badge-enhance-relnotes {
+  display: inline-block;
+  margin-top: -5px;
+  margin-right: -8px;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  padding: 4.5px 5px 3px;
+  top: -1px;
+  color: #0d652d;
+  background-color: #bcf7d7;
+  font-weight: 500;
+  border-radius: 6px;
+  width: 96px;
+}
+
+.badge-fix-relnotes {
+  display: inline-block;
+  margin-top: -5px;
+  margin-right: -8px;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  padding: 4.5px 5px 3px;
+  top: -1px;
+  color: #174ea6;
+  background-color: #a9e8ff;
+  font-weight: 500;
+  border-radius: 6px;
+  width: 96px;
+}
