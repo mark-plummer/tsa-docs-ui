@@ -26,12 +26,16 @@
   max-height: var(--toc-height);
   overflow-y: auto;
   padding: 0;
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
 
 .release-nav ul::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 6px;
+}
+
+.release-nav ul::-webkit-scrollbar-thumb {
+  background: var(--toc-border-color);
+  border-radius: 3px;
 }
 
 .release-nav li {
@@ -54,19 +58,6 @@
   border-left-color: var(--link-font-color);
   color: var(--link-font-color);
   font-weight: var(--body-font-weight-bold);
-}
-
-.release-nav ul {
-  scrollbar-width: thin;
-}
-
-.release-nav ul::-webkit-scrollbar {
-  width: 6px;
-}
-
-.release-nav ul::-webkit-scrollbar-thumb {
-  background: var(--toc-border-color);
-  border-radius: 3px;
 }
 
 .release-nav ul ul {
