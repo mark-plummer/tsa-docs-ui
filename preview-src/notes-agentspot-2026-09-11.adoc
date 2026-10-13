@@ -1,5 +1,6 @@
 = September 11, 2026
 :page-layout: default-agentspot-release-notes
+:page-release-nav-source: whats-new-agentspot.html
 :description: Full release notes for the AgentSpot production release of September 11, 2026.
 
 This production release includes 11 updates. For a summary of recent releases, see xref:whats-new-agentspot.adoc[AgentSpot release notes].
