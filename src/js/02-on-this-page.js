@@ -2,7 +2,7 @@
   'use strict'
 
   var sidebar = document.querySelector('aside.toc.sidebar')
-  if (!sidebar) return
+  if (!sidebar || sidebar.classList.contains('release-nav')) return
   if (document.querySelector('body.-toc')) return sidebar.parentNode.removeChild(sidebar)
   var levels = parseInt(sidebar.dataset.levels || 2, 10)
   if (levels < 0) return

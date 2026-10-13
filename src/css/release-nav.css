@@ -1,0 +1,106 @@
+.release-nav .release-nav-menu {
+  color: var(--toc-font-color);
+  margin-right: 0.75rem;
+  position: sticky;
+  top: calc(var(--toc-top) + 2.5rem);
+}
+
+.release-nav h3 {
+  color: var(--toc-heading-font-color);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  font-weight: var(--body-font-weight-bold);
+  height: 2rem;
+  justify-content: flex-end;
+  line-height: 1.3;
+  margin: 0 -0.5px;
+  padding-bottom: 0.25rem;
+}
+
+.release-nav ul {
+  font-size: 14px;
+  line-height: var(--toc-line-height);
+  list-style: none;
+  margin: 0;
+  max-height: var(--toc-height);
+  overflow-y: auto;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+.release-nav ul::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.release-nav li {
+  margin: 0;
+}
+
+.release-nav a {
+  border-left: 2px solid var(--toc-border-color);
+  color: inherit;
+  display: block;
+  padding: 0.25rem 0 0.25rem 0.75rem;
+  text-decoration: none;
+}
+
+.release-nav a:hover {
+  color: var(--link-font-color);
+}
+
+.release-nav a.is-active {
+  border-left-color: var(--link-font-color);
+  color: var(--link-font-color);
+  font-weight: var(--body-font-weight-bold);
+}
+
+.release-nav ul {
+  scrollbar-width: thin;
+}
+
+.release-nav ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.release-nav ul::-webkit-scrollbar-thumb {
+  background: var(--toc-border-color);
+  border-radius: 3px;
+}
+
+.release-nav ul ul {
+  max-height: none;
+  overflow: visible;
+}
+
+.release-nav summary {
+  cursor: pointer;
+  font-weight: var(--body-font-weight-bold);
+  list-style: none;
+  padding: 0.35rem 0 0.35rem 0.75rem;
+  user-select: none;
+}
+
+.release-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.release-nav summary::after {
+  content: "\203A";
+  display: inline-block;
+  margin-left: 0.4rem;
+  transition: transform 0.15s;
+}
+
+.release-nav details[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.release-nav summary:hover {
+  color: var(--link-font-color);
+}
+
+.release-nav details ul a {
+  padding-left: 1.5rem;
+}

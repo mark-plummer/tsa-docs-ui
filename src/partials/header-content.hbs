@@ -119,7 +119,7 @@
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
     <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
-    {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'default-agentspot-no-index-wide') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+    {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'default-agentspot-no-index-wide') (eq @root.page.layout 'default-agentspot-release-notes') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
     <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
     <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
     <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>

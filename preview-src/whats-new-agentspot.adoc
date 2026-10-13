@@ -1,4 +1,5 @@
 = AgentSpot release notes
+:page-layout: default-agentspot-release-notes
 :page-role: borderless-tables dated-updates dated-summary
 :description: A summary of the latest AgentSpot production releases, with links to the full release notes for each date.
 
