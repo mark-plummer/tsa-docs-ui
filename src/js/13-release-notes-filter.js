@@ -51,6 +51,24 @@
       return btn
     })
 
+    var indicator = document.createElement('span')
+    indicator.className = 'release-notes-filter-indicator'
+    indicator.setAttribute('aria-hidden', 'true')
+    buttonGroup.insertBefore(indicator, buttonGroup.firstChild)
+
+    function moveIndicator () {
+      var active = buttons.filter(function (b) { return b.classList.contains('is-active') })[0]
+      if (!active || !active.offsetWidth) return
+      indicator.dataset.status = active.dataset.status
+      // Use fractional rects (offset* values round to whole pixels and leave the text off-centre).
+      var groupRect = buttonGroup.getBoundingClientRect()
+      var rect = active.getBoundingClientRect()
+      indicator.style.width = rect.width + 'px'
+      indicator.style.height = rect.height + 'px'
+      indicator.style.transform = 'translate(' + (rect.left - groupRect.left - buttonGroup.clientLeft) + 'px, ' +
+        (rect.top - groupRect.top - buttonGroup.clientTop) + 'px)'
+    }
+
     var sectionBody = section.querySelector('.sectionbody') || section
     var firstSubsection = sectionBody.querySelector('.sect2')
     sectionBody.insertBefore(toolbar, firstSubsection || sectionBody.firstChild)
@@ -77,6 +95,30 @@
       })
     }
 
+    function getHeaderBottom () {
+      var fixedToolbar = document.querySelector('.toolbar')
+      if (fixedToolbar) return fixedToolbar.getBoundingClientRect().bottom
+      var subnav = document.querySelector('.subnav')
+      if (subnav && window.getComputedStyle(subnav).display !== 'none') return subnav.getBoundingClientRect().bottom
+      return (document.querySelector('.navbar') || document.body).getBoundingClientRect().bottom
+    }
+
+    var hasClicked = false
+
+    // Filtering changes the page height, so put the "Features by status" label at the top of
+    // the viewport (below the fixed header) rather than wherever the browser leaves the scroll.
+    function scrollToLabel () {
+      var top = label.getBoundingClientRect().top - getHeaderBottom() - 16
+      window.scrollBy({ left: 0, top: top, behavior: 'instant' })
+    }
+
+    // Place the pill without animating, then enable transitions for later clicks.
+    moveIndicator()
+    window.requestAnimationFrame(function () { buttonGroup.classList.add('is-ready') })
+    window.addEventListener('resize', moveIndicator)
+    window.addEventListener('load', moveIndicator)
+    if (window.ResizeObserver) new window.ResizeObserver(moveIndicator).observe(buttonGroup)
+
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         buttons.forEach(function (b) {
@@ -85,7 +127,11 @@
         })
         btn.classList.add('is-active')
         btn.setAttribute('aria-pressed', 'true')
+        moveIndicator()
         applyFilter(btn.dataset.status)
+        // The first click only filters; later clicks also scroll the label to the top.
+        if (hasClicked) scrollToLabel()
+        hasClicked = true
       })
     })
   })

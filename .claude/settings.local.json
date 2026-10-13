@@ -52,7 +52,24 @@
       "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark3.png --window-size=1200,14000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
       "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark4.png --window-size=1200,4000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html#\")",
       "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/full_dark5.png --window-size=1200,20000 --force-dark-mode --force-color-profile=srgb \"http://localhost:5252/index.html\")",
-      "Bash(pkill -f \"npm exec gulp preview\")"
+      "Bash(pkill -f \"npm exec gulp preview\")",
+      "Bash(curl *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/live_check.png --window-size=1400,1400 \"https://docs.thoughtspot.com/cloud/26.8.0.cl/notes-weekly\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/nw_check.png --window-size=1200,900 \"http://localhost:5252/notes-weekly.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/idx_check.png --window-size=1200,14000 \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/idx_check2.png --window-size=1200,16000 \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/tabs_check.png --window-size=1200,900 \"http://localhost:5252/notes-weekly.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_check.png --window-size=1200,900 \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_check2.png --window-size=1200,900 \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_light.png --window-size=1200,900 --force-color-profile=srgb \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_light.png --window-size=1200,900 --force-color-profile=srgb --blink-settings=forceDarkModeEnabled=false \"http://localhost:5252/index.html?theme=light\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_light2.png --window-size=1200,900 --force-color-profile=srgb --enable-features=WebContentsForceDark:inversion_method/cielab_based/image_behavior/none --force-prefers-color-scheme=light \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_margin.png --window-size=1200,900 \"http://localhost:5252/index.html\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --screenshot=/tmp/modal_dark_check.png --window-size=1200,700 \"http://localhost:5252/index.html\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('puppeteer'\\)\\)\")",
+      "Bash(pkill -f \"remote-debugging-port=9333\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --remote-debugging-port=9333 --window-size=1200,900 about:blank)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --disable-gpu --remote-debugging-port=9333 --remote-allow-origins=* --window-size=1200,900 about:blank)"
     ]
   }
 }

@@ -40,10 +40,26 @@
     margin-top: 0;
   }
 
-  /* when a subsection heading (e.g. === Spotter) opens the entry instead of a table */
-  .dated-updates .doc .sect1 > .sectionbody > .sect2:first-child > h3:not(.discrete) {
-    margin-top: 0.5rem;
+  /* summary pages (`:page-role: dated-summary`) start each entry with a paragraph rather than a table,
+     so align the date and the first line of text on a shared baseline */
+  .dated-summary .doc .sect1 {
+    align-items: baseline;
   }
+
+  .dated-summary .doc h2:not(.discrete) {
+    flex-basis: 165px;
+    font-size: calc(16 / var(--rem-base) * 1rem);
+    margin-top: 0;
+    width: 165px;
+  }
+
+  .dated-summary .doc .sect1 .sectionbody > :first-child {
+    margin-top: 0;
+  }
+
+  /* .notes-weekly-aligned-heading is a marker class only; notes-weekly-filter.js measures
+     the actual rendered gap to the date and sets an exact pixel margin-top inline, since a
+     fixed rem value doesn't reliably match across genuinely-first vs filter-promoted headings */
 
   /* stack badge above text instead of side-by-side columns */
   .dated-updates .doc .sect1 table.tableblock,

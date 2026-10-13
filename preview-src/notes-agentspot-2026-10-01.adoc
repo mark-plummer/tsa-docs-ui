@@ -1,0 +1,49 @@
+= October 1, 2026
+:description: Full release notes for the AgentSpot production release of October 1, 2026.
+
+This production release includes 30 updates. For a summary of recent releases, see xref:whats-new-agentspot.adoc[AgentSpot release notes].
+
+== What's new
+
+=== Agents
+
+* *Discover shared work across your org:* a new Discover tab ranks the agents, apps, and workflows your organization already uses, so you can find and reuse what's working instead of building from scratch.
+* *Chief of Staff agent templates:* new ready-made agent templates and a Chief of Staff persona for tasks like meeting follow-through and executive assistance.
+
+=== Connectors
+
+* *Microsoft 365 connector:* connect your Microsoft 365 account to bring Outlook, Calendar, OneDrive, SharePoint, Excel, and Teams into your agents and workflows.
+* *Microsoft file and email attachments:* agents connected to Microsoft 365 can now download and upload OneDrive/SharePoint files and handle email attachments.
+
+=== Administration
+
+* *Memory privacy controls:* turn personal memory off, control whether agents learn from your conversations, and organizations can turn memory off tenant-wide.
+
+== Improvements
+
+=== Agents
+
+* *Smarter matching to existing work:* Scout better recognizes when your request matches an existing agent, workflow, or app regardless of how you phrase it.
+* *Clearer loading experience for Scout:* Scout's first response now shows clear progress messaging instead of a blank screen while it starts up.
+* *Skills now load reliably:* fixed an issue where skills attached to an agent could fail to reach it at runtime.
+* *Accurate connector counts on agent cards:* agent cards now correctly show every connected app, including ones without an icon.
+
+=== Workflows
+
+* *Accurate workflow run status:* workflow runs you stop now consistently show the correct status instead of appearing to still be running.
+* *Clearer workflow run recaps:* run pages now show a structured recap of what happened and clear visuals of the execution graph.
+* *Connector health on workflow runs:* run pages now show the connection status of each connector a workflow depends on.
+* *Redesigned workflow run page:* the run page's side panel now leads with the workflow's identity, schedule, and the actions you need most.
+* *Outcome-first workflow run panel:* run results now lead with the outcome, a plain-language summary, and the outputs produced.
+* *Reliable workflow run outputs:* fixed an issue where some successful runs incorrectly appeared to have no output and were marked as failed.
+* *Redesigned workflow builder icons:* workflow builder nodes now use a redesigned icon set for clearer visual distinction between step types.
+* *Easier navigation in the workflow builder:* the builder now shows the workflow's name and lets you go back without losing your work.
+* *Live progress on workflow runs:* workflow runs now stream progress updates live by default.
+
+=== Apps
+
+* *Data Apps renamed to Apps:* "Data Apps" is now called "Apps" throughout the product for clarity and consistency.
+
+=== Administration
+
+* *Quick link to ThoughtSpot:* your profile menu now includes a direct link to your organization's ThoughtSpot cluster.

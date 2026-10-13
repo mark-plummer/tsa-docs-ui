@@ -2,6 +2,7 @@
 @import "typeface-roboto-mono.css";
 @import "typeface-geist.css";
 @import "typeface-geist-mono.css";
+@import "typeface-optimo-plain.css";
 @import "vars.css";
 @import "base.css";
 @import "body.css";
@@ -24,7 +25,11 @@
 @import "@asciidoctor/tabs";
 @import "snippet-layout.css";
 @import "snippet.css";
+@import "whats-new-widget.css";
 @import "faq.css";
 @import "release-notes-filter.css";
 @import "release-notes-dates.css";
+@import "notes-weekly-filter.css";
+@import "deprecation.css";
+@import "popup-modal.css";
 @import "dark-mode-icons.css";

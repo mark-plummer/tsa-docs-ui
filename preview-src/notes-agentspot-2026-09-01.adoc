@@ -1,0 +1,46 @@
+= September 1, 2026
+:description: Full release notes for the AgentSpot production release of September 1, 2026.
+
+This production release includes 14 updates. For a summary of recent releases, see xref:whats-new-agentspot.adoc[AgentSpot release notes].
+
+== What's new
+
+=== Apps
+
+* *Actions support in AgentSpot apps:* apps can now run actions end to end, triggering follow-up steps and writing data back after loading.
+
+=== Connectors
+
+* *Tableau connector authentication support:* a step toward connecting your Tableau data to AgentSpot apps.
+
+=== Administration
+
+* *Login hint support for single sign-on:* returning users now see their email pre-filled at login.
+
+== Improvements
+
+=== Workflows
+
+* *More reliable workflow connector tools:* workflows keep their connected-app tools instead of silently losing them.
+* *Fixed missing connector tools in workflow builder:* connector-based workflows now build reliably even when the data app feature is disabled.
+
+=== Apps
+
+* *Clearer style options in the app builder:* style picker options now use plain, everyday descriptions instead of technical design terms.
+* *Fixed app tiles failing incorrectly:* app tiles no longer show a false error when the underlying step actually succeeded.
+
+=== Administration
+
+* *Fixed the pricing information link:* the "Learn more about pricing" link now takes you to the correct page.
+* *More reliable account activation:* password setup during activation now automatically retries transient errors.
+
+== Under the hood
+
+=== Agents
+
+* *Improved reliability of connector tool responses:* large connector tool results are trimmed to a safe size, keeping conversations responsive.
+* *More resilient handling of oversized tool outputs:* a bounded response is returned instead of overwhelming the conversation.
+
+=== Connectors
+
+* *Faster Google Calendar responses:* calendar list and search results are trimmed to essential details for quicker responses.

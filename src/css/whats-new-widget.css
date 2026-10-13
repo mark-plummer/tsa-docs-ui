@@ -1,0 +1,218 @@
+.wn-root {
+  position: relative;
+  width: 788px;
+  height: 550px;
+  box-sizing: border-box;
+  background: #fff;
+  font-family: "Optimo-Plain", -apple-system, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wn-media {
+  flex: none;
+  width: 788px;
+  height: 381px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wn-light {
+  background: #dee8fa;
+}
+
+.wn-light .wn-asset {
+  width: calc(100% - 160px);
+  height: auto;
+  max-width: none;
+  max-height: none;
+  align-self: flex-start;
+  object-fit: cover;
+}
+
+.wn-dark {
+  background: #1f2632;
+}
+
+.wn-asset {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.wn-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 16px;
+  background: #2770ef;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.wn-content {
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 24px 80px 0;
+}
+
+.wn-titlerow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.wn-title {
+  margin: 0;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: #1d232f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wn-tag {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  box-sizing: border-box;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: #f6f8fa;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 375;
+  position: relative;
+  top: 4px;
+}
+
+.wn-tag-beta {
+  color: #2770ef;
+}
+
+.wn-tag-ea {
+  color: #8c62f5;
+}
+
+.wn-desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 375;
+  color: #1d232f;
+}
+
+.wn-bullets {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wn-bullet {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 375;
+  color: #1d232f;
+}
+
+.wn-nav {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.wn-nav-item {
+  flex: none;
+  height: 5px;
+  width: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 2.5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.wn-nav-upcoming {
+  background: #c0c6cf;
+}
+
+.wn-nav-done {
+  background: #777e8b;
+}
+
+.wn-nav-active {
+  width: 20px;
+  background: #c0c6cf;
+  position: relative;
+  overflow: hidden;
+}
+
+.wn-nav-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 2.5px;
+  background: #777e8b;
+  animation: wnNavFill 4000ms linear forwards;
+}
+
+@keyframes wnNavFill {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* the snippet layout wraps content in article.doc, whose generic h2/p/ul
+   rules (doc.css) outrank the plain class selectors above - restate the
+   overridden properties with matching specificity so the widget spec wins */
+.doc h2.wn-title {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+}
+
+.doc h2.wn-title::after {
+  content: none;
+}
+
+.doc p.wn-desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.doc ul.wn-bullets {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}

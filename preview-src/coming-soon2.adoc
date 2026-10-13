@@ -1,0 +1,62 @@
+[.conceal-title]
+= {empty}
+:page-layout: snippet
+:experimental:
+:pendo-links:
+:page-noindex:
+
+++++
+<div class="wn-root">
+<div class="wn-media wn-light"><img class="wn-asset" src="https://docs.thoughtspot.com/cloud/26.8.0.cl/_images/gradient.png" alt=""></div>
+<div class="wn-content"><div class="wn-titlerow"><h2 class="wn-title">Gradient legends for charts</h2><span class="wn-tag wn-tag-beta">Beta</span></div><p class="wn-desc">You can now encode a continuous measure, like profit margin or revenue, as a color gradient directly on new bar, scatter, and line charts. Instead of building a separate chart or table to surface a second variable, you can enable a gradient legend on any measure column and optionally set a &quot;Vary by&quot; measure to drive the color scale independently of the displayed value. This makes it faster to spot outliers, patterns, and directional trends at a glance.</p></div>
+<div class="wn-nav"></div>
+</div>
+++++
+
+++++
+<script>(function(){
+var STEPS=[{"media":{"type":"image","src":"https://docs.thoughtspot.com/cloud/26.8.0.cl/_images/gradient.png"},"content":"\u003cdiv class=\"wn-titlerow\">\u003ch2 class=\"wn-title\">Gradient legends for charts\u003c/h2>\u003cspan class=\"wn-tag wn-tag-beta\">Beta\u003c/span>\u003c/div>\u003cp class=\"wn-desc\">You can now encode a continuous measure, like profit margin or revenue, as a color gradient directly on new bar, scatter, and line charts. Instead of building a separate chart or table to surface a second variable, you can enable a gradient legend on any measure column and optionally set a &quot;Vary by&quot; measure to drive the color scale independently of the displayed value. This makes it faster to spot outliers, patterns, and directional trends at a glance.\u003c/p>"},{"media":{"type":"image","src":"https://docs.thoughtspot.com/cloud/26.8.0.cl/_images/outline-encoding.png"},"content":"\u003cdiv class=\"wn-titlerow\">\u003ch2 class=\"wn-title\">Outline color for chart marks\u003c/h2>\u003c/div>\u003cp class=\"wn-desc\">You can now use data to drive the outline (border) color of chart marks such as bars, arcs, and points. Bind a field to the outline color encoding to automatically generate an ordinal color palette or a continuous gradient, complete with legend and tooltip support. \u003c/p>"},{"media":{"type":"image","src":"https://docs.thoughtspot.com/cloud/26.8.0.cl/_images/LBsched-connection-config.png"},"content":"\u003cdiv class=\"wn-titlerow\">\u003ch2 class=\"wn-title\">Scheduled Liveboards: dedicated connection configuration\u003c/h2>\u003c/div>\u003cp class=\"wn-desc\">You can now add a Scheduled Liveboards process type to a connection configuration, so scheduled Liveboard queries can use a separate warehouse, credentials, or non-OAuth authentication method instead of the parent connection’s defaults.\u003c/p>"},{"media":{"type":"video","src":"https://www.thoughtspot.com/whats-new/july-2026-highlights.mp4","poster":""},"content":"\u003cdiv class=\"wn-titlerow\">\u003ch2 class=\"wn-title\">Other features\u003c/h2>\u003c/div>\u003cul class=\"wn-bullets\">\u003cli class=\"wn-bullet\">Manage and remove parameterization from the UI\u003c/li>\u003cli class=\"wn-bullet\">Aggregate-aware query execution\u003c/li>\u003cli class=\"wn-bullet\">Remember this button in Spotter 3\u003c/li>\u003c/ul>"}];
+var SLIDE=4000;
+var rootEl=document.currentScript?document.currentScript.parentNode.querySelector('.wn-root'):null;
+if(!rootEl){rootEl=document.querySelector('.wn-root');}
+var media=rootEl.querySelector('.wn-media');
+var content=rootEl.querySelector('.wn-content');
+var nav=rootEl.querySelector('.wn-nav');
+var timer;
+function mediaHtml(m){
+if(m.type==='video'){
+var img=m.poster?'<img class="wn-asset" src="'+m.poster+'" alt="">':'';
+return '<div class="wn-media wn-dark">'+img+'<button type="button" class="wn-play" data-src="'+(m.src||'')+'">\u25B6 Watch highlights</button></div>';
+}
+return '<div class="wn-media wn-light">'+(m.src?'<img class="wn-asset" src="'+m.src+'" alt="">':'')+'</div>';
+}
+function navHtml(active){
+  var h='';
+  for(var k=0;k<STEPS.length;k++){
+    if(k<active){h+='<span class="wn-nav-item wn-nav-done" data-i="'+k+'"></span>';}
+else if(k===active){h+='<span class="wn-nav-item wn-nav-active" data-i="'+k+'"><span class="wn-nav-fill"></span></span>';}
+else{h+='<span class="wn-nav-item wn-nav-upcoming" data-i="'+k+'"></span>';}
+}
+return h;
+}
+function render(i){
+var s=STEPS[i];if(!s)return;
+var tmp=document.createElement('div');tmp.innerHTML=mediaHtml(s.media);
+rootEl.replaceChild(tmp.firstChild,media);
+media=rootEl.querySelector('.wn-media');
+content.innerHTML=s.content;
+nav.innerHTML=navHtml(i);
+var play=media.querySelector('.wn-play');
+if(play){play.addEventListener('click',function(){
+var src=this.getAttribute('data-src');
+if(src){media.innerHTML='<video class="wn-asset" src="'+src+'" controls autoplay playsinline></video>';if(timer){clearTimeout(timer);}}
+});}
+var items=nav.querySelectorAll('.wn-nav-item');
+for(var k=0;k<items.length;k++){(function(idx){items[idx].addEventListener('click',function(){render(idx);});})(k);}
+  if(timer){clearTimeout(timer);}
+  if(i<STEPS.length-1){timer=setTimeout(function(){render(i+1);},SLIDE);}
+}
+render(0);
+})();
+</script>
+++++

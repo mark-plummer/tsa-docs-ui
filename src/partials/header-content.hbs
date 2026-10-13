@@ -58,13 +58,16 @@
         <kbd class="navbar-search-shortcut">⌘K</kbd>
         <!-- <div id="algolia-search" class="algolia_search_wrapper"></div> -->
       </div> --}}
-      {{!-- <a class="ask-ai-btn" href="#">
-        <svg class="ask-ai-icon" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M8 0L9.6 5.6L15.2 7.2L9.6 8.8L8 16L6.4 8.8L0.8 7.2L6.4 5.6Z"/>
-          <path d="M13.5 0L14.4 2.6L17 3.5L14.4 4.4L13.5 7L12.6 4.4L10 3.5L12.6 2.6Z"/>
+      {{!-- SpotLine AI button: hidden until ready to launch (uncomment to re-enable)
+      <a class="ask-ai-btn" href="#">
+        <svg class="ask-ai-icon" viewBox="-0.87 0.84 20.37 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M13 4.5L15.08 8.92L19.5 11L15.08 13.08L13 17.5L10.92 13.08L6.5 11L10.92 8.92Z"/>
+          <path d="M3.5 1.63L4.77 4.73L7.87 6L4.77 7.27L3.5 10.37L2.23 7.27L-0.87 6L2.23 4.73Z"/>
+          <path d="M5.1 13.95L6.32 15.78L8.15 17L6.32 18.22L5.1 20.05L3.88 18.22L2.05 17L3.88 15.78Z"/>
         </svg>
         SpotLine AI
-      </a> --}}
+      </a>
+      --}}
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
@@ -116,7 +119,7 @@
     <a class="subnav-link is-current" href="{{{relativize @root.page.componentVersion.url}}}">{{./title}}</a>
     {{/if}}{{/each}}
     <a class="subnav-link" href="{{{site.url}}}/agentspot">AgentSpot</a>
-    {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
+    {{else if (or (eq @root.page.layout 'default-agentspot-no-index') (eq @root.page.layout 'default-agentspot-no-index-wide') (eq @root.page.layout 'home-branch-agentspot-no-index'))}}
     <a class="subnav-link" href="{{{site.url}}}/cloud/latest">Cloud</a>
     <a class="subnav-link" href="{{{site.url}}}/software/latest">Software</a>
     <a class="subnav-link" href="{{{site.url}}}/mobile/latest">Mobile</a>

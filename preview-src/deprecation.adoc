@@ -1,0 +1,328 @@
+= Deprecated and removed features
+:page-last_updated: July 23, 2026
+:linkattrs:
+:experimental:
+:description: In this article, we give you advance notice of features we are discontinuing in future releases.
+:jira: SCAL-198582, SCAL-202496, SCAL-220961, SCAL-220962, SCAL-246119, SCAL-247016, SCAL-252489, SCAL-248250, SCAL-258753, SCAL-264534, SCAL-268198, SCAL-269928 (sage removal dec 2025), SCAL-305410, SCAL-292919, SCAL-319095
+
+ThoughtSpot sometimes deprecates and then removes existing features, replacing them with new and more effective ways to use our products.
+In this article, we provide a list of features we've chosen to deprecate or remove in each release.
+
+IMPORTANT: Information about deprecated and removed features is subject to change without notice.
+
+ThoughtSpot _deprecates_ some existing features, and then _removes_ them. These terms mean two different things.
+
+Deprecated::
+A deprecated feature still exists in the product, for backward compatibility, but there is a plan to remove it in a later release. Deprecated features do not receive ongoing support from ThoughtSpot.
++
+We recommend that you stop using deprecated features as soon as possible, and change your workflows to use the new, improved functionality instead.
+
+Removed::
+A removed feature no longer exists in the product. When you upgrade to a newer release, any workflows that rely on a removed feature no longer work.
+
+////
+Use following notes above feature that is deprecated. Send a link back to this document for a fuller description.
+NOTE: This feature is now deprecated. You may not use it starting with release 7.1. For details, see xref:deprecation.adoc[Deprecation Announcements].
+////
+The tables below list each feature once, with the release that deprecated it and the release that removed it, newest first.
+A dash (—) means the feature was removed without a deprecation period. *To be announced* means a removal release has not been set yet.
+
+[#upcoming-2026]
+== 2026 releases
+
+[.deprecation-table%header,cols="25,15,15,45"]
+|===
+|Feature |Deprecated |Removed |Details
+
+|IAMv1 (Identity and Access Management)
+|26.12.0.cl +
+(Dec 2026)
+|End of Dec 2026
+a|IAMv1 support will be removed by the end of December 2026. ThoughtSpot strongly advises you to migrate to the enhanced Identity and Access Management (IAMv2) at the earliest.
+
+Review and follow the steps in the documentation so that your users have no login disruption after migration.
+
+For more information, see xref:okta-iam.adoc[Identity and Access Management v2]. Contact {support-url} if you have any questions.
+
+|Legacy *Liveboard Schedules* section in *Data* > *Utilities*
+|26.7.0.cl +
+(Jul 2026)
+|26.10.0.cl +
+(Oct 2026)
+a|The *Liveboard schedules* section on the Insights tab becomes the default and only way to view and manage all schedules across Liveboards.
+
+* Functionally equivalent, so there is no loss of capability.
+* Existing Liveboard schedules are not affected.
+
+For assistance, contact {support-url}.
+
+|Reference question workflow in Spotter 3 (with Memory enabled)
+|—
+|26.9.0.cl +
+(Sep 2026)
+|The *+Add to memory* button is replaced by *Remember this*, which lets you train Spotter directly within a chat session. Existing reference questions are not affected and will be migrated to Memory context in a future release.
+
+|[[remove-make-lb]]*Make this Liveboard discoverable* and *Make this Answer discoverable* checkboxes
+|26.2.0.cl +
+(Feb 2026)
+|26.8.0.cl +
+(Aug 2026)
+a|ThoughtSpot is removing this feature because of low and declining usage, governance concerns, and because most users disabled it.
+
+* Objects are only accessible to users with explicit permissions (view, edit, or owner).
+* Users who previously found a Liveboard or Answer using discoverability lose access unless it is explicitly shared with them.
+
+|*Every N minutes* schedule frequency for Liveboard schedules
+|—
+|26.8.0.cl +
+(Aug 2026)
+a|* Existing *every N minutes* schedules are automatically changed to *every 1 hour*. Running or paused status is preserved, and no schedules are deleted.
+* Creating or updating a sub-hourly schedule with the REST API returns a `403 Forbidden` error. Update any scripts or integrations to use a minimum of every 1 hour before upgrading.
+* To send a Liveboard report immediately, use xref:liveboard-schedule.adoc#scheduling_a_liveboard[Send now].
+* To request the frequency back, contact {support-url}. ThoughtSpot will not provide ongoing maintenance for it.
+
+|Auto-generated business terms
+|26.6.0.cl +
+(Jun 2026)
+|26.8.0.cl +
+(Aug 2026)
+|You can no longer add business terms directly from a conversation. The only way to add a business term to coaching is from the *Business terms* tab in the Memory sources page.
+
+|ThoughtSpot Sage in the Admin panel
+|—
+|26.6.0.cl +
+(Jun 2026)
+|Sage no longer appears as a selectable option. All clusters running Sage are automatically upgraded to Spotter 2, and your AI usage preferences are retained. No administrator action is required. Embed SDK users should upgrade to the latest SDK version, and API users should move to the Spotter APIs.
+
+|First pin experience
+|—
+|26.6.0.cl +
+(Jun 2026)
+|ThoughtSpot no longer auto-creates a Liveboard named "_username_'s first Liveboard" when a new user pins for the first time. The standard pin-to-Liveboard dialog is shown instead.
+
+|Generate AI Synonyms at the model level
+|26.5.0.cl +
+(May 2026)
+|26.6.0.cl +
+(Jun 2026)
+a|Since 26.4.0.cl, the feature receives no enhancements, bug fixes, or accuracy improvements.
+
+* *Alternative:* Spotter Model (Early Access) supports bulk updates and column-level synonym generation.
+* *Migration:* Synonyms that were already generated stay in place. You cannot generate new ones.
+
+|Answer data panel _classic experience_
+|26.3.0.cl +
+(Feb 2026)
+|26.5.0.cl +
+(May 2026)
+|You can continue to use the feature until it is removed, but ThoughtSpot provides no support for it.
+
+|*Product Usage* system data model
+|26.5.0.cl +
+(May 2026)
+|To be announced
+|Move your usage and adoption reporting to the *TS : AI and BI Stats* data model, which provides more accurate and comprehensive insights. For more information, contact {support-url}.
+
+|Reference question in the Data workspace
+|—
+|26.2.0.cl +
+(Feb 2026)
+|You can no longer add reference questions to your coaching from the Data workspace. Coach from a conversation instead. See xref:spotter-reference-questions.adoc[].
+
+|===
+
+[#releases-2025]
+== 2025 releases
+
+[.deprecation-table%header,cols="25,15,15,45"]
+|===
+|Feature |Deprecated |Removed |Details
+
+|Sage and Ask Sage
+|—
+|10.15.0.cl +
+(Dec 2025)
+|Spotter replaces Sage and Ask Sage. See xref:spotter.adoc[Spotter].
+
+|Navigation and homepage _classic experience_
+|—
+|10.15.0.cl +
+(Dec 2025)
+|Replaced by the new navigation and homepage experience.
+
+|Collaborative Liveboards (comments on Liveboards)
+|10.12.0.cl +
+(Aug 2025)
+|Feb 1, 2026
+|You can continue to use the feature until it is removed, but ThoughtSpot provides no support for it.
+
+|Worksheets
+|10.4.0.cl +
+(Nov 2024)
+|10.12.0.cl +
+(Aug 2025)
+|All existing Worksheets are migrated automatically to Models when your cluster upgrades, and Worksheets are no longer available.
+
+|Worksheet creation for dbt connections
+|—
+|10.12.0.cl +
+(Aug 2025)
+|Adding a dbt connection creates a Model instead of a Worksheet.
+
+|Right-hand side panel in *Find existing Liveboards and Answers* search results
+|10.9.0.cl +
+(May 2025)
+|10.12.0.cl +
+(Aug 2025)
+|The panel is hidden from 10.9.0.cl and removed in 10.12.0.cl. To keep it visible before removal, contact {support-url}.
+
+|ThoughtSpot Status page
+|10.11.0.cl +
+(Jul 2025)
+|To be announced
+|ThoughtSpot plans to replace it with an improved status page. See xref:status.adoc[ThoughtSpot Status].
+
+|*Create new* > *Worksheet* in the *Data workspace*
+|10.4.0.cl +
+(Nov 2024)
+|10.10.0.cl +
+(second half of 2025)
+|Existing Worksheets can only be edited through TML or by converting them to a Model. ThoughtSpot recommends migrating Worksheets to Models before the 10.12 release.
+
+|*Search Tokens* and *Previous Search Tokens* columns in the TS: Spotter Analytics Model
+|—
+|10.9.0.cl +
+(May 2025)
+|The model is the basis for the Spotter Conversations Liveboard.
+
+|===
+
+In 10.10.0.cl, ThoughtSpot also added the *Hidden*, *User Feedback Labels*, and *User Feedback Comments* columns to the TS: Spotter analytics data model, and renamed *User Feedback* to *User Feedback Rating*.
+
+[#releases-2024]
+== 2023 and 2024 releases
+
+[.deprecation-table%header,cols="25,15,15,45"]
+|===
+|Feature |Deprecated |Removed |Details
+
+|Search Assist, SpotIQ Insights on the Worksheet detail page, Profile, and Review Suggestions in the *Data workspace*
+|10.1.0.cl +
+(Aug 2024)
+|10.4.0.cl +
+(Nov 2024)
+|The *How users are searching answers* Liveboard is also removed in 10.4.0.cl. Use the xref:spotter-conversations-liveboard.adoc[Spotter Conversations Liveboard] instead.
+
+|Sage Feedback Leaderboard
+|10.3.0.cl +
+(Oct 2024)
+|To be announced
+|You can still use this feature, but ThoughtSpot will remove it in a later release.
+
+|Classic experience for Liveboards, Answers, and SpotIQ
+|—
+|10.1.0.cl +
+(Aug 2024)
+|The new experience is now the only option and is on by default.
+
+|*Edit TML* and *Import TML* actions on the *Liveboards* and *Answers* list pages
+|—
+|10.1.0.cl +
+(Aug 2024)
+|Use the TML menu actions on the individual Liveboard and Answer pages, or the import and export TML options on *Data Workspace* > *Utilities*.
+
+|SpotApps UI
+|9.10.0.cl +
+(Feb 2024)
+|9.12.0.cl +
+(Apr 2024)
+|You can still upload pre-built SpotApp templates. Download the TML templates from https://developers.thoughtspot.com/codespot?type=TML[CodeSpot^], modify them if needed, and import them using the TML import/export utility in the Data workspace.
+
+|Footer text in Liveboard PDFs
+|—
+|9.8.0.cl +
+(Jan 2024)
+|Resolves misaligned footers in exported Liveboard PDFs.
+
+|Page numbers in downloaded Liveboard PDFs
+|—
+|9.5.0.cl +
+(Jul 2023)
+|Prevents timeout errors when downloading Liveboard PDFs.
+
+|*Automatically select my chart* toggle
+|—
+|9.5.0.cl +
+(Jul 2023)
+|ThoughtSpot keeps your chosen chart type as you change the query. If the query can no longer render as that type, ThoughtSpot selects a chart type that can.
+
+|Pin Headlines to a Liveboard
+|—
+|9.4.0.cl +
+(Aug 2023)
+|Create xref:chart-kpi.adoc[KPI charts] instead. Existing pinned Headlines are not affected. See link:https://community.thoughtspot.com/s/article/How-to-convert-Headlines-to-KPI-charts[How to convert Headlines to KPI charts^].
+
+|*Include only <value>* and *Exclude <value>* in the Liveboard visualization contextual menu
+|—
+|9.2.0.cl +
+(Apr 2023)
+|Still available in xref:answer-explorer.adoc[Explore mode], when searching data, and when viewing an Answer.
+
+|===
+
+[#releases-2022]
+== 2022 and earlier releases
+
+[.deprecation-table%header,cols="25,15,15,45"]
+|===
+|Feature |Deprecated |Removed |Details
+
+|Features listed in the new Liveboard experience deprecations
+|8.3.0.cl +
+(Apr 2022)
+|To be announced
+a|include::partial$new-liveboard-experience-deprecations.adoc[]
+
+|Business user onboarding
+|—
+|8.2.0.cl +
+(Mar 2022)
+|Replaced by a new onboarding flow that directs new users to Search Assist, where they complete sample searches on demo data or their company's data.
+
+|Liveboard follow
+|—
+|8.0.0.cl +
+(Jan 2022)
+|Combined with scheduling into a single *Schedule* action. Existing follows are migrated to Liveboard schedules, shown as _Migrated from follow (your display name)_. To send Liveboard emails to other users, you still need the xref:privileges-end-user.adoc#schedule-pinboards[*can schedule for others* permission].
+
+|[[removed-august-cloud]]Ask an Expert
+|May 2021
+|Aug 2021
+|Users can instead search across existing Answers and Pinboards, or complete Search Assist sample queries. See xref:search-answers.adoc[].
+
+|[[removed-may-cloud]]Home page shortcuts for Answers and Pinboards
+|—
+|May 2021
+|Add important metrics from Pinboards to your watchlist instead. See xref:thoughtspot-one-homepage.adoc#quick-links[quick links]. To reach your most-used objects quickly, favorite them and toggle *My favorites*.
+
+|Replay search and the *Learn how to use ThoughtSpot Pinboard*
+|—
+|May 2021
+|Use Search Assist to learn search on demo data or your company's data.
+
+|[[deprecate-may-cloud]]Multiple join path resolution in the formula editor or a search
+|May 2021
+|To be announced
+|The system no longer lets you define the join path within a search or formula. Instead, it prompts you to create a Worksheet with the correct join path. With the xref:answer-experience-new.adoc[new Answer experience] on, this is removed in May 2021. To use it, turn the new Answer experience off xref:answer-experience-new.adoc#toggle-on-off[individually] or for your company by contacting {support-url}.
+
+|*Send feedback* option on an Answer or search
+|May 2021
+|To be announced
+|Previously available from the *more options* menu image:icon-more-10px.png[more options menu icon].
+
+|Client-side summaries for tables
+|May 2021
+|To be announced
+|Column summaries and headlines are consolidated into one headline summary that is integrated with the table columns and can be pinned to Pinboards. ThoughtSpot runs one SQL query per summary against the underlying database.
+
+|===

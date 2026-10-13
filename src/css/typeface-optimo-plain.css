@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Optimo-Plain";
+  font-style: normal;
+  font-weight: 300;
+  src: url(../font/Plain-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Optimo-Plain";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../font/Plain-Medium.ttf) format("truetype");
+}

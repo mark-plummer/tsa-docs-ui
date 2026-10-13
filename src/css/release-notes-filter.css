@@ -1,7 +1,14 @@
 .release-notes-filter-toolbar {
-  margin: 4px 0 1.5rem;
+  margin: 0 0 1.5rem;
   width: fit-content;
   max-width: 100%;
+}
+
+/* Out-specify the "table + *" top margins in doc.css when the toolbar follows a table */
+.doc > table.tableblock + .release-notes-filter-toolbar,
+.doc :not(.tablecontainer) > table.tableblock + .release-notes-filter-toolbar,
+.doc .tablecontainer + .release-notes-filter-toolbar {
+  margin-top: 0;
 }
 
 .release-notes-filter-label {
@@ -30,6 +37,7 @@
   background-color: var(--nav-item-hover-background);
   border-radius: 10px;
   padding: 3px;
+  position: relative;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,7 +61,9 @@
   border: none;
   border-radius: 7px;
   cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  z-index: 1;
+  transition: color 0.15s ease;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,37 +90,62 @@
   color: #b3b3b3;
 }
 
-.release-notes-filter-btn.is-active {
-  color: var(--color-white);
+/* Sliding pill behind the active tab; positioned by 13-release-notes-filter.js */
+.release-notes-filter-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  border-radius: 7px;
+  pointer-events: none;
   background-color: var(--color-jet-50);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+.release-notes-filter-buttons.is-ready .release-notes-filter-indicator {
+  transition:
+    transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.28s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-notes-filter-buttons.is-ready .release-notes-filter-indicator {
+    transition: none;
+  }
+}
+
+.release-notes-filter-btn.is-active {
+  color: var(--color-white);
+}
+
 .release-notes-filter-btn[data-status="all"].is-active {
-  background-color: var(--body-background);
   color: var(--heading-font-color);
+}
+
+.release-notes-filter-indicator[data-status="all"] {
+  background-color: var(--body-background);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .release-notes-filter-btn[data-status="all"].is-active {
-    background-color: var(--body-background);
     color: var(--color-white);
   }
 }
 
 [data-theme="dark"] .release-notes-filter-btn[data-status="all"].is-active {
-  background-color: var(--body-background);
   color: var(--color-white);
 }
 
-.release-notes-filter-btn[data-status="ga"].is-active {
+.release-notes-filter-indicator[data-status="ga"] {
   background-color: #346dc9;
 }
 
-.release-notes-filter-btn[data-status="early-access"].is-active {
+.release-notes-filter-indicator[data-status="early-access"] {
   background-color: #8c62f5;
 }
 
-.release-notes-filter-btn[data-status="beta"].is-active {
+.release-notes-filter-indicator[data-status="beta"] {
   background-color: #06bf7f;
 }

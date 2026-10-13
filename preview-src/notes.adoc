@@ -1,32 +1,235 @@
 = {version} Release Notes
 :experimental:
-:page-last_updated: May 14, 2026
+:page-last_updated: Sep 22, 2026
 :linkattrs:
 :page-aliases:
-:page-layout: default-cloud-early-access-spotter-3
 :description: These release notes include information about new and enhanced features.
-:jira: SCAL-277691, SCAL-305410
+:jira: SCAL-277691, SCAL-305410, SCAL-301650
 
 ifdef::preview-docs[]
 ++++
-<div class="admonitionblock announce">
-<table>
-<tbody><tr>
-<td class="icon">
-<i class="fa icon-announce" title="Announce"></i>
-</td>
-<td class="content">
-<h2 id="_new_navigation_and_homepage_coming_soon"><a class="anchor" href="#_new_navigation_and_homepage_coming_soon"></a>26.6.0.cl preview documentation</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>These release notes include draft information about the new and updated features in the 26.6.0.cl release.</p><br>
-<p>Each time information is added or updated we will <mark>highlight</mark> it below.</p><br><p>As new or updated feature articles are added, we will add links to them in the corresponding sections describing them.</p>
-</tr>
-</tbody></table>
-</div>
+<style>
+h2#_new_navigation_and_homepage_coming_soon {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    margin-top: -.6rem !important;
+    font-size: 18px !important;
+    text-align: left !important;
+    padding: .4rem 1rem .1rem !important;
+    border-bottom: 0px solid #e1e1e1;
+}
+
+h2#_new_navigation_and_homepage_coming_soon::after {
+    content: " " !important;
+    display: block !important;
+    background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9)) !important;
+    background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%) !important;
+    height: 1px !important;
+    margin-top: 0px !important;
+}
+
+h4#_highlights_of_the_new_navigation_and_homepage.discrete {
+    color: #444 !important;
+    font-weight: 500 !important;
+    font-family: Optimo-Plain, sans-serif !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    margin: 1rem 0 0 !important;
+}
+
+.doc-snippet h3 {
+    color: #444;
+    font-weight: 500;
+    font-family: Optimo-Plain, sans-serif;
+    -ms-hyphens: none;
+    hyphens: none;
+    line-height: 1.3;
+    margin: 1rem 0 0;
+}
+
+.doc-snippet .sidebarblock {
+    position: relative !important;
+    /* background-color: #e1e1e1 !important; */
+    background-color: #fef19f !important;
+    border-radius: 0.75rem !important;
+    padding: 0.75rem 1.5rem !important;
+    padding-top: 0.75rem !important;
+    padding-right: 2rem !important;
+    padding-bottom: 0.75rem !important;
+    padding-left: 0.7rem !important;
+}
+
+.doc-snippet .sidebarblock::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -2px !important;
+    right: -2px !important;
+    bottom: -2px !important;
+    left: -2px !important;
+    background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9)) !important;
+    background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%) !important;
+    z-index: -1 !important;
+    border-radius: inherit !important;
+}
+
+.doc-snippet .sidebarblock>.content>.title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: -.3em;
+    text-align: left;
+}
+
+.doc-snippet .sidebarblock>.content>.title:not(.discrete)::after {
+    content: " ";
+    display: block;
+    background: -webkit-gradient(linear, right top, left top, color-stop(0, #fba76f), color-stop(29%, #d89af0), color-stop(67%, #99d8da), color-stop(96%, #0a6cf9));
+    background: linear-gradient(270deg, #fba76f 0, #d89af0 29%, #99d8da 67%, #0a6cf9 96%);
+    height: 1px;
+    margin-top: 0px;
+}
+
+.doc-snippet .admonitionblock td.icon {
+    padding-left: .1rem;
+    padding-top: 3px;
+}
+
+.doc-home .admonitionblock td.icon {
+    padding-left: .1rem;
+    margin-top: 0 !important;
+}
+
+.doc-home .admonitionblock {
+    margin-top: 1rem;
+}
+
+.doc .admonitionblock > table {
+    background-color: #fff3e2 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    border-left: 0 !important;
+    height: 52px !important;
+    width: 90% !important;
+    display: table !important;
+}
+
+.doc-home .admonitionblock > table > tbody,
+.doc-home .admonitionblock > table > tbody > tr > td {
+    padding-left: 2px !important;
+    /* display: block !important; */
+}
+
+.doc-home .admonitionblock>table>tbody>tr {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+
+.doc-snippet .admonitionblock td.icon {
+    padding-left: .1rem;
+    padding-top: 3px;
+}
+
+.doc-snippet i.fac {
+    -ms-hyphens: none;
+    hyphens: none;
+    font-style: normal;
+    padding-left: 5px;
+}
+
+
+.doc-snippet .admonitionblock td.icon-announce i::before {
+    background: no-repeat;
+    content: "";
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-right: -3px;
+    display: block;
+    height: 18px;
+    width: 18px;
+}
+
+.doc-snippet .admonitionblock td.content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    line-height: 1.6;
+    min-width: 0;
+    padding: .9rem .75rem .75rem .2rem;
+    border-radius: 5px;
+}
+
+.doc-home .admonitionblock.announce td.content::before, .doc-snippet .admonitionblock.announce td.content::before, .doc .admonitionblock.announce td.content::before {
+    color: #00aeef;
+}
+
+.doc-snippet .admonitionblock td.content::before {
+    font-weight: 500;
+    content: "" !important;
+}
+
+.doc-snippet .admonitionblock td.content>:first-child {
+    margin-top: 1px;
+}
+
+.doc-home .admonitionblock td.icon i::before {
+    background-image: url(https://docs.thoughtspot.com/cloud/latest/_images/megaphone_ts.png) !important;
+    vertical-align: middle !important;
+    padding-left: 25px !important;
+}
+
+i.fa.icon-announce::before {
+    background-image: url(https://docs.thoughtspot.com/cloud/latest/_images/megaphone_ts.png) !important;
+    /* background: no-repeat; */
+    content: "";
+    margin-top: -19px !important;
+    margin-left: 10px !important;
+    margin-right: -3px !important;
+    display: block;
+    height: 29px !important;
+    width: 33px !important;
+}
+
+.doc .admonitionblock>announce-table>tbody>tr>td {
+    padding-left: 2px;
+}
+
+.doc-snippet table.wide_table, td, th {
+    border: none !important;
+}
+
+.doc-snippet .admonitionblock td.content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 14px;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    line-height: 1.6;
+    min-width: 0;
+    padding: .9rem .75rem .75rem .2rem;
+    border-radius: 5px;
+}
+</style>
 ++++
 endif::[]
 
+ifdef::preview-docs[]
+.{version} preview documentation
+[.announce-box-narrow]
+--
+These release notes include draft information about the new and updated features in the {version} release.
+
+Each time information is added or updated we will #highlight# it below.
+
+As new or updated feature articles are added, we will add links to them in the corresponding sections describing them.
+--
+endif::[]
 
 ThoughtSpot Cloud {version} is now available.
 
@@ -34,183 +237,237 @@ These release notes include information about new and enhanced features.
 
 For information about previous releases, see xref:release-history.adoc[Release history].
 
-For information about features deprecated or removed in this and future releases see xref:deprecation.adoc[].
-
 ThoughtSpot also provides weekly updates containing bug fixes and enhancements which are automatically deployed on customer instances. For details, see xref:notes-weekly.adoc[Weekly release notes].
 
 
-[#new]
+[#new.release-notes-filter]
 == New features and functionality
-
 The latest release of ThoughtSpot Cloud contains several new and enhanced features.
 
-[#26-6-0-cl-business-user]
-++++
-<div class="admonitionblock announce">
-<table>
-<tbody><tr>
-<td class="icon">
-<i class="fa icon-announce" title="Announce"></i>
-</td>
-<td class="content">
-<h2 id="_announcement"><a class="anchor" href="#_announcement"></a>ThoughtSpot Sage removal in 26.6.0.cl</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.</p><br>
-<p>All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled  will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.</p>
-<br>
-<p>For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to <a href="deprecation">Deprecated and removed features</a> for details.</p>
-</tr>
-</tbody></table>
-</div>
-++++
+The features described in these release notes may have one of the following statuses.
 
-[.announce-box]
-.New doc site coming soon!
---
-ThoughtSpot Sage is deprecated and has reached end-of-life. It is removed from ThoughtSpot in this release.
+[.borderless,width=88%]
+|===
+|Feature statuses
 
-All clusters currently on Sage have been automatically upgraded to Spotter 2. Your AI usage preferences — including whether AI answer generation is enabled or disabled  will be retained as part of the migration. We recommend all administrators migrate to Spotter as soon as possible.
+|[.badge.badge-beta-relnotes]#Beta#
 
-For customers using the ThoughtSpot Embed SDK, ensure your SDK is updated to the latest version before upgrading to 26.6.0.cl. Refer to Deprecated and removed features for details.
---
+Beta features are incomplete and may change before GA. They are enabled for select customers to collect feedback and have limited documentation. Beta features are disabled by default. Your administrator must contact {support-url} to enable them.
 
-SPOTTER: Spotter features are subject to change without notice.
-NOTE: help me!
+|[.badge.badge-early-access-relnotes]#Early Access#
 
-[#26-6-0-cl-business-user]
+Early Access features are complete and supported, but not yet enabled by default. You can try them before GA, with full documentation available. Early Access features are disabled by default. Refer to the feature documentation for how to enable them.
+
+|[.badge.badge-ga-relnotes]#GA#
+
+General Availability (GA) features are usually enabled by default for all customers. They are fully supported. If the GA feature is not enabled by default, the process for enabling it is noted in the documentation.
+|===
+
+[#26-8-0-cl-business-user]
 === For the Business User
 
-// Naomi. jira: SCAL-293519, SCAL-298380. docs jira: SCAL-293521, SCAL-298381
-// PM: Aaghran
-#Spotter CSV upload support#::
+[#spreadsheet]
+Spreadsheets [.badge.badge-ga-relnotes]#GA#::
+// Naomi. jira: SCAL-324098. docs jira: SCAL-324099
+// PM: Peeyush.
+The spreadsheet interface puts a familiar, editable grid directly on your live data. Save your work as an Answer that stays searchable, shareable, and governed like anything else in ThoughtSpot.
 
-You can now upload CSV files directly to Spotter, enabling ad-hoc data analysis without requiring a pre-built data model. This feature makes it faster to explore and get insights from external data files directly in the Spotter interface. Simply click the *+* icon next to the Model selection button in the search bar and select the file you plan to upload. Note that the files you upload remain only in your conversation, and are not stored in ThoughtSpot. Files persist in your conversation for up to an hour. The size limit is 5 mb per file, 10 files per message.
-+
-For more information, see xref:spotter-getting-started.adoc#csv-upload[Spotter CSV upload].
-
-// Naomi. jira: SCAL-257617. docs jira: SCAL-268083
-// PM: Mayur
-#Spotter answer stop button#::
-
-You can now stop in-progress answer generation in Spotter, giving greater control over query execution and improving the experience when you need to revise a query. For more information, see
-xref:spotter-getting-started.adoc[Getting started with Spotter].
-
-// Naomi. jira: SCAL-305012. docs jira: SCAL-305013
-// PM: Rahul PJP.
-#SpotterViz enhancements#::
-We have made the following enhancements to SpotterViz:
-+
---
-* When you create a new Liveboard and SpotterViz is enabled, the Liveboard opens in edit mode.
-* You can now drag the SpotterViz window to resize it.
-* While SpotterViz is working, you can add additional prompts.
---
+* *Columns and formulas on live data*: Build new metrics with 70+ built-in functions. Every formula runs as a live query and persists as governed logic your team can reuse.
+* *Shape your view instantly*: Sort, filter, conditional formatting, and text and number formatting help you focus on what matters, applied live on the data.
+* *Save as a governed Answer*: Your spreadsheet becomes a searchable, shareable object with security and lineage intact, never a disconnected export.
+* *Built for real datasets*: Scroll seamlessly through large result sets and switch to full-screen mode for focused analysis.
 +
 For more information, see
-xref:spotter-viz.adoc[SpotterViz].
+xref:spreadsheet.adoc[Spreadsheet].
 
-// Naomi. jira: SCAL-303119. docs jira: SCAL-303120
-// PM: Dilip
-#SpotterViz charting skills#::
+[#spotter-connector-marketplace]
+Spotter connector marketplace [.badge.badge-ga-relnotes]#GA#::
+// Mark. jira: SCAL-330286. docs jira: SCAL-330287
+// PM: Shannon
+Spotter now features a browsable catalog with more than 100 third-party connectors, making it easier than ever to discover and add third-party data integrations. Every user can browse, search, and explore available connectors, including one-click options like Slack and Web Search, plus connectors for services like Microsoft Teams that guide you through setup. Your administrator or users with the `CanManageSpotter` privilege can add and configure connectors for your organization. If you don't see a specific MCP server in the catalog, any MCP-compliant server can still be added manually. The Spotter marketplace connectors are available to all users in Spotter by selecting *Settings > Connectors*. This feature will be rolled out in the first weekly patch after the 26.10.0.cl release. For more information, see xref:spotter-connector-marketplace.adoc[].
 
-You can now make the following types of changes by prompting SpotterViz:
+[#charts-added]
+Charts added to the new charts library [.badge.badge-ga-relnotes]#GA#::
+// Mark. jira: SCAL-299459, SCAL-299450, SCAL-299440. docs jira: SCAL-299460, SCAL-299451, SCAL-299441
+// PM: Anshul.
+The new charts library expands to add waterfall, pareto, candlestick, funnel, and heatmap charts, bringing enhanced analytical flexibility and modernized styling across search, Spotter, and Liveboards. This release introduces support for multi-panel trellis and faceting modes, new multivariate axis configuration logic, and expanded customization options — including independent color controls for increment and decrement bars on Waterfall charts, refined gradient and label positioning on Heatmaps, and enhanced axis formatting on pareto charts. For more information, see xref:charts-library-new.adoc#new-chart-types[New chart types].
 
-Visual editing::: Reference and modify specific visualizations, groups, or tabs.
-Bulk formatting::: Apply changes across multiple objects simultaneously.
-Structural transformation::: Change visual representations (chart types, axes, stacking).
-Cosmetic styling::: Fine-tune colors, labels, legends, and branding.
-+
-For more information, see xref:spotter-viz.adoc[SpotterViz].
+[#liveboard-depedency]
+Liveboard dependency management [.badge.badge-ga-relnotes]#GA#::
+// Mary. jira: SCAL-323877. docs jira: SCAL-323878
+// PM: Siddhant.
+Liveboard dependency management is now generally available (GA). Admin users can now delete data model columns even if they're in use on Liveboards. When a data model column that a Liveboard depends on is deleted, ThoughtSpot now detects the impact and shows you exactly what's broken instead of displaying a generic error or silently failing.
 
-// Mark – jira: SCAL-289824. docs jira: SCAL-289825
-// PM: Rudram
-#Command palette# [.badge.badge-early-access-relnotes]#Early Access#::
+[#command-palette]
+Command palette redesign::
+// Mark. jira: SCAL-323049. docs jira: SCAL-335174
+// PM: Arpit. add screenshot. add to release notes.
+The command palette has a new, polished look and feel that introduces full support for light and dark modes, smooth open and close animations, and a cleaner layout with updated icons and filter chips. Search results now highlight matching terms for faster scanning, and improved loading and visuals make it easier to understand what's happening as you search — all while keeping the same keyboard shortcuts and commands you already know.
 
-You can now access anything in ThoughtSpot from a single keystroke. The command palette (kbd:[`Cmd`] + kbd:[`K`] on Mac / kbd:[`Ctrl`] + kbd:[`K`] on Windows and Linux) is a global command center that unifies navigation, search, and actions across the ThoughtSpot platform. Instead of switching between menus, list pages, and contextual controls, you can find content, trigger workflows, and navigate to any part of the product — all from one place.
-+
-With the command palette, you can:
-+
---
-* Search across Liveboards, Answers, Models, and more in one place.
-* Launch a new Answer, Liveboard, or Spotter chat.
-* Jump to any section of ThoughtSpot directly, from Home to Admin settings.
-* Type your data question and send it straight to Spotter.
-* Press forward slash (/) to filter your search by Liveboards, Answers, Admin Settings, Create, Spotter, Models, Tables, and Collections.
---
+[#faster-chart]
+Faster chart rendering for charts in Spotter answers [.badge.badge-beta-whats-new]#Beta#::
+// Mark. jira: SCAL-330485. docs jira: SCAL-330486
+// PM: Anshul.
+Spotter now uses progressive rendering to display charts instantly as soon as your query returns results, rather than waiting for the chart generation to complete. An initial chart appears immediately, then automatically updates in the background with refined styling and data-aware formatting — with a subtle indicator letting you know the enhancement is in progress. Any manual adjustments you make always take priority. The result is a noticeably faster and smoother experience when exploring data with Spotter. To enable this feature, contact {support-url}. For more information, see xref:charts-agentic-progressive-rendering.adoc[].
 
-[#26-6-0-cl-analyst]
+[#26-8-0-cl-analyst]
 === For the Analyst
 
-// Naomi. jira: SCAL-292250, SCAL-290534. docs jira: SCAL-292251
-// PM: Damian/Abhijit
-#Dynamic values for date type parameters#::
-You can now configure dynamic date type parameters when creating parameters, meaning that you can specify a dynamic rule like "start of current month", which updates with the current date rather than remaining static (for example, "June 14th"). For more information, see xref:parameters-create.adoc[Creating parameters].
-
-// Mark. jira: SCAL-300025. docs jira: SCAL-300026
-// PM: Rudram
-#Models in object search# [.badge.badge-beta-relnotes]#Beta#::
-Models are now fully discoverable through ThoughtSpot's unified search. Whether you're using the global search bar or the search results page, Models appear alongside Answers and Liveboards — making it faster and easier to find the data foundation your analyses are built on.
-
-// Mary. jira: SCAL-295148. docs jira: SCAL-295149
-// PM: Siddhant
-#Centralized filter window#::
-The centralized filter window is now generally available (GA). This feature introduces a single, unified interface for managing all Liveboard filters. Users can use this to view, update, and apply multiple filters at once, rather than interacting with each filter individually. This feature supports bulk filter changes, clear and reset actions, and provides a streamlined workflow for complex analyses. This improves efficiency, especially when working with Liveboards containing many filters or when users need to adjust several dimensions simultaneously.
-
-
-[#26-6-0-cl-data-engineer]
-=== For the Data Engineer
-
-// Naomi. jira: SCAL-293535, SCAL-302617. docs jira: SCAL-293536, SCAL-303390
-// PM: Aaghran
-#Spotter instructions#::
-Administrators and Org administrators can now configure instructions at the agent level to customize how Spotter responds to queries across your organization. Spotter instructions let you tailor Spotter's behavior for specific use cases, ensuring more consistent and relevant AI-generated answers. You can use Spotter instructions to specify output defaults like format and currency, tell Spotter how to handle ambiguous queries, and set guardrails for sensitive data. For example, you can say, “If the user doesn't specify a breakdown, default to department, region, and location. Always compare year-over-year.”
+[#liveboard-contextual]
+Liveboard contextual filtering [.badge.badge-early-access-relnotes]#Early Access#::
+// Mary. jira: SCAL-298005. docs jira: SCAL-298006
+// PM: Dilip.
+Liveboard creators can now scope filters and parameters to a specific tab or group, instead of applying them globally across the entire Liveboard. This makes it easier to build focused, information-dense Liveboards where consumers can analyze a specific area without inadvertently affecting unrelated visualizations. To enable this feature, contact your administrator.
 +
-To configure Spotter instructions, click the gear icon in the lower left corner of your Spotter conversation and select *Spotter instructions*.
+When a Liveboard with tab or group filters is imported into a cluster where this feature is disabled, the scoped filters are removed on import.
 +
 For more information, see
-xref:spotter-instructions.adoc[Spotter instructions].
+xref:liveboard-filters.adoc[Liveboard filters].
 
-// Naomi. jira: SCAL-286534. docs jira: SCAL-286535
-// PM: Akshat
-#SpotterModel# [.badge.badge-early-access-relnotes]#Early Access#::
-
-You can now use SpotterModel to generate comprehensive, optimized Models ready to use in your analysis. SpotterModel automates table selection, join creation, and column selection, while allowing you to review and customize each step. To enable this feature, contact your administrator.
+[#liveboards-with]
+Liveboards with column-security rules [.badge.badge-ga-relnotes]#GA#::
+// Mary. jira: SCAL-284082. docs jira: SCAL-284083
+// PM: Siddhant.
+The enhanced behavior of Liveboards built with column security rules is now generally available (GA). If users restricted by column security access the Liveboard, they can see and interact with the Liveboard filters and visualizations, but cannot edit the Liveboard as a whole. If such inaccessible columns are used as filters in the Liveboard, the Liveboard will no longer be blocked. Schedules now honor column security rules, and each recipient receives their own report based on their column security rule assignments.
 +
-For more information, see xref:spotter-model-create.adoc[SpotterModel].
+For more information, see
+xref:security-data-object.adoc#csr-liveboard[Column security rules on Liveboards].
 
-// Naomi. jira: SCAL-312267
-#Asana connector in Spotter#:: Because Asana has sunset its previous MCP server, we have removed Asana as a default connector in Spotter. You can still xref:spotter-connectors.adoc#register[register Asana as a connector], but an Asana admin must first link:https://developers.asana.com/docs/integrating-with-asanas-mcp-server[create and configure an OAuth app in Asana].
+[#26-8-0-cl-data-engineer]
+=== For the Data Engineer
 
-// Naomi. jira: SCAL-295866. docs jira: SCAL-295867
-// PM: Anant
-#Memory from Liveboards enhancements#::
-You can now reference the Status field in the Memory sources page to see whether your memory has been generated. ThoughtSpot also notifies you once the Liveboard memory is fully generated. To enable memory from Liveboards and conversations, contact your administrator. For more information, see
-xref:spotter-memory-manage.adoc[Manage memory].
+[#spotter-analyst]
+Spotter analyst builder [.badge.badge-ga-relnotes]#GA#::
+// Naomi. jira: SCAL-317811. docs jira: SCAL-317812
+// PM: Aaghran.
+The Spotter analyst builder is now generally available (GA). In this chat-based interface, you can describe the analyst you would like to use, and Spotter translates your requests into instructions for the agent. Spotter analysts are also GA in this release.
++
+For more information, see
+xref:spotter-analysts.adoc[Spotter analysts].
 
-// Mary. jira:SCAL-299280. docs jira: SCAL-299281
+[#spotter-connector-user]
+Spotter connector user group sharing [.badge.badge-ga-relnotes]#GA#::
+// Naomi. jira: SCAL-304864. docs jira: SCAL-304865
+// PM: Shannon.
+We've added more granular controls for sharing of Spotter connectors in ThoughtSpot. Previously, if an administrator enabled a Spotter connector like Slack, it was shared with all users across all Orgs. Now, if you add a connector in the primary Org, you can choose whether to share it with certain users and groups, and it will be hidden by default from all other users and groups. You can still only add or edit connectors from the primary Org, but you can share connectors within any Org.
+
+[#writeback-for]
+Writeback for Snowflake [.badge.badge-beta-relnotes]#Beta#::
+// Mary. jira: SCAL-311902, SCAL-311849. docs jira: SCAL-311903, SCAL-311850
+// PM: Abhijit.
+Writeback with input tables allows you to create and edit tables directly in ThoughtSpot, where you can add new columns and update values. Data is saved back to your cloud data warehouse so you can use these tables across Answers and Liveboards. Currently, we support Snowflake cloud data warehouses. This feature supports planning, and operational workflows, removing the need for spreadsheets or manual uploads. Only users with edit permissions can make changes, and all edits are tracked for governance. To enable this feature, contact {support-url}.
++
+For more information, see
+xref:writeback.adoc[Writeback].
+
+[#muze-studio]
+Muze Studio AI [.badge.badge-beta-relnotes]#Beta#::
+// Mark. jira: SCAL-325477, docs jira: SCAL-325478
+// PM: Anshul. confirm whether Muze or Muze Studio.
+Muze Studio now includes an AI chat assistant that lets you build and refine custom charts using natural language. Simply describe the visualization you want, or ask follow-up questions to iterate on it, and the AI generates the configuration for you directly inside the Muze Studio editor. A built-in "Show work" timeline lets you trace each step the AI took, giving you full visibility into how your chart was constructed. To enable this feature, contact {support-url}. For more information, see xref:chart-create.adoc#ai-chat[Use AI chat to create and refine charts].
+
+Publishing from object lists [.badge.badge-ga-relnotes]#GA#::
+// Mary. jira: SCAL-321926. docs jira: SCAL-333386
+// PM: Sejal
+Publishing, and publishing from object lists are now generally available (GA). You can now publish, unpublish, and manage the publishing state of Answers, Liveboards, and Models directly from the list page view without having to open each object individually.
++
+The *Publish*, *Unpublish*, and *Manage publishing* options are available in the row-level action menu on the Answers, Liveboards, and Data Workspace list pages. The publish and unpublish options allow you to select target Orgs, handle dependents, and confirm the action.
++
+Publishing is a multi-Org feature. These actions are only visible in multi-Org environments where object publishing is enabled. You must be in the primary Org and be a cluster administrator to see the publish and unpublish actions.
++
+For Models specifically, the publish action is not available for objects authored by a superuser or system user.
++
+
+// For more information about publishing objects across Orgs, see xref:publish-objects.adoc[Publishing objects].
+// For more information about publishing objects across Orgs, see xref:publish-objects.adoc[Publishing objects].
+
+[#connection-level]
+Connection-level query timeout [.badge.badge-ga-relnotes]#GA#::
+// Naomi. jira: SCAL-263005. docs jira: SCAL-334887
+// PM: Prayansh. use case.
+You can now set query timeout in the *Advanced Config* setting in Connections, where you can define how many seconds a query should run for before it automatically times out.
+
+[#user-impersonation]
+Act as (User impersonation) [.badge.badge-early-access-relnotes]#Early Access#::
+// Rani. jira: SCAL-325381, SCAL-325379. docs jira: SCAL-325382, SCAL-325380
+// PM: Swarnima. request image.
+ThoughtSpot administrators can now impersonate a specific user to troubleshoot issues directly, without requiring screen shares or shadow accounts. To initiate a session, the administrator first requests the user to configure their *Act as user* preferences on their profile page, where the user sets the permitted time window for impersonation. Sessions expire automatically at 60 minutes, and the administrator can end the session at any time using the *Exit session* button. The user receives email notifications when a session starts and ends. All actions taken during the session are captured in audit logs.
++
+This feature is available for ThoughtSpot Analytics customers with the xref:admin-portal-2.adoc[new Admin Portal] enabled. Administrators can enable it from *Feature Management* > *Early Access*.
++
+For more information, see xref:user-impersonation.adoc[Act as (User impersonation)]
+
+[#databricks-metric]
+Databricks Metric Views integration [.badge.badge-early-access-relnotes]#Early Access#::
+// Naomi. jira: SCAL-313894. docs jira: SCAL-313895
 // PM: Prayansh
-#Snowflake Semantic Views integration# [.badge.badge-early-access-relnotes]#Early Access#::
-Snowflake Semantic Views integration is now available in ThoughtSpot. This integration allows you to connect directly to Semantic Views defined in Snowflake and use them to automatically create Models in ThoughtSpot. You can import Semantic Views, including metrics, formulas, and column metadata, and immediately use them for building Liveboards, running queries, and analytics. The integration supports both direct connection to Snowflake and YAML file uploads for flexibility. Administrators can manage and resync Semantic Views as needed to reflect changes made in Snowflake. To enable this feature, contact {support-url}.
+Databricks Metric Views integration is now available in ThoughtSpot. This integration allows you to connect directly to Metric Views defined in Databricks and use them to automatically create Models in ThoughtSpot. You can import Metric Views, including metrics, formulas, and column metadata, and immediately use them for building Liveboards, running queries, analytics, and Spotter. Users with Can manage data privileges can manage and resync Metric Views as needed to reflect changes made in Databricks.
++
+To enable this feature, contact your administrator.
 
-// Naomi – jira: SCAL-297519. docs jira: SCAL-297520
+[#llm-driven]
+LLM-driven semantic integrations for formula generation [.badge.badge-beta-relnotes]#Beta#::
+ThoughtSpot now uses AI to translate external semantic definitions into ThoughtSpot formulas and Models during import, delivering higher accuracy than the previous rule-based translator, especially for complex SQL expressions that the deterministic parser could not handle. This feature is supported for Snowflake Semantic Views, Databricks Metric Views, and dbt MetricFlow imports.
+For Databricks Metric Views, you can provide the Metric View definition either by uploading a YAML file or by connecting directly to Databricks to retrieve the definition at import time.
++
+To enable this feature, contact {support-url}.
+
+[#use-llm]
+Use LLM in dbt MetricFlow for formula conversion [.badge.badge-beta-relnotes]#Beta#::
+// Mary. jira: SCAL-324142. docs jira: SCAL-324143
+// PM: Prayansh.
+When importing a dbt MetricFlow semantic model from Snowflake or Databricks, ThoughtSpot now uses AI to translate metric measures and dimension expressions into ThoughtSpot formulas.
++
+
+// For more information, see xref:dbt-metricflow.adoc[Import a dbt MetricFlow model].
+// For more information, see xref:dbt-metricflow.adoc[Import a dbt MetricFlow model].
+
+[#data-workspace]
+Data workspace page [.badge.badge-ga-relnotes]#GA#::
+// Mary. jira: SCAL-309506, docs jira: SCAL-309507
 // PM: Prayansh
-#Connect to Iomete# [.badge.badge-early-access-relnotes]#Early Access#::
-You can now connect to Iomete cloud data warehouses. To enable this feature, contact your administrator. For more information, see xref:connections-iomete.adoc[Connect to Iomete].
+The new Data workspace page is now generally available (GA). It now uses a modernized object table, making it easier to find, filter, and manage your data objects in one place.
 
-[#26-6-0-cl-developer]
+[#secure-suggestions]
+Secure suggestions in saved filter values [.badge.badge-beta-relnotes]#Beta#::
+// Naomi. jira: SCAL-289352. docs jira: SCAL-289353
+// PM: Prayansh
+ThoughtSpot now enforces row-level security (RLS) on saved filter values in Answers and Liveboards. When a filter chip displays values from a column marked as *Secure Suggestions* in the data model, ThoughtSpot checks whether the current user has RLS access to those values before displaying them.
++
+When filter values are cleared due to RLS enforcement, the user still sees data, but only the rows their RLS policy permits. An empty
+filter chip on a secured column does not mean *no data*; it means the saved filter values were not applicable to this user and the RLS policy
+is the active constraint.
++
+
+To enable this feature, contact {support-url}.
+// For more information on secure suggestions and RLS, see xref:rls-secure-suggestions.adoc[Row-level security: secure suggestions].
+
+[#object-ids]
+Object IDs in template variables [.badge.badge-beta-relnotes]#Beta#::
+
+// Naomi. jira: SCAL-318593. docs jira: SCAL-335175
+// PM: Shreyash
+You can now define object IDs for variables in TML or the API. Object IDs now support multi-tenant objects. Use object IDs in tandem with GUIDs that identify objects in TML. You can use object IDs to identify objects that you export in TML and import to other Orgs, removing the need to completely recreate objects between Orgs.
+
+[#amazon-athena]
+Amazon Athena driver upgrade [.badge.badge-ga-relnotes]#GA#::
+// Naomi. jira: SCAL-318884. docs jira: SCAL-318885
+// PM: Prayansh. release notes only?
+We have upgraded the Amazon Athena driver to version 3.8.0.
++
+For more information, see xref:connections-driver-reference.adoc[Cloud data warehouse driver details for connections].
+
+[#26-8-0-cl-developer]
 === For the Developer
 
 ThoughtSpot Embedded:: For information about the new features and enhancements introduced in this release, refer to https://developers.thoughtspot.com/docs/?pageid=whats-new[ThoughtSpot Developer Documentation^].
 
-[#26-5-0-cl-analyst-studio]
+[#26-8-0-cl-analyst-studio]
 === For Analyst Studio users
 
 Analyst Studio:: For information about the new features and enhancements introduced in the latest release, refer to xref:analyst-studio-release.adoc[Analyst Studio release notes].
 
-
-
-[#26-5-0-cl-mobile]
+[#26-8-0-cl-mobile]
 === For Mobile users
 
 ThoughtSpot Mobile:: For information about the new features and enhancements introduced in the latest release, refer to https://docs.thoughtspot.com/mobile/latest[ThoughtSpot Mobile Documentation^].

@@ -1,0 +1,42 @@
+= AgentSpot release notes
+:page-role: borderless-tables dated-updates dated-summary
+:description: A summary of the latest AgentSpot production releases, with links to the full release notes for each date.
+
+A summary of recent AgentSpot production releases. Each entry links to the full release notes for that date.
+
+[#oct-01-2026]
+== October 1, 2026
+
+30 updates, including a new Discover tab, a Microsoft 365 connector, and a redesigned workflow run experience.
+
+* *Discover shared work across your org:* a new Discover tab ranks the agents, apps, and workflows your organization already uses.
+* *Microsoft 365 connector:* bring Outlook, Calendar, OneDrive, SharePoint, Excel, and Teams into your agents and workflows.
+* *Memory privacy controls:* turn personal memory off, and let organizations turn memory off tenant-wide.
+* *Workflow runs:* a redesigned run page with an outcome-first summary, connector health, and live progress updates.
+* *Data Apps renamed to Apps* throughout the product.
+
+xref:notes-agentspot-2026-10-01.adoc[Read the full release notes for October 1, 2026 →]
+
+[#sep-11-2026]
+== September 11, 2026
+
+11 updates, including the ability to cancel workflow runs and continuous Slack conversations.
+
+* *Cancel workflow runs* while they are in progress.
+* *Continuous Slack conversations:* AgentSpot now remembers the conversation in Slack DM and channel threads.
+* *More reliable workflows:* large lists and parallel steps no longer fail the entire run, and workflows can include up to 50 managed agents.
+* *More consistent memory* across an entire conversation.
+
+xref:notes-agentspot-2026-09-11.adoc[Read the full release notes for September 11, 2026 →]
+
+[#sep-01-2026]
+== September 1, 2026
+
+14 updates, including actions in AgentSpot apps and login hint support for single sign-on.
+
+* *Actions in apps:* apps can now run actions end to end, triggering follow-up steps and writing data back.
+* *Tableau connector authentication support,* a step toward connecting your Tableau data to AgentSpot apps.
+* *Login hint support for single sign-on:* returning users see their email pre-filled at login.
+* *More reliable workflow connector tools* and clearer style options in the app builder.
+
+xref:notes-agentspot-2026-09-01.adoc[Read the full release notes for September 1, 2026 →]

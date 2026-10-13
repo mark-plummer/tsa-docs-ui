@@ -127,7 +127,7 @@ endif::[]
 
 ++++
 <div class="border">
-<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/9jwx0q72t4.js" async type="module"></script><style>wistia-player[media-id='9jwx0q72t4']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/9jwx0q72t4/swatch'); display: block; filter: blur(5px); padding-top:56.46%; }</style> <wistia-player media-id="9jwx0q72t4" aspect="1.7712177121771218"></wistia-player>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/9jwx0q72t4.js" async type="module"></script><style>wistia-player[media-id='9jwx0q72t4']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/9jwx0q72t4/swatch'); display: block; filter: blur(5px); padding-top:56.46%; }</style> <wistia-player media-id="9jwx0q72t4" aspect="1.7712177121771218" quality-min="720"></wistia-player>
 </div>
 ++++
 
@@ -183,7 +183,7 @@ With the command palette, you can:
 
 ++++
 <div class="border">
-<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ob9bsm5u9l.js" async type="module"></script><style>wistia-player[media-id='ob9bsm5u9l']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ob9bsm5u9l/swatch'); display: block; filter: blur(5px); padding-top:84.79%; }</style> <wistia-player media-id="ob9bsm5u9l" aspect="1.1793611793611793"></wistia-player>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/ob9bsm5u9l.js" async type="module"></script><style>wistia-player[media-id='ob9bsm5u9l']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/ob9bsm5u9l/swatch'); display: block; filter: blur(5px); padding-top:84.79%; }</style> <wistia-player media-id="ob9bsm5u9l" aspect="1.1793611793611793" quality-min="720"></wistia-player>
 </div>
 ++++
 
@@ -239,7 +239,7 @@ Models are now fully discoverable through ThoughtSpot's unified search. Whether 
 ++++
 <br>
 <div class="border">
-<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/vky63f6tp2.js" async type="module"></script><style>wistia-player[media-id='vky63f6tp2']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vky63f6tp2/swatch'); display: block; filter: blur(5px); padding-top:60.83%; }</style> <wistia-player media-id="vky63f6tp2" aspect="1.643835616438356"></wistia-player>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/vky63f6tp2.js" async type="module"></script><style>wistia-player[media-id='vky63f6tp2']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/vky63f6tp2/swatch'); display: block; filter: blur(5px); padding-top:60.83%; }</style> <wistia-player media-id="vky63f6tp2" aspect="1.643835616438356" quality-min="720"></wistia-player>
 </div>
 ++++
 
@@ -306,7 +306,7 @@ endif::[]
 
 ++++
 <div class="border">
-<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/gqyfnxkspw.js" async type="module"></script><style>wistia-player[media-id='gqyfnxkspw']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/gqyfnxkspw/swatch'); display: block; filter: blur(5px); padding-top:57.29%; }</style> <wistia-player media-id="gqyfnxkspw" aspect="1.7454545454545454"></wistia-player>
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/gqyfnxkspw.js" async type="module"></script><style>wistia-player[media-id='gqyfnxkspw']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/gqyfnxkspw/swatch'); display: block; filter: blur(5px); padding-top:57.29%; }</style> <wistia-player media-id="gqyfnxkspw" aspect="1.7454545454545454" quality-min="720"></wistia-player>
 </div>
 ++++
 

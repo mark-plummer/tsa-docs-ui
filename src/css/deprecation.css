@@ -1,0 +1,98 @@
+/* Deprecation page: Feature | Deprecated | Removed | Details tables */
+.doc table.tableblock.deprecation-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.doc table.tableblock.deprecation-table > * > tr > * {
+  vertical-align: top;
+  text-align: left;
+  padding: 0.75rem 0.75rem;
+  hyphens: none;
+}
+
+.doc table.tableblock.deprecation-table > thead th {
+  white-space: nowrap;
+}
+
+/* Feature name */
+.doc table.tableblock.deprecation-table > tbody > tr > :first-child {
+  font-weight: 600;
+}
+
+/* Deprecated and Removed dates stay on one line per release where space allows */
+.doc table.tableblock.deprecation-table > tbody > tr > :nth-child(2),
+.doc table.tableblock.deprecation-table > tbody > tr > :nth-child(3) {
+  hyphens: none;
+}
+
+.doc table.tableblock.deprecation-table td > .content > :last-child,
+.doc table.tableblock.deprecation-table td > p.tableblock:last-child {
+  margin-bottom: 0;
+}
+
+.doc table.tableblock.deprecation-table td ul {
+  margin: 0.25rem 0 0.5rem 0;
+  padding-left: 1.1rem;
+}
+
+/* Mobile: each row becomes a card so Details is never hidden off-screen */
+@media screen and (max-width: 768px) {
+  .doc table.tableblock.deprecation-table,
+  .doc table.tableblock.deprecation-table > tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .doc table.tableblock.deprecation-table > thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    padding: 0.75rem 0;
+    border-top: 1px solid #cecece;
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr > * {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0 !important;
+    background: none;
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr > :first-child,
+  .doc table.tableblock.deprecation-table > tbody > tr > :nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr > :nth-child(2)::before,
+  .doc table.tableblock.deprecation-table > tbody > tr > :nth-child(3)::before {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr > :nth-child(2)::before {
+    content: 'Deprecated';
+  }
+
+  .doc table.tableblock.deprecation-table > tbody > tr > :nth-child(3)::before {
+    content: 'Removed';
+  }
+}

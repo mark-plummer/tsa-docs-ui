@@ -1,0 +1,37 @@
+= September 11, 2026
+:description: Full release notes for the AgentSpot production release of September 11, 2026.
+
+This production release includes 11 updates. For a summary of recent releases, see xref:whats-new-agentspot.adoc[AgentSpot release notes].
+
+== What's new
+
+=== Workflows
+
+* *Cancel workflow runs:* cancel a workflow run while it's in progress instead of waiting for it to finish.
+
+=== Connectors
+
+* *Continuous Slack DM conversations:* AgentSpot now remembers the conversation in a Slack direct-message thread, so follow-up messages continue where you left off instead of starting a new conversation each time.
+* *Continuous Slack channel conversations:* AgentSpot now keeps a running conversation for each person in a Slack channel thread, so follow-up questions continue the same conversation instead of starting over.
+
+== Improvements
+
+=== Agents
+
+* *More consistent memory across a conversation:* agents now keep your saved facts and preferences available throughout an entire conversation, not just the first reply.
+
+=== Workflows
+
+* *More reliable workflow runs with large data:* workflows that process large lists of items in parallel steps no longer fail the entire run.
+* *More reliable parallel step results:* workflow steps that combine results from many parallel branches now complete reliably even with large outputs.
+* *Higher workflow agent limit:* workflows can now include up to 50 managed agents, up from the previous limit.
+* *Simplified workflow editor:* the workflow editor no longer shows a separate test-run button, simplifying how you run a workflow.
+
+=== Apps
+
+* *Working back button in apps:* the browser back button now works correctly after opening an app directly from a link.
+
+=== Administration
+
+* *Faster memory admin page:* the verified facts and instructions admin page now loads noticeably faster.
+* *Consistent credit terminology:* DO credits now appear with consistent capitalization throughout the product.

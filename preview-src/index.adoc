@@ -9,6 +9,109 @@ Author Name
 :page-pagination:
 :description: A "preview" site for the new UI.
 
+++++
+<style>
+.doc .sidebarblock {
+  background: #f1f1f1;
+  border-radius: 0.75rem;
+  border: 1px solid #4444;
+  padding: 0.75rem 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 96%;
+}
+
+.doc .sidebarblock p {
+  margin-top: 1.25rem;
+}
+
+.doc .sidebarblock>.content>.title {
+    font-weight: 500;
+    font-size: .9rem;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.doc .image:not(.left):not(.right)>img {
+    margin-top: -0.2em;
+    margin-bottom: -5px;
+}
+
+#preamble+.sect1, .doc .sect1+.sect1 {
+  margin-top: 1rem;
+  margin-left: 10px;
+}
+
+.sect1 {
+  margin-left: 10px;
+}
+
+.doc .sidebarblock .title img {
+  margin-top: 0px;
+  margin-bottom: -12px;
+  margin-right: 5px;
+}
+
+span.image {
+    vertical-align: text-bottom;
+}
+
+img {
+    max-width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home .columns .box li img.inline {
+    margin-top: 0;
+}
+</style>
+++++
+
+++++
+<div class="border">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/7ry1cxsx5p.js" async type="module"></script><style>wistia-player[media-id='7ry1cxsx5p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/7ry1cxsx5p/swatch'); display: block; filter: blur(5px); padding-top:33.54%; }</style> <wistia-player media-id="7ry1cxsx5p" aspect="2.981366459627329" quality-min="720"></wistia-player>
+</div>
+++++
+
+[.popup-modal]
+--
+[discrete]
+== Weekly release update – August 14th
+
+This week features the official launch of AgentQL for powerful semantic querying, CSV download support in Spotter to easily export your insights, key bug fixes for smoother Liveboard performance, and more.
+
+xref:notes-weekly.adoc[*Go to weekly release notes*].
+--
+
+TIP: For best performance, limit Liveboards to 80 or fewer visualizations. Having more than 80 visualizations may lead to slower chart loading times or request timeouts.
+
+[.card-link]
+--
+xref:spotter-viz.adoc[SpotterViz]
+
+SpotterViz can autonomously create Liveboards based on your prompts, populating them with relevant visualizations and KPIs. In response to your query, ThoughtSpot evaluates available data sources, creates analysis, and lays out the information for you.
+--
+
+****
+An updated and streamlined sign-in page will go live by the end of September. No functionality has changed.
+//For more information, see xref:user-account-activation-okta.adoc[].
+
+[.bordered]
+image::new-login.png[New login screen,160]
+****
+
+.New sign-in page coming soon!
+[.announce-box-narrow]
+--
+An updated and streamlined sign-in page will go live by the end of September. No functionality has changed.
+
+[.bordered]
+image::new-login.png[New login screen,320]
+--
+
+
 .test
 [.coming-soon-box]
 --
@@ -20,7 +123,7 @@ test
 [.lead]
 This is it!
 
-[.card-link]
+[.card-box]
 --
 xref:doc-update.adoc[Welcome to the new ThoughtSpot documentation!]
 
@@ -35,22 +138,21 @@ Navigation sections now mirror the ThoughtSpot product interface, so the content
 
 == This is a heading
 
-  .Welcome to the new ThoughtSpot documentation!
-  [.announce-box-narrow]
-  --
-  We've redesigned the site with a new navigation structure, updated search features, and a fresh new look.
+.Welcome to the new ThoughtSpot documentation!
+[.announce-box-narrow]
+--
+We've redesigned the site with a new navigation structure, updated search features, and a fresh new look.
 
-  xref:doc-update.adoc[*Learn more*].
-  --
+xref:doc-update.adoc[*Learn more*].
+--
 
-.Release 26.7.0.cl coming soon!
+.Release 26.9.0.cl coming soon!
 [.coming-soon-box]
 --
-ThoughtSpot plans to upgrade customer instances starting on June 30.
+ThoughtSpot plans to upgrade customer instances starting on September 9.
 
-See the xref:coming-soon.adoc[highlights] of the 26.7.0.cl release.
+See the xref:coming-soon.adoc[highlights] of the 26.9.0.cl release.
 --
-
 
 xref:home.adoc[]
 
@@ -82,7 +184,7 @@ Turn raw data into models in minutes.
 
 [.card-link]
 --
-image::##Kaios.svg##[Icon,36,36]
+image::Kaios.svg[Icon,36,36]
 
 xref:page.adoc[SpotterViz]
 
