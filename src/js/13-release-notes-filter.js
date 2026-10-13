@@ -95,23 +95,6 @@
       })
     }
 
-    function getHeaderBottom () {
-      var fixedToolbar = document.querySelector('.toolbar')
-      if (fixedToolbar) return fixedToolbar.getBoundingClientRect().bottom
-      var subnav = document.querySelector('.subnav')
-      if (subnav && window.getComputedStyle(subnav).display !== 'none') return subnav.getBoundingClientRect().bottom
-      return (document.querySelector('.navbar') || document.body).getBoundingClientRect().bottom
-    }
-
-    var hasClicked = false
-
-    // Filtering changes the page height, so put the "Features by status" label at the top of
-    // the viewport (below the fixed header) rather than wherever the browser leaves the scroll.
-    function scrollToLabel () {
-      var top = label.getBoundingClientRect().top - getHeaderBottom() - 16
-      window.scrollBy({ left: 0, top: top, behavior: 'instant' })
-    }
-
     // Place the pill without animating, then enable transitions for later clicks.
     moveIndicator()
     window.requestAnimationFrame(function () { buttonGroup.classList.add('is-ready') })
@@ -128,10 +111,11 @@
         btn.classList.add('is-active')
         btn.setAttribute('aria-pressed', 'true')
         moveIndicator()
+        // Filtering changes the page height, so keep the toolbar at the same spot in the viewport.
+        var before = toolbar.getBoundingClientRect().top
         applyFilter(btn.dataset.status)
-        // The first click only filters; later clicks also scroll the label to the top.
-        if (hasClicked) scrollToLabel()
-        hasClicked = true
+        var shift = toolbar.getBoundingClientRect().top - before
+        if (shift) window.scrollBy({ left: 0, top: shift, behavior: 'instant' })
       })
     })
   })
