@@ -1315,29 +1315,20 @@
 }
 
 .doc .sidebarblock {
-  background: linear-gradient(180deg, #00d2ff 0%, #00d2ff 40%, #33c 100%);
-  border-radius: 1rem;
-  padding: 1px;
+  padding: 0;
 }
 
 .doc .sidebarblock > .content {
   background: var(--example-background);
-  border-radius: calc(1rem - 1px);
+  border: 1px solid var(--panel-border-color);
+  border-radius: 0.75rem;
   padding: 0.75rem 1.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .doc .sidebarblock {
-    background: linear-gradient(180deg, #00d2ff 0%, #33c 100%);
-  }
-
   :root:not([data-theme="light"]) .doc .sidebarblock > .content {
     background: #151241;
   }
-}
-
-[data-theme="dark"] .doc .sidebarblock {
-  background: linear-gradient(180deg, #00d2ff 0%, #33c 100%);
 }
 
 [data-theme="dark"] .doc .sidebarblock > .content {

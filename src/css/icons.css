@@ -1,0 +1,59 @@
+/* Mask-based icons: the SVG supplies the shape, currentColor supplies the colour,
+   so they follow the text colour in both light and dark mode. */
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask: var(--icon) no-repeat center / contain;
+  mask: var(--icon) no-repeat center / contain;
+  vertical-align: -0.125em;
+  overflow: hidden; /* keep the baseline at the bottom edge, not the nbsp inside */
+}
+
+.ui-icon-ellipsis {
+  --icon: url(../img/ellipsis.svg);
+}
+
+.ui-icon-ellipsis-vertical {
+  --icon: url(../img/ellipsis-vertical.svg);
+}
+
+.ui-icon-share-2 {
+  --icon: url(../img/share-2.svg);
+  --icon-shift: -0.04em; /* two nodes on the right make it look right-heavy */
+}
+
+/* Circled variant: ::before is the glyph and ::after is the ring, so they can be
+   coloured separately (a mask on the element itself would clip both). The box
+   grows to 1.6em so the glyph keeps its full 1em size (62.5%) inside. The icons'
+   stroke is 2/24 of the glyph, so the ring is 2/24em (0.0833em) to match. */
+.ui-icon-circle {
+  position: relative;
+  width: 1.6em;
+  height: 1.6em;
+  vertical-align: -0.4em;
+  background: none;
+  -webkit-mask: none;
+  mask: none;
+}
+
+.ui-icon-circle::before,
+.ui-icon-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.ui-icon-circle::before {
+  background-color: currentColor;
+  -webkit-mask: var(--icon) no-repeat calc(50% + var(--icon-shift, 0%)) center / 62.5%;
+  mask: var(--icon) no-repeat calc(50% + var(--icon-shift, 0%)) center / 62.5%;
+}
+
+/* softened ring: lighter grey on light pages, dimmer grey on dark ones */
+.ui-icon-circle::after {
+  background-color: color-mix(in sRGB, currentColor 55%, transparent);
+  -webkit-mask: radial-gradient(closest-side, transparent calc(100% - 0.0833em - 0.5px), #000 calc(100% - 0.0833em), #000 calc(100% - 0.5px), transparent 100%);
+  mask: radial-gradient(closest-side, transparent calc(100% - 0.0833em - 0.5px), #000 calc(100% - 0.0833em), #000 calc(100% - 0.5px), transparent 100%);
+}

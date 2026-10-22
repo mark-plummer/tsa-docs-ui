@@ -12,10 +12,6 @@ Author Name
 ++++
 <style>
 .doc .sidebarblock {
-  background: #f1f1f1;
-  border-radius: 0.75rem;
-  border: 1px solid #4444;
-  padding: 0.75rem 1.5rem;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 96%;
@@ -86,6 +82,26 @@ xref:notes-weekly.adoc[*Go to weekly release notes*].
 --
 
 TIP: For best performance, limit Liveboards to 80 or fewer visualizations. Having more than 80 visualizations may lead to slower chart loading times or request timeouts.
+
+Click the Share [.ui-icon.ui-icon-share-2.ui-icon-circle]##{nbsp}## button and then click the More [.ui-icon.ui-icon-ellipsis-vertical.ui-icon-circle]##{nbsp}## button.
+
+Click the [.ui-icon.ui-icon-share-2]##{nbsp}## *Share* button.
+
+and then click the More [.ui-icon.ui-icon-ellipsis.ui-icon-circle]##{nbsp}## icon.
+
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../../../test/test-utils')
+----
+****
 
 [.card-link]
 --
