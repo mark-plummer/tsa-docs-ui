@@ -1,0 +1,397 @@
+= AgentSpot connector reference
+:last_updated: Oct 22, 2026
+:linkattrs:
+:experimental:
+:page-aliases:
+:description: Learn about the available connectors in AgentSpot
+:page-role: connector-search
+
+// tag::connectors[]
+// Generated from Arsenal's catalogue — edits between these markers are lost on the next run.
+
+[.lead]
+AgentSpot natively connects with over 1,000 third-party tools. Use this reference to quickly verify if your existing software stack is supported.
+
+== Available connectors
+
+Find a connector under its category or by searching for it by name.
+
+=== Commerce and shopping (15)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Amazon Selling Partner |Appcharge |Commerce Layer |Domino's India
+|GoDaddy |Helium 10 |Instacart |McDonald's China
+|Order by Cash App |Shopify |Square |Taskrabbit
+|Teajia |Terminal49 |Zomato |
+|===
+
+=== Communication (25)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|AgentDM |AgentMail |AgentPhone |BaseHub Forums
+|CometChat |DialMCP |EPST |Front
+|GotFreeFax |Infobip Message |Inkbox |Livestorm
+|Pylon |Quo |RingCentral Chat |Sendmux
+|Sent |Slack |Superhuman Mail |Synthflow
+|TimelinesAI |Unthread |Vapi |Webex Meetings
+|Zoom | | |
+|===
+
+=== Creative (61)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|60fps |Agent-Native Design |AIDesigner |B12
+|BioRender |Brandfetch |Canva |ChatCut
+|Cloudinary |Cloudinary Analysis |draw.io |Eraser
+|Excalidraw |fal |Fidelity Studio |Figma
+|Figr |Flourish |Flowstep |Frontify
+|Gamma |HeyGen |Higgsfield |HTML/CSS to Image
+|HyperFrames by HeyGen |Icons8 |IconScout |ImageKit
+|Imagine.art |Inspo |Kling AI |Landingfolio
+|Lucid |Luttie |Magic Patterns |Mermaid Chart
+|Miro |Mobbin |Moda - Slides and Designs |Mood Studio
+|NativeDiagram |OpusClip |Pascal |PixelLab
+|Proseify |QuiverAI |Refero |Retro Diffusion
+|Rubric |Shutterstock |StarryKit |SVGator
+|Swoop |Tella |tldraw |TypeUI
+|Uizze |Unsplash |Visily |Whimsical
+|WordPress.com | | |
+|===
+
+=== Data and analytics (86)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Alien Intelligence |Altertable |Amplitude |AnswerPool
+|AnySearch |Apify |Atlan |Attic Standard
+|august |Canary Data |ChartMogul |ClickHouse
+|cloro |Cloudflare Radar |CockroachDB Cloud |Cognito Forms
+|COMOS Gateway |Contentsquare |Databricks |Databricks Genie
+|Demographic and Health Surveys |Domo |dot. |Enterpret
+|Eon Era |Felt Maps |Fullstory |GIS Cloud
+|Google Analytics 4 |Google Cloud BigQuery |Hex |Honeydew
+|Humblytics |Informatica Catalog Discovery |Informatica Data Exploration |Jedify
+|Jotform |Kuliko AI |Latvia Weather |Lexsis
+|Listen Labs |Looker |Masthead Data |Maze
+|Meko |Metabase |Mixpanel |Monte Carlo
+|MoSPI |MotherDuck |Motley |Narrative I/O
+|Ninout |NRP Geospatial Data |Omni Analytics |Orion by Gravity
+|Orthogonal |Our World in Data |Parallel Task |Pendo
+|Perspective AI |PostHog |Preuve |Qualtrics
+|Rally |Ramp Data |Remesh |SAP LeanIX
+|Sigma |Snowflake |Starburst |Statsig
+|Steep |Subtext |Summation |Superdata
+|SupplyGraph |SurveyMonkey |Tableau |Tally
+|Typeform |Unwrap |Vaisala Xweather |Wolfram
+|Yardi Matrix |Yardi Virtuoso | |
+|===
+
+=== Developer tools (323)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|1inch Docs |21st.dev Magic |Agent-Native |Agentverse
+|Agility CMS |AI Elements |Algolia DocSearch |Algorand Developer Docs
+|Alpic |Antimetal |Applesauce |Appwrite
+|Appwrite Docs |Arcade |Arize AX Docs |AssemblyAI Docs
+|Astro Docs |Autosana |Avalonia Docs |AWS Knowledge
+|Axiom |Base44 |Better Auth |Better Stack
+|BetterBugs |beUI |Bitrise |Bitrix24 Developer Docs
+|Blockscout |Blueshift |Bronto |Browserless
+|BugSnag |Buildkite |Bun Docs |CacheBash
+|Carbon Design System |Catalyst by Zoho |Causely |Celigo
+|Checkout.com Developer |Chipp |Circle Developer Docs |Cisco Meraki
+|CKB AI |Claude Code Docs |Clerk |Cloudflare
+|Cloudflare Agents Docs |Cloudflare AI Gateway |Cloudflare Audit Logs |Cloudflare AutoRAG
+|Cloudflare Browser Rendering |Cloudflare Containers |Cloudflare Developer Platform |Cloudflare Digital Experience Monitoring
+|Cloudflare DNS Analytics |Cloudflare Docs |Cloudflare GraphQL Analytics |Cloudflare Logpush
+|Cloudflare Observability |Cloudflare Workers Builds |Cloudinary Environment Config |CodeAlive
+|CodeWords |Cognite Docs |commercetools Docs |Commonware Library
+|Compiler Explorer |Contentful |Context7 |Control Plane
+|ConvertSite |Coolify |CopilotKit Docs |Coralogix
+|Costory |CreateOS |Croft |CSPR.cloud Docs
+|Cypress Cloud |DaloyJS Docs |Datadog |DatoCMS
+|DeepWiki |Developerz |devenv |DevExpress Docs
+|Devfolio |DevPlan |Discord Developer Docs |Ditto
+|Dodo Payments Docs |E2B Docs |EmDash Docs |Encore Cloud
+|ESP Component Registry |Espressif ESP Pilot |Etherfuse Docs |eToro API Docs
+|Exa |Explorium Docs |Expo |fal Docs
+|FastMCP Docs |Firecrawl |flespi |Floot
+|Formisch Docs |Front-End Checklist |Gaffa Docs |Gemini API Docs
+|GenLayer Docs |GitHits |GitHub |GitLab
+|GitMCP |Glean Dictionary |GMI Cloud |Google Compute Engine
+|Google Workspace Developer Docs |GoPlausible Algorand |Gradio Docs |Grafana
+|GraphOS MCP Tools |Grep by Vercel |Greptile |Harness
+|Hatchable |Hedera Docs |Helix |Honeycomb
+|HoneyHive Docs |Hopper Design System |Hostinger |Hugging Face
+|Incident.io |Infisical Docs |InfluxDB Docs |Initia Docs
+|InsForge |Jam |javadocs.dev |Jentic
+|Jina AI |Jotform Apps |Kapso |Kentico Docs
+|Knot API Docs |Kobiton |LangChain API Reference |LangChain Docs
+|Langfuse Docs |LaraPlugins |Laravel Nightwatch |Latitude
+|LaunchDarkly |Lightrun |Linear |Lithic Docs
+|LlamaParse |Locus |LogRocket |Lua (heylua.ai) Docs
+|Luxonis |MailKite |Make |Manufact
+|Mapbox |Mapbox DevKit |Mapbox Docs |Marmo UI
+|Mastercard Developers |MCPJam Docs |MDN |Mem0
+|MenteDB |Mesh API |MeshMarket |Midnight Docs
+|Mintlify |Mintlify Docs |mittwald |MongoDB Atlas
+|Motion Docs |MuleSoft |Mural Pay Docs |n8n
+|n8n Docs |Namefi |Narrative I/O Docs |Neo4j Agent Memory
+|Neon |Netlify |Nexlayer |Nuxt
+|Nuxt UI |NuxtHub |NVIDIA CUDA Docs |Obelinf
+|One |OpenAI Developer Docs |OpenRouter |OpenTofu
+|OpenZeppelin Contracts |Originkit |Overskill |PagerDuty
+|Parallel Search |ParseAPI |pg-aiguide |Phantom Developer Docs
+|Plaid Developer Tools |PlanetScale |Port IO |Postman
+|Prava Payments Docs |Prefect |Princi |Prisma
+|Privy Docs |Pulumi |Qt Docs |QuickNode
+|Railway |ReadMe Docs |Ref |Render
+|Reown Docs |Replicate |Resend |Resend Docs
+|Respan |Restate Docs |Retool |ReUI
+|Roboflow |Rootly |Rostelecom React Design System |RubberDuck
+|RubberDuck Semantic Intelligence |Runpod Docs |Runway (runway.team) |Sanity
+|Scalekit |ScrapeBadger |Scrapfly |searchcode
+|Sefaria Developers |Semgrep |Sentry |Shelly API Docs
+|Sidero Labs Docs |SigNoz |Sinch Docs |Slint Docs
+|SODAX Builders |Solana Developer |Sora UI |Sosein
+|Sosumi |Sourcegraph |Speakeasy Gram |Speko
+|SpotterCode |Sprintra |Sprites |Stack Auth Docs
+|Stagehand Docs |Standout |Storyblok |Strapi Docs
+|Stytch |Supabase |Svelte |Swagger
+|Synthflow Docs |TanStack |Tavily |Temporal Docs
+|The Website Specification |ThreeUI |TinyFish |treg.to
+|Trendyol Developer Tools |Trustless Work Docs |Twilio |Twinkle Hub
+|Typesense Cloud |UI Skills |UI Verify |Unblocked
+|Unipile API Docs |Uno Platform Docs |Unstoppable Domains |Unstructured Transform
+|Untitled UI |Upstash |UptimeRobot |v0
+|Vaadin |Val Town |Vapi Docs |Varlock Docs
+|Vercel |VibeShip Spawner |Vue Ecosystem |Vuetify
+|Webflow |webforJ |WeWeb |Wix
+|Workato |WorkOS |World Docs |X Developer Docs
+|xAI Docs |YouTrack |Zapier |Zep Docs
+|Zerion API Docs |Zite |ZK Compression Docs |
+|===
+
+=== Education (23)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|alphaXiv |arXiv Radar |Brisk Teaching |Consensus
+|Coteach |Ed.ai Admin |Elicit |IMAS Data Dictionary
+|Neo4j GraphAcademy |NTHU Campus Assistant |O'Reilly |Oak National Academy
+|OpenAlex |Padlet |Purdue RCAC Docs |Scite
+|Scrimba Explain |Sefaria |Skilljar |Tafsir Center
+|TeamTeacher |Udemy Business |Wiley Scholar Gateway |
+|===
+
+=== Financial services (118)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|9fin |Aiera |Aiwyn Tax |Aleph
+|AlphAI |AngelList |Anticapture |Avalara
+|BankBridge |Bigdata.com |Black Diamond |Bonsai
+|Brex |Campfire |Carta |CB Insights
+|CFO.ai |Chargebee |Chronograph |Cinder
+|Clarity AI |Clear Street |CoinDesk |CoinGecko
+|Coinversa Pulse |Crypto.com |cTrader |D&B Finance Analytics
+|D&B Risk Analytics |Daloopa |Datarails FinanceOS |Digits
+|Dodo Payments |DualEntry |Dynt |Embat
+|Energy Aspects |Era Context |Etherscan |Expensify
+|FactSet AI-Ready Data |Factuarea |Financial Datasets |Fiscal.ai
+|Flourish Financial |FMP |freee |FreshBooks
+|GammaRips |Gemini |GoCardless |Grasp
+|Groww |Hanover Park |Ideals |INDmoney
+|Interactive Brokers (IBKR) |ISO 20022 by Beneficial Strategies |Kepler |Kintsugi
+|Light |Lumonic |LunarCrush |Mercury
+|mergerinfo |Meridian Connector for QuickBooks |Mollie |Moody's
+|Moon Banking |Morningstar |MT Newswires |Navan
+|NetSuite |OneTick Cloud |Paddle |Paymob
+|PayPal |Paytm Payment Gateway |Pigment |Pine Labs Payments Assistant
+|Pinegap |Plaid |Pleo |PocketSmith
+|Polar |Privacy.com |Pulpe |Ramp
+|Range |Razorpay |RealtyPad |Rillet
+|Robinhood |Rockhopper |S&P - Deterministic Retrieval |S&P Global - Adaptive Retrieval
+|Sage Intacct |Sherpa |Specter |Spendesk
+|Spendflo |Stripe |SuperBooks |Tabs
+|Tax1099 |TaxAct |Tiller |Twelve Data
+|Verisk Underwriting Intelligence |viaNexus vAST |VTX Macro |Vultax
+|Wealthbox |Webull |Xero |Zacks Data
+|Zocks |Zuora | |
+|===
+
+=== Health and life sciences (23)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|AdisInsight |Alma |Amass |Benchling
+|BGPT |Boltz API |Cortellis CMC Intelligence |Cortellis Regulatory Intelligence
+|Elfcare |FitnessPeak |Health Data Avatar (HDA) |Inductive Bio
+|Ketryx |LatchBio |Medidata |Open Targets
+|Pipeworx Clinical Tables |PopHIVE |Revvity Signals AI |SNOMED CT Terminology
+|Synapse.org |Synthesize Bio |Turquoise Health |
+|===
+
+=== HR and recruiting (23)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Ashby |Assembly |BambooHR |Cloverleaf
+|Deel |Dice |Gem |Gusto
+|Indeed |Justworks |Lattice |Metaview
+|Offers |pintl |Rippling |Shapes
+|Snagajob |StackOne |Teamtailor |Tough Tongue AI
+|Visier |Workable |ZipRecruiter |
+|===
+
+=== Legal (40)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Aurora |Bloomberg Law |BoardWise |Clarivate IPOne CompuMark Trademarks
+|Contract-Factory |CourtListener |Courtroom5 |Definely
+|Descrybe |DocuSeal |DocuSign |Everlaw
+|Filevine |GC.AI |General Legal |Haloo Trademark Clearance
+|Harvey |iManage Work |Ironclad |iubenda
+|Jotform Sign |Lawstronaut |Lawve AI |LawVu
+|Legal Data Hunter |LegalZoom |Lumin |Midpage
+|NetDocuments |OpenCase |OpenCaseLaw |PandaDoc
+|Patlytics |Paxton Legal Research |SignatureAPI |TopCounsel by The L Suite
+|Youtrust |Yuandian Cases |Yuandian Company |Yuandian Law
+|===
+
+=== Media and entertainment (17)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Beehiiv |Brand24 |Brightcove |Bzzoiro Sports Data
+|Fever Event Discovery |Gamedev.pl |Listnr Studio |Melon
+|Meltwater |PodEngine |Restream |Sonos
+|Splice |Ticket Tailor |Tixel |TranscriptAPI
+|Viberate | | |
+|===
+
+=== Nonprofit (5)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Candid |Givebutter |Granted |Kindora Funder Discovery
+|Planning Center | | |
+|===
+
+=== Productivity (113)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|AgentKey |Agiflow |Airtable |Albo
+|Ambiguous |Ancher |Asana |Astravue
+|Atlassian (Jira/Confluence) |Atmina |Box |Calendly
+|Circleback |Clarify |ClickUp |Clyro
+|Coda |Composio |ContextStream |CORE
+|Craft |DeepL |Docfarm |Dropbox
+|Dropbox Dash |Egnyte |Engram by Lumetra |fastn
+|Fathom |Felix |Fellow.ai |Fibery
+|Files.com |Fireflies |Freshservice |Galaxy.ai
+|GIA by ACE |GitBook |Glean |Google Workspace
+|Grain |Granola |grtwo-docs |GudCal
+|Guru |HackMD |Heptabase |Idiolect
+|Iterate |iZap |JoAi |KayrosLab
+|Keito |Krisp |LaunchNotes |LILT
+|Lobu |Mem |Membase |Memex
+|Microsoft 365 |MindMap AI |Mojo — Pocket Capture |Monday.com
+|Monid |Notion |offgen |Otter.ai
+|Parcel |Pensyve |Pine Assistant |PipesHub
+|Piyaz |Plaud |Poly |Productive
+|prompts.chat |Read AI |Readwise |Reassign
+|Remote Arc |Rocketlane |Send |Siit
+|Skills IL |Slidely AI |Smartling |Smartsheet
+|Soup.net |Sovara |Stackcut |Stompy
+|Supermemory |Tactiq |TagTeam |Tandem
+|TickTick |Todoist |Trello |uploads.sh
+|Valency |Vani by Zoho |Vertiso Memory |Vibe AI
+|VisionClaw |Webu |Wispr Flow |Within.ai
+|Wrike |xTiles |You.com |Zoho Show
+|Zylo | | |
+|===
+
+=== Sales and marketing (117)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|6sense |AATex |ActiveCampaign |Actively
+|AdKit |Adobe Journey Optimizer |Adobe Real-Time Customer Data Platform |Adspirer
+|Affinity |Ahrefs |AirOps |Anysite
+|Apollo.io |Apostra |Attention |Attio
+|AWS Marketplace |Badger Maps |Bigin by Zoho CRM |Bitly
+|Bonemeal |Brand Kit OS |Braze |Cargo
+|Cello |Chili Piper |Clay |Close
+|ColdIQ |Common Room |Conductor |Crossbeam
+|Crustdata |Customer.io |DataForB2B |Day AI
+|Ethos by Cluster |EULER |Explorium AgentSource |G2
+|Gainsight (CS) |Gainsight (Staircase AI) |GLG |Gong
+|Grinfi |Grinfi Telegram |GTM Buddy |GymHappy
+|Harmonic |Helena by Enrich Labs |Hrizn |HubSpot
+|Hunter |IBISWorld |Insider One |Intercom
+|Intuit Mailchimp |item |Jasper |Keywords People Use
+|Klaviyo |LeadIQ |LeadMagic |Leafpad
+|Lemlist |LidFly |Loops |Luma
+|MailerLite |Markifact |Metricool Social Media Management |Migma
+|Modjo |Motion Creative Analytics |Negolio |Nooks
+|NotFair |OneSignal |OpenRush |OpenSEO
+|Orcool |Outreach |Peec AI |Phoenix by HG Insights
+|Pipedrive |Praiz |PristineSend |Profound
+|Pushwoosh ManyMoney |Rapido CRM |RocketReach |Salesforce
+|SE Ranking |Seamless |Semrush |Sendoso
+|Sequel.io |Sillage |Similarweb |SISTRIX
+|Spara |Sprout Social |Sprouts Data Intelligence |Sumble
+|Supermetrics Marketing Analytics |Sybill |Typefully |Upfluence
+|Valuecase |Vibe Prospecting |Voluum |Vruum
+|Webmetic |Wingify |Zernio |Zoho CRM
+|ZoomInfo | | |
+|===
+
+=== Security and compliance (22)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|AgentAvow |Arcjet |BalkanID |Bright Security
+|CalmCompliance |Cloudflare CASB |Dash |Drata
+|Have I Been Pwned |IANS Research |InspectAgents |JupiterOne
+|Mind |Orca Security |Origin |Phished
+|Pi Security |Prowler |Sonatype Guide |Tines
+|Vanta |Wiz | |
+|===
+
+=== Travel (18)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|Airfield Directory |AllTrails |CargoAi |EcoAloha
+|Expedia |Ferryhopper |Hostex |Kiwi.com
+|lastminute.com |Nomads.com |OpenBnB |Otto Travel
+|Skiplagged |Super.com |Trivago |Turkish Airlines
+|Veltra Activities |Viator | |
+|===
+
+=== Other (7)
+
+[cols="25%,25%,25%,25%",frame=none,grid=cols]
+|===
+|AgeVolt |Autodesk Product Help |Epicure |Maryland Community Compass
+|PGA Golf |Tayyib Live |Tenqual |
+|===
+// end::connectors[]
+
+== Connector notes
+
+The Microsoft 365 connector is platform-native and supports all Microsoft 365 apps. Agents can use it to work with Microsoft 365 data, including transferring workspace files and handling email attachments.
+// madhukumar-ds confirmed we support all MS 365 apps.
+
+Google Slides tools are available as part of the Google Workspace connector.
+
+The Google Workspace connector now offers the same set of tools as Google's own Workspace MCP server.
+// TODO: verify with engineering — list the Google Workspace apps and tools now covered, and whether any need extra admin consent or OAuth scopes
