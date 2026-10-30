@@ -2042,6 +2042,7 @@
 
 .doc .sidebarblock.card-link-grid > .content {
   background: none;
+  border: none;
   border-radius: 0;
   padding: 0;
 }
@@ -2104,6 +2105,7 @@
 
 .doc .sidebarblock.card-link-grid-2 > .content {
   background: none;
+  border: none;
   border-radius: 0;
   padding: 0;
 }
@@ -2174,6 +2176,7 @@
 
 .doc .sidebarblock.card-link-grid-4 > .content {
   background: none;
+  border: none;
   border-radius: 0;
   padding: 0;
 }

@@ -160,6 +160,8 @@ code,
 kbd,
 pre {
   font-family: var(--monospace-font-family);
+  font-feature-settings: "liga" 0, "calt" 0;
+  font-variant-ligatures: none;
 }
 
 b,

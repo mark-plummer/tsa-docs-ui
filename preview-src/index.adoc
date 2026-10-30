@@ -9,6 +9,58 @@ Author Name
 :page-pagination:
 :description: A "preview" site for the new UI.
 
+== Filter syntax
+
+Each filter clause has the form `{Column name} {operator} {values}`. Separate multiple values with commas. Spaces inside a value are kept.
+
+[width="100%",cols="1,2,2"]
+[options="header"]
+|===
+|Column type |Example |Meaning
+
+|Attribute
+|`Region=West,East`
+|Region is West or East
+
+|Attribute
+|`Region!=South`
+|Region is not South
+
+|Measure
+|`Sales>10000`
+|Greater than 10000. `+>=+`, `<`, and `+<=+` also work.
+
+|Measure
+|`Sales=between10005000`
+|Between 1000 and 5000, inclusive
+
+|Date, rolling
+|`OrderDate=last30days`
+|The last 30 days. Also `this quarter`, `next 2 weeks`, `today`, `year to date`.
+
+|Date, rolling
+|`OrderDate>last2months`
+|After the last 2 months
+
+|Date,fixed
+|`OrderDate=2026-08-31`
+|On that day. Dates must be in `yyyy-MM-dd` format.
+
+|Date,fixed
+|`OrderDate=between2026-01-012026-06-30`
+|Between the two dates, inclusive
+
+|Date, fixed
+|`OrderDate=january2026`
+|The whole month. Also `q1 2026` and `2026`.
+
+|Any
+|`ProductType=`
+|Clears the chip, so all values are shown
+|===
+
+You can now access anything in ThoughtSpot from a single keystroke. The command palette (kbd:[`Cmd`] + kbd:[`K`] on Mac / kbd:[`Ctrl`] + kbd:[`K`] on Windows and Linux) is a global command center that unifies navigation, search, and actions across the ThoughtSpot platform. Instead of switching between menus, list pages, and contextual controls, you can find content, trigger workflows, and navigate to any part of the product — all from one place.
+
 ++++
 <div class="border">
 <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/7ry1cxsx5p.js" async type="module"></script><style>wistia-player[media-id='7ry1cxsx5p']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/7ry1cxsx5p/swatch'); display: block; filter: blur(5px); padding-top:33.54%; }</style> <wistia-player media-id="7ry1cxsx5p" aspect="2.981366459627329" quality-min="720"></wistia-player>
