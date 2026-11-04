@@ -1,4 +1,4 @@
-= Welcome to ThoughtSpot Documentation
+= Spotter context explained
 :idprefix:
 :idseparator: -
 :!example-caption:
@@ -7,101 +7,22 @@
 :page-pagination:
 :description: A "preview" site for the UI.
 
-++++
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
-++++
+Every Spotter answer is built from four kinds of context:
+
+- Instructions that set behavior
+- Data model semantics that give the data meaning
+- Memory that captures how your business answers questions
+- External context that is pulled over MCP from the sources your admin has connected
+
+The following walkthrough shows how Spotter fetches each type of context and applies it to produce the final insight.
+
+== How the agent responds to a question, step by step
 
 ++++
 <div class="sce">
 <div class="wrap" id="sce-top">
 
-  <header class="hero">
-    <div class="eyebrow">Getting Spotter ready · concepts</div>
-    <h1>How Spotter uses context to answer</h1>
-    <p class="lede">Every Spotter answer is built from four kinds of context: instructions that set behavior, data model semantics that give the data meaning, memory that holds how your business answers, and external context pulled over MCP from the sources your admin has connected. The sections below show how Spotter fetches each of them and acts on them to produce the final insight.</p>
-  </header>
-
-  <!-- ============ 1 · THE PICTURE ============ -->
-  <section class="sect" id="sce-picture">
-    <div class="head">
-      <div class="eyebrow">The picture</div>
-      <h2>What Spotter assembles before it answers</h2>
-    </div>
-    <figure class="fig">
-      <div class="scroll">
-      <svg viewBox="0 0 900 490" role="img" aria-label="Three tiers read top to bottom. Tier one, what you see: a user question flows into the Spotter agent, which fetches, plans and executes to produce the answer. Tier two, what the agent draws on: four blocks side by side, Spotter instructions always applied, data model semantics always in scope, Spotter memory with data model, personal and legacy coaching rows, relevant entries fetched, and external context from Slack, Confluence and SharePoint over MCP, relevant content fetched. All feed the agent. Tier three, where memory comes from: Liveboards and conversations both feed Spotter memory.">
-        <defs><marker id="aB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="arrow"/></marker></defs>
-
-        <text x="40" y="18" class="k">WHAT YOU SEE</text>
-        <rect x="40" y="28" width="220" height="78" rx="10" class="q"/>
-        <text x="56" y="52" class="qs">USER QUESTION</text>
-        <text x="56" y="74" class="qt">"What was our churn</text>
-        <text x="56" y="92" class="qt">last quarter?"</text>
-        <line x1="260" y1="67" x2="336" y2="67" class="ln" marker-end="url(#aB)"/>
-        <text x="298" y="60" text-anchor="middle" class="al">asks</text>
-        <rect x="340" y="28" width="220" height="78" rx="10" class="ag"/>
-        <text x="450" y="52" text-anchor="middle" class="k">AGENT</text>
-        <text x="450" y="72" text-anchor="middle" class="t">Spotter</text>
-        <text x="450" y="92" text-anchor="middle" class="s">fetches · plans · executes</text>
-        <line x1="560" y1="67" x2="636" y2="67" class="ln" marker-end="url(#aB)"/>
-        <text x="598" y="60" text-anchor="middle" class="al">answers</text>
-        <rect x="640" y="28" width="220" height="78" rx="10" class="box"/>
-        <text x="750" y="64" text-anchor="middle" class="t">Answer</text>
-
-        <path d="M139 190 V150 H763 V190" class="ln"/>
-        <path d="M347 190 V150" class="ln"/>
-        <path d="M555 190 V150" class="ln"/>
-        <path d="M450 150 V110" class="ln" marker-end="url(#aB)"/>
-
-        <rect x="36" y="169" width="200" height="15" class="lblbg"/>
-        <text x="40" y="180" class="k">WHAT THE AGENT DRAWS ON</text>
-        <rect x="40" y="190" width="198" height="160" rx="10" class="in"/>
-        <text x="54" y="214" class="t">Spotter instructions</text>
-        <text x="54" y="334" class="m">always applied</text>
-
-        <rect x="248" y="190" width="198" height="160" rx="10" class="se"/>
-        <text x="262" y="214" class="t">Data model semantics</text>
-        <text x="262" y="334" class="m">always in scope</text>
-
-        <rect x="456" y="190" width="198" height="160" rx="10" class="box"/>
-        <text x="470" y="214" class="t">Spotter memory</text>
-        <rect x="470" y="226" width="170" height="26" rx="5" class="sh"/><text x="480" y="244" class="chip-t">Data model memory</text>
-        <rect x="470" y="258" width="170" height="26" rx="5" class="pe"/><text x="480" y="276" class="chip-t">Personal memory</text>
-        <rect x="470" y="290" width="170" height="26" rx="5" class="lg"/><text x="480" y="308" class="chip-t lg-t">Legacy coaching</text>
-        <text x="470" y="334" class="m">relevant entries fetched</text>
-
-        <rect x="664" y="190" width="198" height="160" rx="10" class="ex"/>
-        <text x="678" y="214" class="t">External context</text>
-        <text x="678" y="234" class="s">Slack · Confluence · SharePoint</text>
-        <text x="678" y="250" class="s">over MCP · admin connected</text>
-        <text x="678" y="334" class="m">relevant content fetched</text>
-
-        <rect x="430" y="420" width="116" height="56" rx="10" class="box"/>
-        <text x="488" y="453" text-anchor="middle" class="t">Liveboards</text>
-        <line x1="488" y1="420" x2="488" y2="354" class="ln" marker-end="url(#aB)"/>
-        <rect x="560" y="420" width="126" height="56" rx="10" class="box"/>
-        <text x="623" y="453" text-anchor="middle" class="t">Conversations</text>
-        <line x1="623" y1="420" x2="623" y2="354" class="ln" marker-end="url(#aB)"/>
-        <rect x="520" y="376" width="70" height="16" class="lblbg"/>
-        <text x="555" y="388" text-anchor="middle" class="al">learns from</text>
-      </svg>
-      </div>
-    </figure>
-
-    <div class="vocab">
-      <div class="v in"><div class="w">Behavior</div><div class="sf">Spotter instructions · Analyst instructions</div><p class="qn">How should the agent act, for everyone?</p><p>Tone, format defaults, what to decline, what to always add. Written once by an admin, applied to every answer.</p></div>
-      <div class="v se"><div class="w">Meaning</div><div class="sf">Column synonyms · Column AI Context · Other metadata</div><p class="qn">What is this column, and how are its values written?</p><p>Lives on the data model. Used to pick the right columns for the words in the question.</p></div>
-      <div class="v sh"><div class="w">Logic</div><div class="sf">Data model memory · Personal memory</div><p class="qn">How does this business answer this question?</p><p>Definitions, filters, steps, and what Spotter knows about you. Fetched by relevance, per question.</p></div>
-      <div class="v ex"><div class="w">Knowledge</div><div class="sf">Slack · Confluence · SharePoint · over MCP</div><p class="qn">What does this question need that lives outside ThoughtSpot?</p><p>Searched by relevance like memory, across whichever sources an admin has connected.</p></div>
-    </div>
-  </section>
-
-  <!-- ============ 4 · WATCH ONE ANSWER ============ -->
   <section class="sect" id="sce-watch">
-    <div class="head">
-      <div class="eyebrow">Walkthrough</div>
-      <h2>How the agent responds to a question, step by step</h2>
-    </div>
 
     <div id="anim" tabindex="-1">
       <div class="ctl">
@@ -304,158 +225,6 @@
       </div></div>
     </div>
 
-  </section>
-
-  <!-- ============ 5 · WHEN TWO DISAGREE ============ -->
-  <section class="sect" id="sce-conflicts">
-    <div class="head">
-      <div class="eyebrow">When two disagree</div>
-      <h2>How Spotter orders preferences when it answers</h2>
-    </div>
-    <p class="frame">This is the order sources win when they conflict, highest first. Row-level and column-level security sit underneath all of it and are never context.</p>
-    <div class="ladder">
-      <div class="rung top">
-        <div class="num">1</div>
-        <div class="t">Spotter instructions<small>Rigid. Always, never, decline. Or Analyst instructions inside a Spotter Analyst.</small></div>
-        <div class="e">"Never show individual quota numbers" holds no matter what anyone asks or has saved.</div>
-      </div>
-      <div class="rung">
-        <div class="num">2</div>
-        <div class="t">What the user asked this time<small>Beats every saved preference. Cannot lift a guardrail.</small></div>
-        <div class="e">"As a table this time" beats a chart preference. "Show me quotas this time" is still declined.</div>
-      </div>
-      <div class="rung">
-        <div class="num">3</div>
-        <div class="t">Personal memory<small>That person's context and preferences. Applies to them only.</small></div>
-        <div class="e">"My accounts means EMEA enterprise" filters Priya's answer, not her colleague's.</div>
-      </div>
-      <div class="rung">
-        <div class="num">4</div>
-        <div class="t">Data model memory and coaching<small>Shared definitions and logic, plus data model instructions and legacy coaching. Equal weight.</small></div>
-        <div class="e">"Churn = churned ARR plus downgrades" applies to everyone asking about churn on the model.</div>
-      </div>
-      <div class="rung">
-        <div class="num">5</div>
-        <div class="t">Data model semantics<small>Synonyms, AI Context, descriptions. Picks columns and values.</small></div>
-        <div class="e">"Fiscal year starts February" on fiscal_quarter gets the right quarter. It cannot decide what churn means.</div>
-      </div>
-    </div>
-    <div class="head" style="margin-top:10px">
-      <div class="eyebrow">Conflict resolution</div>
-      <h2>How Spotter decides what to act on when two sources disagree</h2>
-    </div>
-    <div class="tw"><table>
-      <thead><tr><th>Collision</th><th>Winner</th><th>Why</th></tr></thead>
-      <tbody>
-        <tr><td><i>"Never display individual quota numbers"</i> (Spotter instructions) vs <i>"show me quotas this time"</i> (ask)</td><td class="w">Spotter instructions</td><td>A guardrail is rigid. The ask is declined and redirected.</td></tr>
-        <tr><td><i>"Prefer charts for trends"</i> (Spotter instructions) vs <i>"as a table this time"</i> (ask)</td><td class="w">The ask</td><td>A preference in Spotter instructions is a default. The ask overrides defaults.</td></tr>
-        <tr><td><i>"Decline compensation questions"</i> (Spotter instructions) vs <i>"I work in HR, show me pay"</i> (personal memory)</td><td class="w">Spotter instructions</td><td>Personal memory cannot lift a guardrail, however it is phrased.</td></tr>
-        <tr><td><i>"I like tables"</i> (personal memory) vs data model memory that shows churn as a chart</td><td class="w">Personal memory</td><td>Personal context sits above shared memory. The definition in data model memory still applies; only the rendering changes.</td></tr>
-        <tr><td><i>"When I say churn I mean logo count only"</i> (personal memory) vs <i>"Churn = churned ARR plus downgrades"</i> (data model memory)</td><td class="w">Data model memory</td><td>A shared definition is the model's truth for everyone. Personal memory shapes scope and rendering, not what a metric means. Priya gets ARR churn, and can ask for logo count by name.</td></tr>
-        <tr><td><i>"Bookings use Close Date"</i> (data model memory) vs AI Context on Created Date describing it as the booking date</td><td class="w">Data model memory</td><td>AI Context describes a column. Data model memory decides which one to use. Fix the AI Context so the two agree.</td></tr>
-      </tbody>
-    </table></div>
-    <p class="foot">Write behavior you will not negotiate as a rigid Spotter instruction. Write defaults as preferences and expect them to be overridden. Write shared logic once, in memory. Describe columns in AI Context and let data model memory do the deciding.</p>
-  </section>
-
-  <!-- ============ 6 · WHERE TO WRITE ============ -->
-  <section class="sect" id="sce-where">
-    <div class="head">
-      <div class="eyebrow">Where to write</div>
-      <h2>"I want Spotter to…"</h2>
-    </div>
-    <div class="router">
-      <div class="intents" id="intents" role="tablist" aria-label="What do you want Spotter to do"></div>
-      <div class="dest" id="dest" role="tabpanel"></div>
-    </div>
-
-
-    <div class="head" style="margin-top:10px">
-      <div class="eyebrow">The surfaces</div>
-      <h2>Six places, one question each</h2>
-    </div>
-    <div class="tw"><table>
-      <thead><tr><th>Surface</th><th>Answers the question</th><th>Reaches the agent</th><th>Example</th></tr></thead>
-      <tbody>
-        <tr><td class="src"><span class="tg in">instr</span> Spotter instructions<small>Spotter settings · Org</small></td><td>How should the agent behave, for everyone?</td><td>Always, in the system prompt</td><td><span class="ex">"End revenue answers with 'Figures unaudited'."</span></td></tr>
-        <tr><td class="src"><span class="tg in">instr</span> Analyst instructions<small>on a Spotter Analyst</small></td><td>How should this team's analyst behave and what should it focus on?</td><td>Always, in place of the Org instructions, for conversations in that Analyst</td><td><span class="ex">"You are the EMEA renewals analyst. Lead with churn risk."</span></td></tr>
-        <tr><td class="src"><span class="tg se">columns</span> Column synonyms<small>model column property</small></td><td>What else do people call this column?</td><td>During column matching</td><td><span class="ex">region: geo, territory</span></td></tr>
-        <tr><td class="src"><span class="tg se">columns</span> AI Context<small>Spotter optimization tab · 400 chars per column</small></td><td>What is this column and how are its values written?</td><td>During column selection; into the prompt only for selected columns</td><td><span class="ex">"Fiscal quarter label, e.g. Q2 FY26. Fiscal year starts February."</span></td></tr>
-        <tr><td class="src"><span class="tg sh">memory</span> Data model memory<small>Memory sources · from Liveboards and conversations</small></td><td>What business logic applies to this model, and how are recurring analyses built?</td><td>Retrieved by meaning, per question; a learned analysis is applied as-is on an exact match, else as a pattern</td><td><span class="ex">"Churn = churned ARR plus downgrades." · "Quarterly churn: filter close_date to the quarter, group by month, sum arr_change."</span></td></tr>
-        <tr><td class="src"><span class="tg pe">you</span> Personal memory<small>said in conversation · no editor</small></td><td>What should Spotter remember about me?</td><td>Profile always; preferences by relevance on that model</td><td><span class="ex">"When I say my accounts, I mean EMEA enterprise."</span></td></tr>
-      </tbody>
-    </table></div>
-    <p class="foot">Data model instructions, reference questions and business terms you wrote earlier stay in place and are fetched like memory. See Legacy memory sources for how they are managed.</p>
-
-    <div class="head" style="margin-top:10px">
-      <div class="eyebrow">Worked examples</div>
-      <h2>Same fact, different homes</h2>
-    </div>
-    <p class="frame">What happens to one sentence depending on where it is written. Green is the home to use.</p>
-    <div class="tw homes"><table>
-      <thead><tr><th>Expectation</th><th>Data model semantics</th><th>Spotter instructions</th><th>Memory</th></tr></thead>
-      <tbody>
-        <tr>
-          <td class="src">Revenue excludes internal test accounts</td>
-          <td class="no">On the revenue column. Seen only if revenue is already picked. The filter lives on a different column (account type), so the agent has to connect them itself.</td>
-          <td class="no">A data fact, not behavior. It would apply to every model in the Org.</td>
-          <td class="ok">Data model memory. Retrieved whenever revenue is asked about, names both columns, applied as a filter. <span class="rec">use this</span></td>
-        </tr>
-        <tr>
-          <td class="src">Bookings use Close Date, not Created Date</td>
-          <td class="no">"Prefer this over Created Date" on Close Date is a preference, not a description. It only helps once Close Date is a candidate.</td>
-          <td class="no">A data fact, not behavior. It would apply to every model in the Org.</td>
-          <td class="ok">Data model memory: "Bookings questions use Close Date." Plus AI Context on each column stating what it is: "Date the deal was signed" vs "Date the record was created." <span class="rec">use this</span></td>
-        </tr>
-        <tr>
-          <td class="src">End every answer with "Figures unaudited"</td>
-          <td class="no">Not about a column. No home here.</td>
-          <td class="ok">Spotter instructions. Applied to every answer, never filtered out. <span class="rec">use this</span></td>
-          <td class="no">Retrieved only when the question happens to match, so it fires sometimes.</td>
-        </tr>
-        <tr>
-          <td class="src">Churn equals churned ARR plus downgrades</td>
-          <td class="no">Could go on arr_change, but the definition spans change_type too, and it only matters when churn is asked.</td>
-          <td class="no">A definition, not behavior. It would apply to every model in the Org.</td>
-          <td class="ok">Data model memory. Everyone asking about churn on this model gets the same definition. <span class="rec">use this</span></td>
-        </tr>
-        <tr>
-          <td class="src">Medicine names are stored as short forms, MP means Metoprolol</td>
-          <td class="ok">AI Context on the medicine column. This is how the values are written, exactly what column selection needs. <span class="rec">use this</span></td>
-          <td class="no">Too specific for behavior instructions.</td>
-          <td>Data model memory would also work, but the fact is about one column's values, so keep it with the column.</td>
-        </tr>
-        <tr>
-          <td class="src">My team says "geo" for region</td>
-          <td class="ok">Synonym on the region column. A name-to-column mapping, used directly in matching. <span class="rec">use this</span></td>
-          <td class="no">Not behavior. It would apply to every model in the Org.</td>
-          <td>Data model memory would also work, but a name for one column belongs on the column.</td>
-        </tr>
-        <tr>
-          <td class="src">When I say "my accounts", I mean EMEA enterprise</td>
-          <td class="no">Not about a column. It is true for one person only.</td>
-          <td class="no">It would apply to everyone in the Org.</td>
-          <td class="ok">Personal memory. Say it in conversation; it filters your answers and nobody else's. <span class="rec">use this</span></td>
-        </tr>
-      </tbody>
-    </table></div>
-  </section>
-
-  <!-- ============ 7 · GO DEEPER ============ -->
-  <section class="sect" id="sce-deeper">
-    <div class="head">
-      <div class="eyebrow">Go deeper</div>
-      <h2>Set it up, step by step</h2>
-    </div>
-    <div class="links">
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/spotter-memory"><span class="tg sh">memory</span><b>Spotter memory</b><span>What memory is, the two types, and what Spotter stores.</span></a>
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/spotter-liveboard-learn"><span class="tg sh">memory</span><b>Add memory from Liveboards</b><span>Enable, pick up to three Liveboards, write the context description, validate what was generated.</span></a>
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/spotter-conversation-learn"><span class="tg sh">memory</span><b>Add memory from conversations</b><span>Shared and personal tracks, what triggers a save, learning from CSVs and connected knowledge bases.</span></a>
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/spotter-personal-memory"><span class="tg pe">you</span><b>Spotter personal memory</b><span>The two layers of personal memory, how to teach and correct it, and how to see what Spotter knows about you.</span></a>
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/spotter-instructions"><span class="tg in">instr</span><b>Spotter instructions</b><span>The eight behaviors you can control, end-to-end examples, and limits.</span></a>
-      <a class="lk" href="https://docs.thoughtspot.com/cloud/26.9.0.cl/data-model-instructions"><span class="tg lg">legacy</span><b>Data model instructions</b><span>Free-text rules on a data model. Still work, fetched like memory. New logic belongs in data model memory.</span></a>
-    </div>
-    <p class="foot">Also in Getting Spotter ready: Manage and migrate memory, Legacy memory sources, Memory permissions and governance, and the FAQ.</p>
   </section>
 
 </div>
